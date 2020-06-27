@@ -13,6 +13,13 @@
           "system": "archmage",
           "path": "./packs/cleric-spells.db",
           "entity": "Item"
+        },
+        {
+          "name": "dark-alleys-barbarian",
+          "label": "Barbarian",
+          "system": "archmage",
+          "path": "./packs/dark-alleys-barbarian.db",
+          "entity": "Item"
         }
     ],
     "manifest": "https://github.com/mk572/FoundryVTT-Dark-Alleys-Compendium/releases/download/latest/module.json",
