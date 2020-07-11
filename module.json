@@ -2,21 +2,35 @@
     "name": "13a-dark-alleys-compendium",
     "title": "13th Age Dark Alleys Compendium",
     "description": "Game rules compendium for the 13th Age expansion book Dark Alleys & Twisted Path for Foundry Virtual Tabletop ",
-    "version": "0.1.0",
+    "version": "0.2.0",
     "minimumCoreVersion": "0.6.0",
-    "compatibleCoreVersion": "0.6.2",
+    "compatibleCoreVersion": "0.6.4",
     "minimumSystemVersion": "1.5.0",
     "packs": [
         {
           "name": "clericspells",
-          "label": "Cleric Spells",
+          "label": "Dark Alleys Cleric Spells",
           "system": "archmage",
-          "path": "./packs/cleric-spells.db",
+          "path": "./packs/dark-alleys-cleric-spells.db",
+          "entity": "Item"
+        },
+		{
+          "name": "wizardspells",
+          "label": "Dark Alleys Wizard Spells",
+          "system": "archmage",
+          "path": "./packs/dark-alleys-wizard-spells.db",
+          "entity": "Item"
+        },
+		{
+          "name": "clericspells",
+          "label": "Dark Alleys Sorcerer Spells",
+          "system": "archmage",
+          "path": "./packs/dark-alleys-sorcerer-spells.db",
           "entity": "Item"
         },
         {
           "name": "dark-alleys-barbarian",
-          "label": "Barbarian",
+          "label": "Dark Alleys Barbarian",
           "system": "archmage",
           "path": "./packs/dark-alleys-barbarian.db",
           "entity": "Item"
