@@ -2,9 +2,9 @@
     "name": "13a-dark-alleys-compendium",
     "title": "13th Age Dark Alleys Compendium",
     "description": "Game rules & Compendiums for the 13th Age Compatible expansion book Dark Alleys & Twisted Path for Foundry Virtual Tabletop ",
-    "version": "0.3.0",
+    "version": "0.4.0",
     "minimumCoreVersion": "0.6.0",
-    "compatibleCoreVersion": "0.6.4",
+    "compatibleCoreVersion": "0.7.9",
     "minimumSystemVersion": "1.5.0",
     "packs": [
         {
