@@ -43,6 +43,13 @@
           "entity": "Item"
         },
         {
+          "name": "dark-alleys-fighter",
+          "label": "Dark Alleys Fighter",
+          "system": "archmage",
+          "path": "./packs/dark-alleys-fighter.db",
+          "entity": "Item"
+        },
+        {
           "name": "dark-alleys-necromancer-spells",
           "label": "Dark Alleys Necromancer Spells",
           "system": "archmage",
