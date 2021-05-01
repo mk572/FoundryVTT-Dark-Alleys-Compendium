@@ -8,21 +8,21 @@
     "minimumSystemVersion": "1.5.0",
     "packs": [
         {
-          "name": "clericspells",
+          "name": "dark-alleys-cleric",
           "label": "Dark Alleys Cleric Spells",
           "system": "archmage",
           "path": "./packs/dark-alleys-cleric-spells.db",
           "entity": "Item"
         },
 		{
-          "name": "wizardspells",
+          "name": "dark-alleys-wizard-spells",
           "label": "Dark Alleys Wizard Spells",
           "system": "archmage",
           "path": "./packs/dark-alleys-wizard-spells.db",
           "entity": "Item"
         },
 		{
-          "name": "clericspells",
+          "name": "dark-alleys-sorcerer-spells",
           "label": "Dark Alleys Sorcerer Spells",
           "system": "archmage",
           "path": "./packs/dark-alleys-sorcerer-spells.db",
