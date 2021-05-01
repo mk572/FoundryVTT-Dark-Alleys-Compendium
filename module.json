@@ -11,7 +11,7 @@
           "name": "dark-alleys-cleric",
           "label": "Dark Alleys Cleric Spells",
           "system": "archmage",
-          "path": "./packs/dark-alleys-cleric-spells.db",
+          "path": "./packs/dark-alleys-cleric.db",
           "entity": "Item"
         },
 		{
