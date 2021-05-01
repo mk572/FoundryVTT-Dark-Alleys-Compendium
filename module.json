@@ -6,10 +6,17 @@
     "minimumCoreVersion": "0.6.0",
     "compatibleCoreVersion": "0.7.9",
     "minimumSystemVersion": "1.5.0",
-    "packs": [
+    "packs": [        
+        {
+          "name": "13-cld-cleric",
+          "label": "13ClD Cleric Features",
+          "system": "archmage",
+          "path": "./packs/13cld-cleric-features.db",
+          "entity": "Item"
+        },
         {
           "name": "dark-alleys-cleric",
-          "label": "Dark Alleys Cleric Spells",
+          "label": "Dark Alleys Cleric Features",
           "system": "archmage",
           "path": "./packs/dark-alleys-cleric.db",
           "entity": "Item"
