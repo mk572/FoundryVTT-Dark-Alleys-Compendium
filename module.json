@@ -36,10 +36,10 @@
           "entity": "Item"
         },
         {
-          "name": "dark-alleys-bard-spells",
-          "label": "Dark Alleys Bard Spells",
+          "name": "dark-alleys-bard-features",
+          "label": "Dark Alleys Bard Features",
           "system": "archmage",
-          "path": "./packs/dark-alleys-bard-spells.db",
+          "path": "./packs/dark-alleys-bard-features.db",
           "entity": "Item"
         },
         {
