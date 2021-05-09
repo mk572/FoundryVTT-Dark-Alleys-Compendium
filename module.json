@@ -76,6 +76,27 @@
           "system": "archmage",
           "path": "./packs/dark-alleys-occultist-spells.db",
           "entity": "Item"
+        },
+        {
+          "name": "dark-alleys-variant-rules",
+          "label": "Dark Alleys Variant Rules",
+          "system": "archmage",
+          "path": "./packs/dark-alleys-variant-rules.db",
+          "entity": "JournalEntry"
+        },
+        {
+          "name": "dark-alleys-variant-rules-risk-list",
+          "label": "Dark Alleys Variant Rules (Risk List)",
+          "system": "archmage",
+          "path": "./packs/dark-alleys-variant-rules-risks.db",
+          "entity": "Item"
+        },
+        {
+          "name": "dark-alleys-variant-rules-risk-table",
+          "label": "Dark Alleys Variant Rules (Risk Table)",
+          "system": "archmage",
+          "path": "./packs/dark-alleys-variant-rules-risk-table.db",
+          "entity": "RollTable"
         }
     ],
     "manifest": "https://github.com/mk572/FoundryVTT-Dark-Alleys-Compendium/releases/download/latest/module.json",
