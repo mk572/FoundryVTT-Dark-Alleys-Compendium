@@ -1,83 +1,96 @@
 {
-    "name": "13a-dark-alleys-compendium",
-    "title": "13th Age Dark Alleys Compendium",
-    "description": "Game rules & Compendiums for the 13th Age Compatible expansion book Dark Alleys & Twisted Path for Foundry Virtual Tabletop ",
-    "version": "0.5.0",
-    "minimumCoreVersion": "0.6.0",
-    "compatibleCoreVersion": "0.8.9",
-    "minimumSystemVersion": "1.5.0",
-    "packs": [
-        {
-          "name": "13-cld-cleric",
-          "label": "13ClD Cleric Features",
-          "system": "archmage",
-          "path": "./packs/13cld-cleric-features.db",
-          "entity": "Item"
-        },
-        {
-          "name": "dark-alleys-cleric",
-          "label": "Dark Alleys Cleric Features",
-          "system": "archmage",
-          "path": "./packs/dark-alleys-cleric.db",
-          "entity": "Item"
-        },
-        {
-          "name": "dark-alleys-cleric-summons",
-          "label": "Dark Alleys Cleric Summons",
-          "system": "archmage",
-          "path": "./packs/dark-alleys-cleric-summons.db",
-          "entity": "Item"
-        },
-		{
-          "name": "dark-alleys-wizard-spells",
-          "label": "Dark Alleys Wizard Spells",
-          "system": "archmage",
-          "path": "./packs/dark-alleys-wizard-spells.db",
-          "entity": "Item"
-        },
-		{
-          "name": "dark-alleys-sorcerer-spells",
-          "label": "Dark Alleys Sorcerer Spells",
-          "system": "archmage",
-          "path": "./packs/dark-alleys-sorcerer-spells.db",
-          "entity": "Item"
-        },
-        {
-          "name": "dark-alleys-barbarian",
-          "label": "Dark Alleys Barbarian",
-          "system": "archmage",
-          "path": "./packs/dark-alleys-barbarian.db",
-          "entity": "Item"
-        },
-        {
-          "name": "dark-alleys-bard-features",
-          "label": "Dark Alleys Bard Features",
-          "system": "archmage",
-          "path": "./packs/dark-alleys-bard-features.db",
-          "entity": "Item"
-        },
-        {
-          "name": "dark-alleys-fighter",
-          "label": "Dark Alleys Fighter",
-          "system": "archmage",
-          "path": "./packs/dark-alleys-fighter.db",
-          "entity": "Item"
-        },
-        {
-          "name": "dark-alleys-necromancer-spells",
-          "label": "Dark Alleys Necromancer Spells",
-          "system": "archmage",
-          "path": "./packs/dark-alleys-necromancer-spells.db",
-          "entity": "Item"
-        },
-        {
-          "name": "dark-alleys-occultist-spells",
-          "label": "Dark Alleys Occultist Spells",
-          "system": "archmage",
-          "path": "./packs/dark-alleys-occultist-spells.db",
-          "entity": "Item"
+  "id": "13a-dark-alleys-compendium",
+  "title": "13th Age Dark Alleys Compendium",
+  "description": "Game rules & Compendiums for the 13th Age Compatible expansion book Dark Alleys & Twisted Path for Foundry Virtual Tabletop ",
+  "version": "0.5.0",
+  "compatibility": {
+    "minimum": "0.6.0",
+    "verified": "10.286"
+  },
+  "relationships": {
+    "systems": [
+      {
+        "id": "archmage",
+        "type": "system",
+        "compatibility": {
+          "minimum": "1.5.0",
+          "verified": "1.21.0"
         }
-    ],
-    "manifest": "https://github.com/mk572/FoundryVTT-Dark-Alleys-Compendium/releases/download/latest/module.json",
-    "download": "https://github.com/mk572/FoundryVTT-Dark-Alleys-Compendium/releases/download/latest/dark-alleys-compendium.zip"
+      }
+    ]
+  },
+  "packs": [
+    {
+      "name": "13-cld-cleric",
+      "label": "13ClD Cleric Features",
+      "system": "archmage",
+      "path": "./packs/13cld-cleric-features.db",
+      "type": "Item"
+    },
+    {
+      "name": "dark-alleys-cleric",
+      "label": "Dark Alleys Cleric Features",
+      "system": "archmage",
+      "path": "./packs/dark-alleys-cleric.db",
+      "type": "Item"
+    },
+    {
+      "name": "dark-alleys-cleric-summons",
+      "label": "Dark Alleys Cleric Summons",
+      "system": "archmage",
+      "path": "./packs/dark-alleys-cleric-summons.db",
+      "type": "Item"
+    },
+    {
+      "name": "dark-alleys-wizard-spells",
+      "label": "Dark Alleys Wizard Spells",
+      "system": "archmage",
+      "path": "./packs/dark-alleys-wizard-spells.db",
+      "type": "Item"
+    },
+    {
+      "name": "dark-alleys-sorcerer-spells",
+      "label": "Dark Alleys Sorcerer Spells",
+      "system": "archmage",
+      "path": "./packs/dark-alleys-sorcerer-spells.db",
+      "type": "Item"
+    },
+    {
+      "name": "dark-alleys-barbarian",
+      "label": "Dark Alleys Barbarian",
+      "system": "archmage",
+      "path": "./packs/dark-alleys-barbarian.db",
+      "type": "Item"
+    },
+    {
+      "name": "dark-alleys-bard-features",
+      "label": "Dark Alleys Bard Features",
+      "system": "archmage",
+      "path": "./packs/dark-alleys-bard-features.db",
+      "type": "Item"
+    },
+    {
+      "name": "dark-alleys-fighter",
+      "label": "Dark Alleys Fighter",
+      "system": "archmage",
+      "path": "./packs/dark-alleys-fighter.db",
+      "type": "Item"
+    },
+    {
+      "name": "dark-alleys-necromancer-spells",
+      "label": "Dark Alleys Necromancer Spells",
+      "system": "archmage",
+      "path": "./packs/dark-alleys-necromancer-spells.db",
+      "type": "Item"
+    },
+    {
+      "name": "dark-alleys-occultist-spells",
+      "label": "Dark Alleys Occultist Spells",
+      "system": "archmage",
+      "path": "./packs/dark-alleys-occultist-spells.db",
+      "type": "Item"
+    }
+  ],
+  "manifest": "https://github.com/mk572/FoundryVTT-Dark-Alleys-Compendium/releases/download/latest/module.json",
+  "download": "https://github.com/mk572/FoundryVTT-Dark-Alleys-Compendium/releases/download/latest/dark-alleys-compendium.zip"
 }
