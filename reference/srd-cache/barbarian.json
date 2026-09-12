@@ -1,0 +1,241 @@
+{
+  "class": "Barbarian",
+  "source_url": "https://www.13thagesrd.com/classes/barbarian/barbarian-talents-3pp/",
+  "fetched_at": "2026-09-12",
+  "page_structure": "Flat list of talents grouped into Adventurer/Champion/Epic Talent sections. Each talent has its own explicit Source tag. Feat tiers (Adventurer/Champion/Epic Feat) are nested within each talent entry, distinct from which section (page tier) the base talent itself unlocks at.",
+  "source_abbreviations": {
+    "DATP": "Dark Alleys & Twisted Paths (this module's source book)",
+    "13BTF": "unconfirmed abbreviation seen on this page — meaning not looked up",
+    "EB": "The Escalated Bard (confirmed via a copyright footer on the Bard page)"
+  },
+  "entries": [
+    {
+      "name": "Bouncer",
+      "source": "DATP",
+      "tier": "Adventurer",
+      "full_text": "Bouncer Source DATP Your unarmed attacks take no attack penalty, use d8 damage dice, and benefit from two-weapon fighting (reroll natural 2 on the attack). You can use true magic item bracers like a monk to improve your unarmed attacks. Once per battle, when you hit with an unarmed melee attack, you can declare a wrestling stunt. Choose one of the effects below: The target is dazed: -4 to attacks; save ends. Force the target off guard: -4 to AC and PD; save ends. Choke (or twist) the target: deal 1d6 per level extra damage; this damage is not doubled on a critical hit. Throw the target: normal size or smaller only; attacks against it have advantage until it takes a move action; you can choose to pop free from it. Restrain the target: normal size or smaller only; the target has disadvantage on disengage checks and attack rolls (save ends); also ends when you or the target disengages. While restraining an enemy, the only attacks you can make are unarmed melee attacks against that target. Hold on to the target (large or huge enemies only): when the target moves, you stay engaged with it even if it disengages from other combatants; it can shake you off if it succeeds at an attack against you (this is a different effect from a grab). Adventurer Feat When you use your wrestling stunt on a critical hit, you can choose two of the effects. Champion Feat When you rally during a battle, you gain a second use of a wrestling stunt. Epic Feat When the escalation die is 2+, increase your unarmed damage dice to d10s."
+    },
+    {
+      "name": "Brutal Blow",
+      "source": "13BTF",
+      "tier": "Adventurer",
+      "full_text": "Brutal Blow Source 13BTF Whenever one of your attacks staggers a non-mook enemy, a nearby ally of your choice may add your Charisma modifier to their next attack roll. Adventurer Feat One battle per day, when you stagger a non-mook enemy, you gain a fear aura for the remainder of that battle. Your base fear threshold is the same as a normal monster of your character level, as shown in the Baseline Stats for Normal Monsters table under DIY Monsters—add your Charisma modifier to the number given there. Champion Feat The threshold of your fear aura from Brutal Blow is now increased by the escalation die value. Additionally, your chosen nearby ally now adds double your Charisma modifier to their next attack roll when Brutal Blow is triggered. Epic Feat You can now gain a fear aura from Brutal Blow in every battle you fight. Additionally, you now double your Charisma modifier before adding it to your fear threshold."
+    },
+    {
+      "name": "Bulwark",
+      "source": "DATP",
+      "tier": "Adventurer",
+      "full_text": "Bulwark Source DATP Shields up and into the fray. When you wield a shield, reduce the damage you take from enemy attacks by your level. Adventurer Feat When you intercept an enemy or an enemy intercepts you, make a basic melee attack against them as a free action. Champion Feat While wielding a shield, you gain a +1 bonus to PD. Epic Feat Increase the damage reduction to twice your level."
+    },
+    {
+      "name": "Carrening Tackle",
+      "source": "EB",
+      "tier": "Adventurer",
+      "full_text": "Carrening Tackle Source EB Once per battle at the start of your turn, heave yourself at one enemy you were not engaged with before you moved, then make a melee basic attack. If this attack is successful, you grab your target in addition to the basic attack’s damage. Adventurer Feat You grab the target and deal 2d6 damage. Champion Feat You grab the target and deal 2d8 damage. Epic Feat You grab the target and deal 2d10 damage."
+    },
+    {
+      "name": "Deadly Twins",
+      "source": "DATP",
+      "tier": "Adventurer",
+      "full_text": "Deadly Twins Source DATP When you fight with two melee weapons and you score a critical hit, make a second melee attack against the target. You can use this talent once per round. Adventurer Feat You can pop free and engage a different target to make the second Deadly Twins attack. If you do so, you gain a +2 bonus to the attack roll. Champion Feat The first time you miss with a Deadly Twins attack in a battle, you can reroll the attack. Epic Feat When you hit with a Deadly Twins attack, deal 25 ongoing damage to the target."
+    },
+    {
+      "name": "Giant Blood",
+      "source": "DATP",
+      "tier": "Adventurer",
+      "full_text": "Giant Blood Source DATP Once per battle or scene, as a standard action, you can perform a stunt that uses your massive reserves of brute strength. Smash a hole in a wall, lift a giant monolith, or wrestle an iron golem. While this usually won’t require a skill check, the GM can still call for an attack roll if you try to wrestle down an unwilling target or bury them under something very heavy. Adventurer Feat You can wield heavy two-handed (d10) melee weapons in one hand, or wield an oversized heavy two-handed (d12) weapon with both hands. Champion Feat You have advantage on all Strength-based skill checks. Epic Feat Add four times your Strength modifier to melee weapon damage (instead of three times)."
+    },
+    {
+      "name": "Lycanthrope",
+      "source": "DPAS",
+      "tier": "Adventurer",
+      "full_text": "Lycanthrope Source DPAS When you enter a barbarian rage, you grow natural weapons and armor as per the abomination class features. You also gain one abomination maneuver of up to your level that you can trigger when making a melee attack with your natural weapons. Adventurer Feat Choose Carnage, Fueled by Pain, Hardened Plating, Hard to Kill, Monstrous Stunt, Slithering Snake, or Troll Blood. You gain the benefits of this abomination talent while raging. Champion Feat Gain a second abomination maneuver. Epic Feat Gain a third abomination maneuver."
+    },
+    {
+      "name": "Naked Brutality",
+      "source": "13BTF",
+      "tier": "Adventurer",
+      "full_text": "Naked Brutality Source 13BTF When wearing no armor, you gain a bonus to your AC equal to the escalation die value. (You can still use a shield with this talent.) Adventurer Feat One battle per day, if you aren’t wearing armor, add your Constitution modifier to your PD. (This is always in addition to any modifiers normally used to compute your PD in your class description—it doesn’t replace them.) Champion Feat Two battles per day, if you aren’t wearing armor, add your Constitution modifier to your PD. Epic Feat Add your Constitution modifier to your PD in every battle you fight."
+    },
+    {
+      "name": "Primal War Dance",
+      "source": "DATP",
+      "tier": "Adventurer",
+      "full_text": "Primal War Dance Source DATP When you fight with one-handed melee weapons, you can use Dexterity instead of Strength for attack and damage. While raging, you gain a +2 bonus to AC, PD and disengage checks. Adventurer Feat While raging, you take no damage from missed enemy attacks. Champion Feat When an enemy misses you with a melee attack while you rage, deal damage to them equal to twice your Dexterity modifier (x3 at 8th level). Epic Feat Increase the bonuses to +3."
+    },
+    {
+      "name": "Raging Revenant",
+      "source": "DATP",
+      "tier": "Adventurer",
+      "full_text": "Raging Revenant Source DATP Special: You cannot take this talent at character creation. Instead, when your PC dies, resurrect him or her and swap out one barbarian talent for this one. Whenever you face those who killed you, you can rage for free. However, you left a part of your soul down below. You are now Sorta Dead, as per the necromancer talent. If you get killed again, you can return without taking the talent another time. You travel for 1d6 days as you make your way back from the Underworld. Each time you die, you lose a recovery permanently, until you have none left and your soul is trapped in the afterlife eternally. Let’s hope you have found peace by then. Adventurer Feat You suck the life out of your surroundings to sustain yourself. When you make a recovery roll to heal, and a die comes up as the maximum, deal negative energy damage equal to that die to each enemy engaged with you. Champion Feat When you are reduced to zero hit points or below while raging, your Rage ends, but you no longer fall unconscious. You can still die after failing death saves, or when you reach negative hit points equal to half your maximum hit points, but until that point, you can act normally. Epic Feat As per the champion-tier feat, but you keep raging even when at negative hit points."
+    },
+    {
+      "name": "Red Mist",
+      "source": "DATP",
+      "tier": "Adventurer",
+      "full_text": "Red Mist Source DATP If you are staggered at the start of your turn, you can start raging for free. (It doesn’t count against your normal usage.) Adventurer Feat While raging, you are immune to fear effects. Champion Feat While raging, you are immune to the dazed condition. Epic Feat While raging, you are immune to the weakened condition."
+    },
+    {
+      "name": "Savage Sweep",
+      "source": "EB",
+      "tier": "Adventurer",
+      "full_text": "Savage Sweep Source EB Once per battle as a basic melee attack, sweep your weapon out in front of you low to the ground. On a hit, an enemy you are engaged with becomes hampered for one turn. Deal no damage on a miss. Adventurer Feat On a hit, up to two other creatures you’re engaged with are hampered and suffer 2d6 damage. Champion Feat On a hit, up to two other creatures you’re engaged with are hampered and suffer 2d8 damage. Epic Feat All creatures you’re engaged with are hampered for a turn, whether you hit with the attack or not."
+    },
+    {
+      "name": "Spirit Guardian",
+      "source": "DATP",
+      "tier": "Adventurer",
+      "full_text": "Spirit Guardian Source DATP You’ve bonded with a spirit animal that watches over you and protects you. It’s a privilege that is awarded only to the most honorable warriors of your tribe. You gain a 4-point background that represents the spiritual connection to your spirit guide. You can use it on skill checks to perceive supernatural dangers. You also gain the two special abilities below. Once per day, you can activate one of the abilities as a quick action. Infuse your body with the power of your spirit. Choose the beast aspect from the druid’s shifter talent that is closest to your spirit animal, and gain its initiate benefit until the end of the battle. Spend a recovery without healing as a quick action to manifest your spirit. Until the end of the battle, your spirit companion joins the battle as your ally. Create an Animal Companion as per the ranger talent in the core book. As a spirit creature, your companion gains resist physical damage 16+. Adventurer Feat If you are raging while your spirit companion is manifested, it can make one attack with the benefit of raging that battle. Champion Feat You can use both the infuse and the manifest ability once per day each. Epic Feat Once per battle, you or your manifested spirit companion can reroll a save with a +4 bonus."
+    },
+    {
+      "name": "Swap Quarry",
+      "source": "13BTF",
+      "tier": "Adventurer",
+      "full_text": "Swap Quarry Source 13BTF Once per battle as a quick action, you can pop free from an enemy with whom you’re engaged and move to engage another nearby enemy. Adventurer Feat When you use Swap Quarry, the crit range of your next attack against the enemy you engage expands by the number of your allies who are also currently engaged with that enemy. Champion Feat When you use Swap Quarry, the enemy from which you pop free becomes vulnerable (crit range +2) to your allies’ attacks until the start of your next turn. Epic Feat You can now use Swap Quarry twice per battle."
+    },
+    {
+      "name": "Taunting Reply",
+      "source": "EB",
+      "tier": "Adventurer",
+      "full_text": "Taunting Reply Source EB Once per battle, when an enemy misses an attack aimed at you, you can make a basic attack against that enemy as a free action. Champion Feat You gain a +3 bonus to attack with Taunting Reply."
+    },
+    {
+      "name": "Tribal War Chief",
+      "source": "DATP",
+      "tier": "Adventurer",
+      "full_text": "Tribal War Chief Source DATP You gain three points in a background that represents your past or your destiny as a tribal leader. In addition, choose one of the benefits below: You inherited a treasured set of armor as a sign of your status. You take no penalty for wearing heavy armor. Your voice rallies the troops. Choose a battle cry of your level or lower from the bard’s list. You inherited the gift of leadership from your ancestors. Choose a tactic of your level or lower from the commander list. The icons have taken special interest in the destiny of you and your clan. You gain an additional icon relationship die. With you in the lead, others expect victory. Once per day, when you score a critical hit, increase the escalation die by 1. Adventurer Feat Choose a second benefit from the list. Champion Feat Choose a third benefit from the list. Epic Feat Choose a fourth benefit from the list. Champion Talents"
+    },
+    {
+      "name": "Awaken the Fury",
+      "source": "DATP",
+      "tier": "Champion",
+      "full_text": "Awaken the Fury Source DATP Once per battle, when you enter Barbarian Rage, you can engage a nearby enemy and make a melee attack as a free action. Champion Feat Also gain 5 times the escalation die in temporary hit points (8th level: 10 times). Epic Feat If you hit with the melee attack granted by this talent, deal 10 times the escalation die in ongoing damage."
+    },
+    {
+      "name": "Barbaric Yawp",
+      "source": "EB",
+      "tier": "Champion",
+      "full_text": "Barbaric Yawp Source EB Once per day, after missing with a melee attack, let out a terrifying scream that weakens nearby enemies for one turn. Champion Feat In addition to weakening nearby enemies for one turn, it might weaken engaged enemies for longer (11+ save ends). Epic Feat You may now yawp two times per day."
+    },
+    {
+      "name": "Battle Lust",
+      "source": "EB",
+      "tier": "Champion",
+      "full_text": "Battle Lust Source EB Once per day, after an enemy is killed by you or any ally, you may immediately make a melee basic attack roll against another enemy you’re engaged with. Champion Feat Gain a +2 bonus on the second attack roll. Epic Feat Gain a +4 bonus on the second attack roll."
+    },
+    {
+      "name": "Bellowing Charge",
+      "source": "13BTF",
+      "tier": "Champion",
+      "full_text": "Bellowing Charge Source 13BTF One battle per day, you can move to engage a far away enemy and make a melee attack against them. Enemies between you and your target may still attempt to intercept you, however. Champion Feat Add the escalation die to your AC and PD until the start of your next turn. This bonus takes effect after you declare you are using Bellowing Charge, immediately before you move. Epic Feat You can now use Bellowing Charge once per battle. Enemies must succeed on a normal save (11+) to intercept you when you charge."
+    },
+    {
+      "name": "Blood-Soaked Resurgence",
+      "source": "DATP",
+      "tier": "Champion",
+      "full_text": "Blood-Soaked Resurgence Source DATP The first time you are reduced to zero hit points in a battle, you can immediately spend a recovery to heal. If you use this talent while raging, deal three times your level in psychic damage to each enemy you are engaged with. Champion Feat After using this talent, deal 1d12 (8th level: 2d12) extra psychic damage when you hit with a melee attack, until the end of the battle. Epic Feat Heal additional hit points equal to 20 x the escalation die with the recovery."
+    },
+    {
+      "name": "Primitive Strength",
+      "source": "DATP",
+      "tier": "Champion",
+      "full_text": "Primitive Strength Source DATP One battle per day, after succeeding with a melee attack, really put your back into it and deal an additional 1d6 damage. Champion Feat Bonus die is now 1d8. Epic Feat Bonus die is now 1d12."
+    },
+    {
+      "name": "Raging Storm",
+      "source": "DATP",
+      "tier": "Champion",
+      "full_text": "Raging Storm Source DATP When you hit with a melee attack, deal 1d8 extra lightning damage (7th level: 1d12; 9th level: 1d20) to the target. Champion Feat While raging, deal the extra damage to all nearby enemies. Epic Feat You gain resist lightning and thunder 16+."
+    },
+    {
+      "name": "Rallying Cry",
+      "source": "DATP",
+      "tier": "Champion",
+      "full_text": "Rallying Cry Source DATP When you score a critical hit, all nearby allies gain a +2 bonus to melee attack rolls and saves against effects until the end of your next turn. Champion Feat You grant the bonus to all saves, including saves to disengage and death saves. Epic Feat You grant the bonus to all attack rolls, including ranged and spell attacks."
+    },
+    {
+      "name": "Revel In Pain",
+      "source": "13BTF",
+      "tier": "Champion",
+      "full_text": "Revel In Pain Source 13BTF One battle per day while you are raging, increase your AC by 1 every time you are damaged by an enemy’s attack. This AC bonus cannot exceed the escalation die (to a maximum of 6). Champion Feat You can now use Revel In Pain in two battles per day. Epic Feat The maximum AC bonus from Revel In Pain is now your level."
+    },
+    {
+      "name": "Tenacious Grit",
+      "source": "DATP",
+      "tier": "Champion",
+      "full_text": "Tenacious Grit Source DATP You gain a +1 bonus to all saves, including death saves. While raging, the bonus is equal to your Constitution modifier instead. Champion Feat When you start raging, you can make a save against all effects. Epic Feat You take half damage from ongoing damage."
+    },
+    {
+      "name": "Thick Skin",
+      "source": "EB",
+      "tier": "Champion",
+      "full_text": "Thick Skin Source EB Once per day as a quick action, you gain a +2 bonus to your Physical Defense until the end of the battle. Champion Feat The bonus now increases to +4 Physical Defense. Epic Feat You can now use Thick Skin as a free action (rather than a quick action) when an enemy attacks you. Epic Talents"
+    },
+    {
+      "name": "Axe-Crazy Intimidation",
+      "source": "DATP",
+      "tier": "Epic",
+      "full_text": "Axe-Crazy Intimidation Source DATP While you are engaged with an enemy, they take a -2 penalty to all defenses. Epic Feat Enemies must always succeed at a disengage check if they want to disengage from you, even if they use abilities that pop free or teleport. If the check fails, the enemy stays engaged."
+    },
+    {
+      "name": "Blood Rage",
+      "source": "DATP",
+      "tier": "Epic",
+      "full_text": "Blood Rage Source DATP When you score a critical hit, you can heal using a free recovery. Epic Feat After you score a critical hit, the next time you are hit by an attack, you take half damage. Multiple half-damage effects don’t stack."
+    },
+    {
+      "name": "Bloody Desperation",
+      "source": "EB",
+      "tier": "Epic",
+      "full_text": "Bloody Desperation Source EB Once per day, if your hit points would drop below 10, instead they stay at 10 and you make a basic melee attack against the creature that attacked you, if it’s in range. Epic Feat You can use Bloody Desperation once per battle."
+    },
+    {
+      "name": "Fearsome Demeanor",
+      "source": "13BTF",
+      "tier": "Epic",
+      "full_text": "Fearsome Demeanor Source 13BTF One battle per day, all nearby normal monsters and mooks suffer a penalty to their attack rolls and MD equal to the escalation die. If a monster would normally receive a bonus to either of these stats from the escalation die, they lose that bonus instead of suffering the penalty. Epic Feat Large and double-strength monsters are also affected by your Fearsome Demeanor, and you may now use this ability in two battles per day."
+    },
+    {
+      "name": "Fury of the North Wind",
+      "source": "DATP",
+      "tier": "Epic",
+      "full_text": "Fury of the North Wind Source DATP In battle, you can call on the Fury of the North Wind as a standard action. Until the end of your next turn, you gain a +2 bonus to all defenses and resist cold 16+. On your next turn, you can pop free from all enemies and make a giant leap, carried by the icy winds, to engage a nearby or far away enemy as a move action. Your next melee attack that turn deals double damage, and you always count as raging when making the attack. Epic Feat When you activate Fury of the North Wind, enemies engaged with you must succeed at a save or take 25 cold damage and be dazed until the end of your next turn."
+    },
+    {
+      "name": "Killing Frenzy",
+      "source": "DATP",
+      "tier": "Epic",
+      "full_text": "Killing Frenzy Source DATP Your critical hits deal triple damage. Epic Feat When you are not raging, increase your critical threat range by 1."
+    },
+    {
+      "name": "Legendary Rage",
+      "source": "13BTF",
+      "tier": "Epic",
+      "full_text": "Legendary Rage Source 13BTF Once per battle, you can expend a banked roll of 6 on an icon relationship as part of your quick action to start raging. (Players are encouraged to come up with a narrative reason for how the icon relationship inspires this legendary rage.) Doing so lets you roll 3d20 on your barbarian melee and thrown weapon attacks; if any two of these rolls are natural 11+, you score a critical hit as usual per the rage class feature. This benefit persists until you score a critical hit. Epic Feat The benefit of Legendary Rage now persists until you have scored two critical hits."
+    },
+    {
+      "name": "Meat Grinder",
+      "source": "DATP",
+      "tier": "Epic",
+      "full_text": "Meat Grinder Source DATP When an enemy misses with a melee attack against you, you can make a melee attack against them as an interrupt action. Epic Feat Once per battle, use this talent as a free action (ignoring the limit of one interrupt action between your turns)."
+    },
+    {
+      "name": "Might of the Demigod",
+      "source": "DATP",
+      "tier": "Epic",
+      "full_text": "Might of the Demigod Source DATP Special: You can only choose this talent as a single-class barbarian. Increase your Strength and Constitution scores by 4. Epic Feat Increase your Dexterity, Intelligence, Wisdom and Charisma scores by 1."
+    },
+    {
+      "name": "Survival Sacrifice",
+      "source": "EB",
+      "tier": "Epic",
+      "full_text": "Survival Sacrifice Source EB Once per day, you can spend a recovery to turn a regular hit into a critical hit. Epic Feat You can use Survival Sacrifice once per battle."
+    },
+    {
+      "name": "Furies: A Rage Variant",
+      "source": "EB",
+      "tier": "Epic",
+      "full_text": "Furies: A Rage Variant Source EB As described in the 13th Age Roleplaying Game, barbarians are an intentionally straightforward class. Where other classes are building combos with maneuvers and casting multiple spells in search of tactical synergy, you just rage and hit things real hard. Not that there’s anything wrong with that—in fact, that’s the point! If you’re seeking something a little more complex, however, we offer an addition to barbarian rage: Furies. The concept is simple, when you’re raging, you can voluntarily end your rage early (at the end of your turn) to get one big attack that represents the culmination of your efforts—one final paroxysm of berserker rage. It’s a high-reward decision (those Fury attacks are pretty good), but it’s high risk as well, because you won’t have the attack advantage that Rage offers in the following round. You can mitigate that risk by saving Fury attacks for “finishing moves,” but take it from us: You’ll be tempted to use those Fury attacks as soon as you rage. You may also notice that you’re more likely to start raging, rather than saving the rage for a later battle. Go with that—getting angry is fun! You can choose one Fury for every two barbarian levels you have (rounding down, so you get them at every even-numbered level). You can pick any Fury you like, and you swap out your Furies for new ones whenever you level up. Furies work only if you’re raging, so feats that give you more rages (especially the adventurer feat for Rage itself) are particularly good. Take them! Contagious Rage All your allies have a barbaric side—and you know just how to let it out. Effect: Make a melee attack and resolve it normally, then increase the escalation die by +1. Critical Devastation You channel every last iota of emotion into one decisive blow. Effect: If it hits, your melee attack is a critical hit. Cunning Counter You deliver one final enraged blow—but leave just enough in reserve for a lethal counterattack. Effect: Effect: Make a basic melee attack and resolve it normally. The next time this battle you’re hit by someone you’re engaged with, you can immediately interrupt it by making a basic melee attack. If you hit, the enemy’s attack automatically misses. Cyclone of Blood You get right in your enemy’s face (or whatever passes for a face), forcing your foe to take a step or two backward. Effect: Make a basic melee attack and resolve it normally. The target pops free from you after the attack and is hampered until the start of your next turn. Elusive Prey You channel your remaining anger into dodges and evasions so you live to rage another day. Effect: Make a basic melee attack and resolve it normally. For the rest of the battle, missed attacks do no damage to you. Kill, Crush, Destroy You know you’ve got three great blows left in your mighty thews—and you’re going to make them count. Effect: Make a melee basic attack. For this attack and the rest of the battle, you crit on a 16+ until you’ve delivered three critical hits, at which point your crit range returns to whatever it was before you used this Fury. Pack Mentality You save your remaining anger for murderous attacks on enemies who least expect it. Effect: Make a melee attack and resolve it normally. For the rest of the battle, you can make a bonus basic melee attack once per round when an ally hits an enemy you’re engaged with. This basic melee attack deals no damage on a miss. Release the Beast Just as no one can contain your rage, so too can no one hold down your body. Effect: Make a basic melee attack and resolve it normally. Once you’ve done so, break free of any movement-inhibiting spells, effects, or conditions. Tooth and Nail You snarl at your enemies, willing to do anything—including bites, nail-rakes, and other dirty tricks—to exploit the gaps in their armor. Effect: Make a basic melee attack, but target the enemy’s PD, not AC. For the rest of the battle, you can target your foes’ PD with your basic melee attacks. Surprise Savagery Your ultimate attack is such an over-the-top demonstration of barbaric lunacy that your enemies are taken aback. Effect: Make a basic melee attack and resolve it normally. Your target’s MD is reduced by half your level for the rest of the battle. Section 15: Copyright Notice DPAS: Dark Paths & Ancient Secrets . © 2016, Kinoko Games EB: The Escalated Barbarian . © 2019, DASTOW games. Stacey Janssen and David Noonan 13BTF: 13 Barbarian Talents and Feats (13th Age Compatible) . ©2019 Jon Brazer Enterprises DATP: Dark Alleys & Twisted Paths . ©2019, Kinoko Games Check out our other SRD sites! Traveller SRD | 5th Edition SRD | Dungeon World SRD | 13th Age SRD | d20HeroSRD | d20PFSRD | 3.5e SRD | GumshoeSRD | FateCoreSRD | Starjammer SRD | OGN Articles | Fudge SRD | Here Be Monsters | d20 Anime SRD | PF2 SRD | 4 Color SRD (Astonishing Super Heroes) | Into The Unknown | ACK-SRD | 2d20SRD | Everyday Heroes SRD | Heroes and Monsters SRD | Gods and Monsters SRD | Cepheus SRD | Five Torches Deep SRD | Forge Engine SRD | Cairn SRD | Open Fantasy SRD | Monad Echo SRD | True20 SRD | Warrior, Rogue, Mage SRD | Basic Fantasy SRD | OSE SRD | QuestWorlds SRD | Black Flag SRD | PF2SRD (ORC) | Year Zero SRD (OGL) | Grimwild SRD | 2025 5e SRD (5.2) | Trophy SRD OGN Updates This site may earn affiliate commissions from the links on this page. OGN SRD v1.15.3 using Bootstrap New Pages | Recent Changes | Privacy Policy"
+    }
+  ]
+}

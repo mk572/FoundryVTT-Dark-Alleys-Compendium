@@ -1,0 +1,447 @@
+{
+  "class": "Bard",
+  "source_url": "https://www.13thagesrd.com/classes/bard/bard-talents-battlecries-songs-and-spells-3pp/",
+  "fetched_at": "2026-09-12",
+  "page_structure": "Flat list mixing talents, battlecries, songs and spells together, no tier-section grouping like Barbarian. Each entry has its own explicit Source tag. An \"Errata\" note (for March of the Emperor) appears appended near the page footer/copyright block rather than inline with the talent it describes — don't assume position on the page reflects which entry a trailing errata note belongs to; it named the entry explicitly in this case.",
+  "source_abbreviations": {
+    "DATP": "Dark Alleys & Twisted Paths (this module's source book)",
+    "EB": "The Escalated Bard — © 2019, DASTOW Games (confirmed via this page's own copyright footer)"
+  },
+  "entries": [
+    {
+      "name": "Acrobat",
+      "source": "DATP",
+      "full_text": "Acrobat Source DATP You gain a +3 bonus to disengage checks, a +1 bonus to PD, and 3 points towards a background to show off your acrobatic skills. Adventurer Feat Increase your base AC to 13 in light or no armor. Champion Feat You no longer take damage from missed attacks. Epic Feat Increase the PD bonus to +2."
+    },
+    {
+      "name": "Agitator",
+      "source": "EB",
+      "full_text": "Agitator Source EB Special: You cannot take this talent if you have taken the Mourner talent. You have a knack for firing up crowds, whether you’re trying to get them to storm the prison gates or march across no-man’s-land. You feed off others’ sense of injustice and righteous indignation, then channel that power back to them. Whenever a nearby ally suffers one of the following demoralizing events, you choose a nearby conscious ally. That ally heals 1 damage for every level you have. This requires no action on your part, but can be performed only once per turn. Rolling a natural 1 on an attack Suffering from a condition (such as weakened or stunned) Adventurer Feat You may add your Charisma bonus to the healing this talent provides. Champion Feat The ally you choose need not be conscious, and that ally may choose to immediately spend a recovery to heal beyond what this talent provides. Epic Feat You may benefit from this talent any time it triggers, even if that’s more than once per turn."
+    },
+    {
+      "name": "Bardic Familiar",
+      "source": "DATP",
+      "full_text": "Bardic Familiar Source DATP You have enchanted a small animal to become your familiar, as in the wizard’s familiar talent. Like other familiars, it doesn’t join fights and stays somewhere safe. Bards prefer animals that can sing like a bird, dance like a snake, or perform small tricks like a monkey. Your familiar gains two abilities, which you can pick from the wizard list or the bard abilities below. Hypnotic Gaze: Enemies that can see your familiar take a -1 penalty to saves against your spells. Little Rascal: You gain a +2 bonus to checks to pick pockets and steal what’s not nailed down, either because your familiar nicks the item while you’re the distraction, or the other way around. Performer: You gain a +2 bonus to Charisma checks, usually through your familiar aiding your performances. Songbird: Your familiar can keep up the tune of your bard songs, giving you a +1 bonus to sustain checks. Sound of Music: You and your familiar can communicate over distance, with the wind carrying along the music. This also gives your familiar the Scout ability. Adventurer Feat Your familiar gains a third ability. Champion Feat Your familiar gains a fourth ability. Epic Feat Your familiar gains a fifth ability."
+    },
+    {
+      "name": "Blade",
+      "source": "DATP",
+      "full_text": "Blade Source DATP You are a master of stage combat, knife-throwing and other displays of martial arts. While your skills are tested in real battle, you always retain an air of showmanship, even if your opponent is truly out for your blood. Fancy footwork and dashing displays are your lifeblood. Gain three background points in a stage combat background, such as stage fencing, knife-throwing or gladiatorial show combat. When you make a melee or thrown weapon attack with a bladed weapon, you can reroll a natural 2 on the attack roll. If you are fighting with two weapons, you can also reroll a natural 3. You can trigger your bard battle cries with thrown weapon attacks. Adventurer Feat When you hit with an attack, you can forgo the damage and do a stage-worthy stunt instead, such as carving a letter into someone’s shirt, or fling their hat on your head. Champion Feat Gain a fighter maneuver of up to your class level -2 as a bonus power. You can trigger it with your bard basic attacks, like a battle cry. Epic Feat When fighting with a bladed weapon, you gain a +1 bonus to your critical threat range."
+    },
+    {
+      "name": "Bowstring Harmony",
+      "source": "DATP",
+      "full_text": "Bowstring Harmony Source DATP No wild elf is considered an adult before they have fletched their first arrow. For their bards, the bow is not just an instrument of war, it is an instrument of music, and each shot creates a fine harmony. You don’t take a penalty to attack with bows, and you can use your battle cries as flexible ranged attacks as the harmony of your bow inspires your allies. Adventurer Feat Your ranged attacks deal miss damage equal to your level. Champion Feat While you successfully sustain a bardic song, you gain a +1 bonus to ranged attacks with your bow. Epic Feat Once per battle, while you have a bardic song active, you can reroll a ranged attack with a bow."
+    },
+    {
+      "name": "Echo of the Tunnels",
+      "source": "DATP",
+      "full_text": "Echo of the Tunnels Source DATP The bards of the subterranean races, especially dwarves, have learned to use the echo of the caverns to strengthen their bardic magic. When your music can echo off stone, such as in a castle or underground, you have advantage on sustain checks for your bardic songs. Adventurer Feat While underground or within a stone building, you can sustain a bardic song for 1d4 rounds, even if you are knocked unconscious, stunned or silenced, or otherwise unable to use an action to do it. Champion Feat While underground or within a stone building, any daily bard song or spell becomes recharge 16+ for you. Epic Feat While underground or within a stone building, you gain a +1 bonus to attack with bard spells."
+    },
+    {
+      "name": "Fey-touched",
+      "source": "DATP",
+      "full_text": "Fey-touched Source DATP Your past is connected to the fey – maybe it was a satyr who taught you how to play the flute, or maybe you’re a changeling kid that was raised by the fey. You gain a one-point icon relationship with the Elf Queen. This represents your strong connection to the fey realm and its inhabitants over civilized elven society in the mortal realm. Elves notice this connection and treat you with added respect. Starting from 3rd level, choose either sorcerer spells with the Fey keyword, or druid spells from the Circle of the Feysong. You can switch out a bard spell for a spell of the chosen type at a -2 level penalty. Adventurer Feat You can switch out one bard spell without the level penalty. This allows you to switch out a spell before 3rd level. Champion Feat When you disengage from an enemy or teleport away from it, you deal psychic damage equal to twice your level to it. Epic Feat You can switch out a second spell at no level penalty. In addition, you can now take spells of both types."
+    },
+    {
+      "name": "Gift of Inspiration",
+      "source": "DATP",
+      "full_text": "Gift of Inspiration Source DATP A number of times per day equal to your Charisma modifier, as a quick action, you can gift a d4 inspiration die to an ally. Before the end of the battle or scene, the ally can add the die to one d20 roll, such as an attack, save or skill check. The ally can decide to add the die after making the roll. You cannot target allies that currently have an unused inspiration die. You sing an inspiring tune using this talent, so the ally has to be able to hear your voice, and you can’t do it stealthily. Adventurer Feat You gift a d6. Champion Feat You gift a d8, or a d4 to two allies. Epic Feat You gift a d12, or a d6 to two allies."
+    },
+    {
+      "name": "Jack of All Trades",
+      "source": "DATP",
+      "full_text": "Jack of All Trades Source DATP Whenever you make a skill check where none of your backgrounds apply, gain a +1d4 bonus to the roll. Adventurer Feat When you attempt a skill check to do something that an ally just tried and failed, you gain advantage on the roll. Note that in some situations, such as diplomacy, a failed check will increase the difficulty of all subsequent checks. Champion Feat Once per scene, you can grab the exact tool you need that moment from a pocket or your surroundings. Usually, these are mundane tools like a crowbar, but if you are willing to invest an icon relationship roll, you can produce unique items, such as official documents. Explain how you got the item with a flashback scene. These items have one use, so that wand of fireballs will have one charge and that’s it. Epic Feat No skill check ever has a higher DC than 30 for you. Explain it as fool’s luck or a form of supernatural ability."
+    },
+    {
+      "name": "Living Melody",
+      "source": "DATP",
+      "full_text": "Living Melody Source DATP Your being is infused with the essence of the spherical melodies that traverse the ethereal plane. It’s possible that you were born from the idea of music itself. As a standard action, you can dissolve your current physical manifestation and transfer your essence and your equipment into the ethereal plane to merge with the great Song of the Spheres. You can stay in this state as long as you like. When you choose to return, you can go to either the spot where you left, or anywhere in the world where someone plays your melody. In combat, you reappear at the start of your turn. If your physical form is killed, your essence returns to the ethereal plane, but it can take days, and sometimes months to gather the strength to create a new body. Until you gain a level, your damage dice and recovery dice are reduced by one step. The only way to permanently end your existence is to make every mortal forget the melody to call you, or end music itself. Adventurer Feat Even when your essence is on the ethereal plane, you can interact with your friends through music. You can fight in spirit , and you can play or sustain bard songs, but not interfere in other ways. Champion Feat When you take an action to play or sustain a bard song, you heal hit points equal to your level. Epic Feat Once per day, you can whisk yourself away to the ethereal plane as an interrupt action to avoid taking damage and effects from an attack."
+    },
+    {
+      "name": "Luck be a Lady",
+      "source": "DATP",
+      "full_text": "Luck be a Lady Source DATP You gain a number of luck points equal to your Charisma modifier. You can use a luck point as a free action to reroll any of your d20 rolls once. You regain all luck points during a full heal-up. Adventurer Feat If your luck reroll is a natural 20, regain all luck points you spent that day. Champion Feat When you spend a luck point and the reroll is equal to the escalation die or lower, immediately regain that luck point. Epic Feat When you spend your last luck point for the day, make the reroll with advantage."
+    },
+    {
+      "name": "Mourner",
+      "source": "EB",
+      "full_text": "Mourner Source EB Special: You cannot take this talent if you have taken the Agitator talent. You are accustomed to singing dirges and performing requiems, and you draw power from death and near-death experiences. Whenever a nearby creature is reduced to 0 hit points in combat, you choose a nearby conscious ally. That ally heals 1 damage for every level you have. This requires no action on your part, but can be performed only once per turn (so if the barbarian in your party drops five goblins with one Whirlwind attack, you only heal an ally once). Adventurer Feat You may add your Charisma bonus to the healing this talent provides. Champion Feat The ally you choose need not be conscious, and that ally may choose to immediately spend a recovery to heal beyond what this talent provides. Epic Feat You may benefit from this talent any time it triggers, even if that’s more than once per turn."
+    },
+    {
+      "name": "Never Trust a Bard",
+      "source": "DATP",
+      "full_text": "Never Trust a Bard Source DATP Instead of battle cries, you gain the same number of rogue powers, plus one. If you have at least one rogue power that requires momentum, you gain the Momentum class feature. In addition, increase your damage die with small and light one-handed weapons, such as daggers and wicked knives, to d8. Special: You cannot take this talent together with the Battle Skald or Spellsinger talents. Adventurer Feat Once per battle, you can Sneak Attack as a rogue of the same level. Champion Feat Gain an additional rogue power at two levels below your class level. Epic Feat You gain a +2 bonus to hit with melee attacks against enemies that are confused, dazed, stunned, vulnerable to your attack, or weakened."
+    },
+    {
+      "name": "Resounding Battle Cry",
+      "source": "DATP",
+      "full_text": "Resounding Battle Cry Source DATP Once per battle, when you use a battle cry that affects only one target, you can affect multiple allies instead, equal to your Charisma modifier or the escalation die, whichever is lower. Adventurer Feat You can include yourself as a target of the battle cry when you use this talent. Champion Feat The number of targets is no longer limited by the escalation die, only your Charisma modifier. Epic Feat You gain a second use of this talent per battle, but you can only affect two allies with the second use."
+    },
+    {
+      "name": "Silver Tongue",
+      "source": "DATP",
+      "full_text": "Silver Tongue Source DATP Bards have a reputation as sweet talkers, but you take it to a whole new level. Once per session, you can captivate your audience with a story that is so outrageous, so overwhelming, that it becomes the truth because your audience simply wants it to become true, at least in their minds. This is essentially a stunt, and this talent creates a success without the usual hard skill check. If your audience is not willing to listen, like a bunch of cannibals hungry for some gnome stew, your GM can still require a check. You also gain 3 points towards an appropriate background. Adventurer Feat Once per session, you can reroll a failed skill check in a social interaction. Champion Feat You can intervene and reroll the failed skill check of an ally instead, replacing your own skill check with his or hers. Epic Feat You can use Silver Tongue twice per session."
+    },
+    {
+      "name": "Soothing Melody",
+      "source": "DATP",
+      "full_text": "Soothing Melody Source DATP When you grant an ally or yourself a recovery roll to heal with a song, spell or battle cry, add your Charisma modifier to the amount of hit points healed (x2 at 5th level, x3 at 8th). Adventurer Feat The target can decide to spend two recoveries instead of one. Champion Feat The target can also roll a save against a save ends effect. Epic Feat The first time you grant a recovery in a battle, you and all allies other than the target heal hit points equal to three times your Charisma modifier."
+    },
+    {
+      "name": "Soothsayer",
+      "source": "EB",
+      "full_text": "Soothsayer Source EB You gain occasional glimpses of what the future holds. At the start of every turn, you can predict an event from the sidebar below. If the event occurs before your next turn, you earn the associated benefit. Choose a nearby enemy. You predict that enemy will attack but miss on its next turn. If You’re Right That enemy is vulnerable until the start of its next turn. Choose a nearby ally. You predict the ally will score a crit on its next turn. If You’re Right Your ally gains a free basic attack after it resolves the attack, and you gain a free basic attack as well. Choose a nearby creature. You predict that creature will try to disengage on its next turn. If You’re Right You can either make the save to disengage safely easier (6+) or harder (16+). 1st Level Battle Cries"
+    },
+    {
+      "name": "Can’t Touch This!",
+      "source": "DATP",
+      "full_text": "Can’t Touch This! Source DATP Flexible melee attack Triggering Roll: Natural even roll Effect: You gain a +1 bonus to AC and PD until the end of your next turn. Adventurer Feat You also take no damage or effects from missed attacks until the end of your next turn. Champion Feat Increase the bonus to +2. Epic Feat Increase the bonus to +3."
+    },
+    {
+      "name": "Follow the Beat!",
+      "source": "DATP",
+      "full_text": "Follow the Beat! Source DATP Flexible melee attack Triggering Roll: Natural even roll Effect: You gain a +2 bonus to your next check to sustain a bard song this turn. Adventurer Feat The bonus is equal to your Dexterity modifier instead."
+    },
+    {
+      "name": "Like This!",
+      "source": "EB",
+      "full_text": "Like This! Source EB Flexible melee attack Triggering Roll: Natural 16+ Effect: Give a nearby ally a damage bonus equal to your Charisma bonus (minimum +1) until the end of your next turn. Adventurer Feat Nearby allies can immediately make a save against save-ends effects that began with an attack that targeted their MD. Champion Feat All nearby allies gain the damage bonus. Epic Feat The damage bonus is double your Charisma bonus."
+    },
+    {
+      "name": "Ready to Rock!",
+      "source": "DATP",
+      "full_text": "Ready to Rock! Source DATP Flexible melee attack Triggering Roll: Natural odd roll Effect: You gain temporary hit points equal to your Charisma modifier (x2 at 5th level; x3 at 8th). Adventurer Feat Add your level to the temporary hit points gained."
+    },
+    {
+      "name": "You Don’t Dance!",
+      "source": "DATP",
+      "full_text": "You Don’t Dance! Source DATP Flexible melee attack Triggering Roll: Natural odd hit Effect: The target takes a penalty on its next attack roll equal to your Charisma modifier. Champion Feat If the target is a mook, the entire group takes the penalty. Epic Feat The attack penalty is “save ends”. A group of mooks makes one save for the group. 1st Level Spells & Songs"
+    },
+    {
+      "name": "Advanced Acrobatics",
+      "source": "DATP",
+      "full_text": "Advanced Acrobatics Source DATP Close-quarters spell; Daily; Quick action Target: You or a nearby ally Effect: Until the next quick rest, the target has advantage on Dexterity-based skill checks. Adventurer Feat The target also has advantage on disengage checks. Champion Feat The target also gains a +1 bonus to AC and PD. Epic Feat The target also gains a +1 bonus to Dexterity-based attack rolls."
+    },
+    {
+      "name": "Animated Betrayal",
+      "source": "DATP",
+      "full_text": "Animated Betrayal Source DATP Ranged spell; At-will Target: Two nearby enemies Attack: Charisma + Level vs. MD Hit: Psychic damage equal to the other target’s normal attack damage (without effects) Miss: Damage equal to the other target’s level"
+    },
+    {
+      "name": "Birdsong",
+      "source": "DATP",
+      "full_text": "Birdsong Source DATP Close-quarters spell; Daily Effect: Until the next quick rest, you speak the language of birds. You can imitate their songs and communicate with them, within the limits of a bird’s intelligence and understanding of the world. Adventurer Feat You can extend the effect to a nearby ally."
+    },
+    {
+      "name": "Cutting Words",
+      "source": "DATP",
+      "full_text": "Cutting Words Source DATP Close-quarters spell; At-will Target: One nearby enemy Attack: Charisma + Level vs. MD Hit: 1d6 + Charisma psychic damage, and the target takes a 1d6 penalty to its next attack roll. Miss: The target gains a 1d6 bonus to its next attack roll against you. 3 rd level spell: 3d6 damage 5 th level spell: 5d6 damage 7 th level spell: 7d6 damage 9 th level spell: 10d6 damage"
+    },
+    {
+      "name": "Ditty of the Bumbling Fools",
+      "source": "DATP",
+      "full_text": "Ditty of the Bumbling Fools Source DATP Bardic song; Recharge 6+ after battle Quick action each turn; 11+ to sustain; automatic sustain if a natural 1 was rolled during or after your last turn Opening & Sustained Effect: If an ally rolls a natural 1 on a d20 roll, they gain temporary hit points equal to your Charisma + Level. If an opponent rolls a natural 1 on a d20 roll, they take psychic damage equal to your Charisma + Level. Final Verse: Choose an enemy. That enemy must immediately make a save or its next attack roll is a natural 1. Adventurer Feat Target 1d3 enemies with the final verse. Champion Feat Double the temporary hit points and damage. Epic Feat Also grant temporary hit points on natural 2."
+    },
+    {
+      "name": "Don’t Call It a Comback",
+      "source": "EB",
+      "full_text": "Don’t Call It a Comback Source EB Ranged song; Recharge 11+ after battle Target: One nearby ally who is staggered Effect: Your ally gains a +1 bonus on attack and damage rolls as long as he or she remains staggered 3 rd level spell: The bonus increases to +2. 5 th level spell: The bonus increases to +3. 7 th level spell: The bonus increases to +4. 9 th level spell: The bonus increases to +5. Adventurer Feat You can use this spell on yourself if you wish. Champion Feat The attack bonus also applies to saving throws. Epic Feat The bonuses persist for the rest of the battle."
+    },
+    {
+      "name": "Drinking Buddies",
+      "source": "DATP",
+      "full_text": "Drinking Buddies Source DATP Ranged spell; Daily Effect: Until the end of the scene, you gain a 1d6 bonus to skill checks against NPCs who have shared a drink with you. Adventurer Feat Also grant the bonus to all nearby allies."
+    },
+    {
+      "name": "Enchant Instrument",
+      "source": "DATP",
+      "full_text": "Enchant Instrument Source DATP Close-quarters spell; Daily; Quick action Target: A musical instrument Effect: You imbue the target item with the ability to play itself until the end of the battle or scene, which provides a +1 bonus to perform checks and sustain checks for bard songs. It acts as an implement for your bard spells, with a +1 bonus to attack and damage rolls. 5 th level spell: Increase the bonuses to +2. 9 th level spell: Increase the bonuses to +3. Adventurer Feat The spell becomes recharge 11+. Champion Feat Enemies take a penalty to saves against your spells equal to the enchantment bonus. Epic Feat Gain advantage on the first spell attack roll you make with the enchanted instrument."
+    },
+    {
+      "name": "Pounding Voice",
+      "source": "DATP",
+      "full_text": "Pounding Voice Source DATP Close-quarters spell; Once per battle Target: One nearby enemy Attack: Charisma + Level vs. PD Hit: 3d6 + Charisma thunder damage. Until the end of the battle, whenever you use a battlecry, the target takes 1d6 psychic damage. Miss: Half damage 3 rd level spell: 5d6 damage; 2d6 on battlecry 5 th level spell: 8d6 damage; 3d6 on battlecry 7 th level spell: 12d6 damage; 4d6 on battlecry 9 th level spell: 2d6 x 10 damage; 6d6 on battlecry Champion Feat You regain the spell when you rally."
+    },
+    {
+      "name": "Power Chord",
+      "source": "DATP",
+      "full_text": "Power Chord Source DATP Close-quarters spell; Once per battle Target: 1d3 nearby enemies in a group Attack: Charisma + Level vs. MD Hit: 1d12 + Charisma psychic damage, and an ally engaged with the target gains advantage on their next attack against it. Miss: Damage equal to your level 3 rd level spell: 2d12 damage 5 th level spell: 3d12 damage 7 th level spell: 4d12 damage 9 th level spell: 6d12 damage Adventurer Feat If you currently have a bard song active, gain a +1 bonus to the attack roll. Champion Feat On a natural even hit, grant advantage to a second nearby ally. The ally does not need to be engaged with the target. Epic Feat Attack 1d4 nearby enemies."
+    },
+    {
+      "name": "Riding into Battle",
+      "source": "DATP",
+      "full_text": "Riding into Battle Source DATP Ranged spell; Daily; Quick action Effect: You and all nearby allies gain 2d10 temporary hit points. 3 rd level spell: 3d10 temporary hit points 5 th level spell: 4d10 temporary hit points 7 th level spell: 5d10 temporary hit points 9 th level spell: 7d10 temporary hit points Champion Feat You can use this spell twice per day."
+    },
+    {
+      "name": "Song of Sustenance",
+      "source": "DATP",
+      "full_text": "Song of Sustenance Source DATP Bardic song; Recharge 11+ after battle; Quick action each turn; 11+ to sustain Opening & Sustained Effect: At the start of each of your nearby allies’ turns, they heal damage equal to your Charisma bonus (minimum +1). Final Verse: The effect ends immediately, and one ally of your choice can immediately heal using a recovery. 3 rd level spell: The heal amount is 2 + your Charisma bonus. 5 th level spell: The heal amount is 4 + your Charisma bonus. 7 th level spell: The heal amount is 6 + your Charisma bonus. 9 th level spell: The heal amount is 8 + your Charisma bonus."
+    },
+    {
+      "name": "Wild Dance",
+      "source": "DATP",
+      "full_text": "Wild Dance Source DATP Bardic song; Recharge 11+ after battle; Quick action each turn; 11+ to sustain Opening & Sustained Effect: You or a nearby ally can immediately pop free from all enemies or engage a nearby enemy as a free action. Final Verse: You or a nearby ally can immediately make a melee basic attack against a nearby enemy as a free action. Adventurer Feat Target both yourself and one nearby ally with opening, sustain and final verse. Gain this feat for free if you have a positive icon relationship with the High Druid. Champion Feat The target of the final verse effect can trigger flexible attacks like fighter maneuvers and bard battle cries with the attack, if they have any. 3rd Level Battle Cries"
+    },
+    {
+      "name": "Concentrate!",
+      "source": "EB",
+      "full_text": "Concentrate! Source EB Flexible melee attack Triggering Roll: Natural even roll Effect: Give nearby allies a +2 bonus to their MD until the end of your next turn. Adventurer Feat Nearby allies can immediately make a save against save-ends effects that began with an attack that targeted their MD. Champion Feat The MD bonus equals your Charisma bonus. Epic Feat The battle cry also affects far away allies and you."
+    },
+    {
+      "name": "Hammer Time!",
+      "source": "DATP",
+      "full_text": "Hammer Time! Source DATP Flexible melee attack Triggering Roll: Natural odd hit Effect: Your attack deals 1d6 extra thunder damage (5th level: 2d6; 8th level: 3d6). Champion Feat Increase the extra damage dice to d8."
+    },
+    {
+      "name": "Let’s Smack Them!",
+      "source": "DATP",
+      "full_text": "Let’s Smack Them! Source DATP Flexible melee attack; Once per battle Triggering Roll: Natural even hit Effect: All nearby allies deal one additional WEAPON damage die on hit or miss with melee attacks until the end of your next turn. 5 th level battle cry: 2 weapon dice 9 th level battle cry: 3 weapon dice Adventurer Feat Grant the bonus die to damage with all attacks. If the attack uses no WEAPON die, add 1d6."
+    },
+    {
+      "name": "This Will Blow Your Mind!",
+      "source": "DATP",
+      "full_text": "This Will Blow Your Mind! Source DATP Flexible melee attack Triggering Roll: Natural even hit Effect: The next attack against the target’s MD has advantage. Champion Feat Also deal extra psychic damage equal to your level. 3rd Level Spells & Songs"
+    },
+    {
+      "name": "Animated Theater",
+      "source": "DATP",
+      "full_text": "Animated Theater Source DATP Ranged spell; Recharge 11+ Effect: You create a three-dimensional, animated visual illusion, roughly the size of a chest, for up to an hour. You can use the illusion to recreate events, entertain an audience, or add visuals to your music. You must concentrate on the spell to keep the illusion going. 5 th level spell: You can now create an illusion the size of a wardrobe. 7 th level spell: The illusion is now the size of a stage. Adventurer Feat The illusion can create sounds and smells too."
+    },
+    {
+      "name": "Dazed and Confused",
+      "source": "EB",
+      "full_text": "Dazed and Confused Source EB Ranged spell; Recharge 11+ Target: One nearby enemy Hit: The enemy is dazed (save ends). If the enemy fails the first save, it is no longer dazed but is confused (save ends) instead. Miss: — Adventurer Feat You can target a far away enemy, but if you do, the saving throw is 6+. Champion Feat This spell doesn’t provoke opportunity attacks from the target. Epic Feat The enemy is stunned (save ends) instead of dazed."
+    },
+    {
+      "name": "High Tide Sea Shanty",
+      "source": "DATP",
+      "full_text": "High Tide Sea Shanty Source DATP Ranged spell; Daily Effect: You rouse the crew of a ship to work in unison. The difficulty of all seafaring-related checks for the scene is lowered one step (by 5)."
+    },
+    {
+      "name": "Incite Rage",
+      "source": "DATP",
+      "full_text": "Incite Rage Source DATP Ranged spell; Daily Target: A nearby creature Attack: Charisma + Level vs. MD Hit: The target gains a +4 bonus to their critical threat range with melee attacks, but takes a -4 penalty to all defenses (save ends). If the target does not attack on its turn, it takes psychic damage equal to twice its level at the end of that turn. Miss: If you have a positive relationship with the Orc Lord, regain this spell at the end of the battle. Special: When you target an ally with this spell, you don’t require an attack roll, and the target can choose to remain under the effect, without saving against it. Adventurer Feat The target also takes a -2 penalty to melee attack rolls. If you target an ally, they gain a +2 bonus instead."
+    },
+    {
+      "name": "Lucky Break",
+      "source": "DATP",
+      "full_text": "Lucky Break Source DATP Ranged spell; Daily; Quick action Target: You or a nearby ally. If you have a positive icon relationship with the Shadow Prince, target both. Effect: Until the end of the battle or scene, the target increases the natural roll of all its d20 rolls by 1. A natural 20 remains a natural 20. A natural 1 ends the spell. Adventurer Feat If the target rolls a natural 20, it can heal using a recovery as a free action. Champion Feat The recovery granted by the natural 20 is free."
+    },
+    {
+      "name": "March of the Emperor",
+      "source": "DATP",
+      "full_text": "March of the Emperor Source DATP Bardic song; Daily; Quick action each turn; 16+ to sustain (11+ if you have a positive icon relationship with the Emperor) Opening & Sustained Effect: A nearby group of mooks (with up to one mook per song level + your Charisma modifier) must succeed at a normal save. If they fail, you control them during their next turn. Undead are immune to the effect unless you have a positive icon relationship with the Lich King. Final Verse: Every mook that you have successfully controlled with this spell at least once is stunned until the end of your next turn."
+    },
+    {
+      "name": "Ode to Heroism",
+      "source": "DATP",
+      "full_text": "Ode to Heroism Source DATP Bardic song; Recharge 16+ after battle; Quick action each turn; 11+ to sustain (6+ if you have a positive icon relationship with the Great Gold Wyrm) Opening & Sustained Effect: Choose an enemy. You and all nearby allies are immune to its fear aura (if any), and gain a +2 bonus to saves against any save ends effects it imposes. Final Verse: You and all nearby allies can save against a save-ends effect imposed by the target. Adventurer Feat You can choose two enemies for the song’s effects. Champion Feat You and all nearby allies are immune to the fear aura until the end of the battle, even after the song ends."
+    },
+    {
+      "name": "Phantom Crowd",
+      "source": "DATP",
+      "full_text": "Phantom Crowd Source DATP Ranged spell; Daily Effect: You create the illusion of a group of 2d6 people. You can decide the appearance of the crowd freely, from playing children to a band of roving orcs. The illusion is both visual and auditory. However, anything physical passes through the crowd. 5 th level spell: 1d4 x 10 people 7 th level spell: 2d6 x 10 people 9 th level spell: 3d6 x 10 people"
+    },
+    {
+      "name": "Song of Allegro",
+      "source": "EB",
+      "full_text": "Song of Allegro Source EB Bardic song; Recharge 11+ after battle Quick action each turn; 11+ to sustain Opening & Sustained Effect: Your nearby allies gain a +4 bonus on disengage saves. Final Verse: The effect ends immediately, but on their next turn, all nearby allies can disengage without drawing opportunity attacks. 5 th level spell: You also gain a bonus on disengage saves. 7 th level spell: You and your nearby allies can intercept enemies even while engaged. 9 th level spell: You and your allies move far away during disengagement."
+    },
+    {
+      "name": "Song of Clashing Swords",
+      "source": "DATP",
+      "full_text": "Song of Clashing Swords Source DATP Bardic song; Daily Quick action each turn; 16+ to sustain Opening & Sustained Effect: All nearby allies gain a +2 bonus to their AC against melee attacks. Final Verse: Nearby allies have advantage on their next melee attack roll. Champion Feat On the final verse, enemies are also vulnerable to your allies’ next melee attack. 5th Level Battle Cries"
+    },
+    {
+      "name": "Fear the Dark!",
+      "source": "DATP",
+      "full_text": "Fear the Dark! Source DATP Flexible melee attack Triggering Roll: Natural odd hit Effect: Mark the target. At the start of any turn this battle, if the target is hiding or has moved to a far away location, you can end the mark and make a melee attack against the target as a standard action as if you were engaged with it. The attack targets MD and deals psychic damage. Champion Feat The attack above is a free action. If you have a positive icon relationship with the Shadow Prince, you gain this feat for free."
+    },
+    {
+      "name": "I’m Just Messing with You!",
+      "source": "DATP",
+      "full_text": "I’m Just Messing with You! Source DATP Flexible melee attack Triggering Roll: Natural even miss Effect: Your next melee attack against this enemy targets the lower of their AC and MD. Champion Feat You can use this battle cry on an odd miss once per battle."
+    },
+    {
+      "name": "Push It!",
+      "source": "EB",
+      "full_text": "Push It! Source EB Flexible melee attack Triggering Roll: Any hit Effect: Until the end of your next turn, your nearby allies can treat any attack roll as even for the purposes of triggers and flexible attacks. Champion Feat Your allies can add +1 to their attack roll if it was naturally odd to begin with. Epic Feat This battle cry also affects you, but you can’t use it to trigger Push It! next turn."
+    },
+    {
+      "name": "Shift Formation!",
+      "source": "EB",
+      "full_text": "Shift Formation! Source EB Flexible melee attack Triggering Roll: Natural even roll Effect: Until the end of your next turn, your nearby allies automatically succeed on disengage checks and can intercept enemies even if they’re engaged (doing so pops them free). Champion Feat The stuck condition ends for nearby allies, and they pop free from any enemies who’ve grabbed them. Epic Feat This battle cry also affects far away allies and you."
+    },
+    {
+      "name": "Stop Messing Around!",
+      "source": "DATP",
+      "full_text": "Stop Messing Around! Source DATP Flexible melee attack Triggering Roll: Natural even hit Effect: The next ally who misses an attack before the end of your next turn can reroll it once. Champion Feat If no ally misses an attack roll before the end of your next turn, increase the escalation die by 1."
+    },
+    {
+      "name": "That’s the Sound of Victory!",
+      "source": "DATP",
+      "full_text": "That’s the Sound of Victory! Source DATP Flexible melee attack Triggering Roll: Natural even hit Effect: Make a sustain check for a bard song as a free action. Champion Feat Add your Charisma modifier to the roll."
+    },
+    {
+      "name": "Time to Dance!",
+      "source": "DATP",
+      "full_text": "Time to Dance! Source DATP Flexible melee attack Triggering Roll: Natural 5, 6, 7, 8 Effect: You pop free from the target, and a nearby ally pops free from all enemies and engages the target. Champion Feat A second nearby ally can also pop free and engage the target. 5th Level Songs & Spells"
+    },
+    {
+      "name": "Captivating Story",
+      "source": "DATP",
+      "full_text": "Captivating Story Source DATP Close-quarters spell; Daily Target: A group of people you are telling a story to Attack: Charisma + Level vs. the highest MD Hit: You captivate your audience with a story that is so outrageous, so overwhelming that it becomes the truth in their minds. Miss: Your audience loses interest and disperses. Champion Feat You can use an appropriate skill as a bonus to the “attack” roll."
+    },
+    {
+      "name": "Ethereal Dancers",
+      "source": "DATP",
+      "full_text": "Ethereal Dancers Source DATP You summon a group of ghostly dancers who surround your enemies and invite them to dance. Bardic song; Daily Standard action each turn; 11+ to sustain Opening & Sustained Effect: Make the following attack against the nearby enemy with the lowest hit points. If it’s a mook, target the entire group. Skip targets that are already under the effect of the song. Attack: Charisma + Level vs. MD Hit: The target enters a wild dance (save ends). It can move, but it cannot take other actions. If the target takes damage, the effect ends. Natural even hit: Repeat the attack against the next nearby enemy with the lowest hit points that is not currently under the spell. Miss: The target is dazed until the end of your next turn. Final Verse: All targets currently under the effect of the spell are stunned until the end of your next turn, then the effect ends. Champion Feat Gain a +1 bonus to your sustain check for each target currently under the effect. Epic Feat Allies can give you advantage on your next attack roll with the song if they spend a standard action joining the dance instead of attacking."
+    },
+    {
+      "name": "Glamor Shield",
+      "source": "DATP",
+      "full_text": "Glamor Shield Source DATP Close-quarters spell; Daily (Recharge 16+ if you have a positive icon relationship with the Elf Queen); Quick action Always: For the rest of the battle, once per round when an enemy moves to engage you, you can make the following attack against it as a free action before it has the chance to attack in melee. Attack: Charisma + Level vs. MD Natural Even Hit: Teleport yourself to somewhere you can see. The attack has no effect as the enemy attacks an illusory image of you. Natural Odd Hit: 5d6 + Charisma damage, and the target is dazed until the end of your next turn. Miss: — 7 th level spell: 7d6 damage 9 th level spell: 10d6 damage Champion Feat You can place the shield on a nearby ally instead. Epic Feat On a natural even miss, you take half damage from the target’s attacks until the end of the turn."
+    },
+    {
+      "name": "Rewrite History",
+      "source": "EB",
+      "full_text": "Rewrite History Source EB Close-quarters spell; Daily Target: You and all nearby allies. Effect: Until the start of your next turn, reroll all successful attacks made against a target of this spell. The attacks succeed only if the second roll is also a hit. Champion Feat Targets of this spell can reroll unsuccessful saving throws if they wish, taking the second result instead. Epic Feat Whenever this spell turns an enemy’s hit into a miss, deal damage to that enemy equal to your level."
+    },
+    {
+      "name": "Song of Careless Refrain",
+      "source": "EB",
+      "full_text": "Song of Careless Refrain Source EB Bardic song; Recharge 11+ after battle Quick action each turn; 11+ to sustain Opening & Sustained Effect: Choose a nearby ally to gain an extra move action during the next turn. Final Verse: The effect ends immediately, but on their next turn, all nearby allies gain an extra move action during their next turn. 7 th level song: You also grant yourself the extra move action. 9 th level song: You can grant a melee basic attack instead of a move action."
+    },
+    {
+      "name": "Song of the Mockingbird",
+      "source": "DATP",
+      "full_text": "Song of the Mockingbird Source DATP Bardic song; Daily Quick action each turn; 6+ to sustain Opening & Sustained Effect: All nearby enemies take a -2 penalty to their saves. If an enemy fails a save, it takes psychic damage equal to your level (but note that a natural 18+ on a save always succeeds). Final Verse: The effect ends immediately. Deal 1d6 psychic damage per level to a nearby enemy. Champion Feat Enemies who fail a save are also dazed (-4 to attacks) until the end of their next turn. Epic Feat Increase the save penalty to -4."
+    },
+    {
+      "name": "Symphony of Pain",
+      "source": "DATP",
+      "full_text": "Symphony of Pain Source DATP Ranged spell; Daily Target: One nearby enemy (OR all nearby staggered enemies if you have a positive icon relationship with the Diabolist) Attack: Charisma + Level vs. MD Hit: 15 ongoing psychic damage. The target is also weakened (-4 to attacks and defenses) and enraged (attacks deal extra damage equal to twice its level). A save ends all three conditions. Miss: The target is dazed until the end of your next turn. 7 th level spell: 25 ongoing psychic damage 9 th level spell: 40 ongoing psychic damage Champion Feat If the target is staggered, you gain a +2 bonus to the attack. Epic Feat The save is now a hard save."
+    },
+    {
+      "name": "Unleash Chaos & Mayhem",
+      "source": "DATP",
+      "full_text": "Unleash Chaos & Mayhem Source DATP You animate nearby objects that are not nailed down to create a tornado of flying hazards that strike at anyone who is not taking cover immediately. Close-quarters, Daily Target: 1d4 nearby enemies, or 2d4 if cast recklessly Attack: Charisma + Level vs. AC Hit: 1d6 x 10 + Charisma damage Miss: Half damage Reckless miss: 10 damage to all allies engaged with the target Always: The obstacles you scatter across the battlefield give all disengage checks disadvantage until the end of your next turn. 7 th level spell: 2d4 x 10 damage; 15 damage on reckless miss 9 th level spell: 2d8 x 10 damage; 20 damage on reckless miss Champion Feat The spell is now recharge 16+. 7th Level Battle Cries"
+    },
+    {
+      "name": "Cover Me!",
+      "source": "DATP",
+      "full_text": "Cover Me! Source DATP Flexible melee attack; Once per battle Triggering Roll: Natural odd miss Effect: A nearby ally can make a ranged basic attack against the target, and you pop free. Epic Feat The ally can use any standard action ranged attack."
+    },
+    {
+      "name": "Dig Deep!",
+      "source": "EB",
+      "full_text": "Dig Deep! Source EB Flexible melee attack Triggering Roll: Natural even roll Effect: Nearby allies can immediately spend a recovery to end a save-ends effect. Epic Feat Your allies also heal their recovery dice amount as if they’d spent the recovery to heal."
+    },
+    {
+      "name": "Don’t Quit On Me!",
+      "source": "EB",
+      "full_text": "Don’t Quit On Me! Source EB Flexible melee attack Triggering Roll: Any hit Effect: Nearby allies can immediately attempt a death save, even though it isn’t the start of the allies’ turn. If the save fails, it doesn’t count as one of the four failed death saves that result in death. Epic Feat One nearby ally (you choose which) automatically succeeds at the extra death save, as if the ally had rolled a 16"
+    },
+    {
+      "name": "I Meant to Do That!",
+      "source": "DATP",
+      "full_text": "I Meant to Do That! Source DATP Flexible melee attack; Once per battle Triggering Roll: Natural even miss Effect: Reroll the attack with a +2 bonus. Epic Feat If the second attack roll is a miss, gain a +2 bonus to all defenses until the end of your next turn."
+    },
+    {
+      "name": "Screw This!",
+      "source": "DATP",
+      "full_text": "Screw This! Source DATP Flexible melee attack Triggering Roll: Natural 1 Effect: You can reduce the escalation die by one to reroll the attack. Pop free from all enemies after the attack."
+    },
+    {
+      "name": "Welcome to my Nightmare!",
+      "source": "DATP",
+      "full_text": "Welcome to my Nightmare! Source DATP Flexible melee attack Triggering Roll: Natural odd hit Effect: Deal 1d20 psychic damage against the target. 9 th level battle cry: 2d20 damage 7th Level Songs & Spells"
+    },
+    {
+      "name": "Dissonant Scream",
+      "source": "EB",
+      "full_text": "Dissonant Scream Source EB Ranged spell; Daily Target: One nearby enemy Attack: Charisma + Level vs. MD Hit: 2d4 x 10 psychic damage, and 20 ongoing psychic damage. Miss: 20 ongoing psychic damage, and you regain the spell during your next quick rest. 9 th level battle cry: 4d4 x 10 damage, and 30 ongoing damage; 30 ongoing damage on a miss Epic Feat This spell becomes a close-quarters spell targeting all nearby creatures."
+    },
+    {
+      "name": "Dancing Blade",
+      "source": "DATP",
+      "full_text": "Dancing Blade Source DATP Bardic song; Daily; Quick action; 6+ to sustain Opening & Sustained Effect: A melee weapon you are holding flies out to make a melee attack on its own. Make a melee basic attack (no battle cries) against a nearby enemy. Final Verse: The weapon flies out to make another melee attack. Champion Feat With the final verse, If the natural roll of that attack was even, make another attack against a different nearby enemy. Keep attacking until you have run out of targets, or until an attack roll is odd."
+    },
+    {
+      "name": "Manic Cacophony",
+      "source": "DATP",
+      "full_text": "Manic Cacophony Source DATP Bardic song; Daily Standard action each turn; 16+ to sustain Opening & Sustained Effect: Make the following against the 1d3 nearby enemies with the lowest hit point total. Attack: Charisma + Level vs. MD Hit: If the target has 125 hit points or fewer, it is confused until the end of your next turn. If it has more, it is dazed instead. Miss: If the target has 125 hit points or fewer, it is dazed until the end of your next turn. Otherwise, no effect. Final Verse: Make the attack against 2d4 nearby enemies, or attack one enemy with a +4 bonus and no hit point limit. 9 th level song: Increase the hit point limit to 250 hit points. Champion Feat This song is now 11+ to sustain."
+    },
+    {
+      "name": "Otherworldly Voice",
+      "source": "DATP",
+      "full_text": "Otherworldly Voice Source DATP Close-quarters spell; Daily Target: You Effect: Until the rest of the scene, your voice becomes as soothing as a bath in the springs of Elysium, or as cutting as the sharpest knife. It can fill the arena of Axis and still be heard in the outskirts of the city, or carry across the planes to whisper in the ears of a god. It can bring a tear to the cheek of the Elf Queen or a smile to the face of an Archdemon. This spell allows you to achieve a feat with your voice that would normally require a ridiculously hard skill check at epic tier (DC 35)."
+    },
+    {
+      "name": "Roar of the Great Gold Wyrm",
+      "source": "DATP",
+      "full_text": "Roar of the Great Gold Wyrm Source DATP Bardic song; Daily; Quick action; 16+ to sustain Opening & Sustained Effect: Creatures with fewer hit points than you cannot attack you. Final Verse: If you have succeeded at at least one sustain check for this song, take an extra standard action this turn. If you have a positive icon relationship with the Great Gold Wyrm, one ally can take an extra standard action for each successful check past the first."
+    },
+    {
+      "name": "Song of Elemental Harmony",
+      "source": "EB",
+      "full_text": "Song of Elemental Harmony Source EB Bardic song; Daily Quick action; 6+ to sustain Opening & Sustained Effect: Choose a nearby ally who made an attack last turn. You and your other nearby allies gain the damage type that the chosen ally used for your next attack. Final Verse: The effect ends immediately, and you gain resistance 16+ to a damage type you chose at any point during the song. 9 th level song: You may choose a type a nearby enemy used last turn."
+    },
+    {
+      "name": "Time to Fly",
+      "source": "DATP",
+      "full_text": "Time to Fly Source DATP Close-quarters, Daily Target: You and a number of willing allies equal to your Charisma bonus Effect: You transform all targets and their equipment into birds. The main purpose of this spell is overland travel, as you can’t use items or abilities while in bird form. The targets can still communicate with each other, but their words sound like chirping and twittering to anyone else. The effect lasts until the next sunrise or sundown, or until you end it. Any flying targets fall to the ground like feathers when the spell ends. The spell also ends on any target that takes damage. Epic Feat Double the number of creatures you can target. 9th Level Battle Cries"
+    },
+    {
+      "name": "Fight the Good Fight!",
+      "source": "DATP",
+      "full_text": "Fight the Good Fight! Source DATP Flexible melee attack; Daily Triggering Roll: Natural 16+ Effect: Increase the escalation die by 1. Epic Feat Roll a second d20 (without making an attack) and trigger a second battle cry based on that roll. If you have a positive icon relationship with the Crusader, you gain this feat for free."
+    },
+    {
+      "name": "I’ve Got Another One for You!",
+      "source": "DATP",
+      "full_text": "I’ve Got Another One for You! Source DATP Flexible melee attack; Once per battle Triggering Roll: Natural 18+ Effect: Cast a bard spell as a quick action this turn."
+    },
+    {
+      "name": "Never Gonna Give You Up!",
+      "source": "DATP",
+      "full_text": "Never Gonna Give You Up! Source DATP Flexible melee attack; Daily Triggering Roll: Natural even roll Effect: Every ally that is currently at 10 hit points or less, including dying and stabilized allies, can spend a recovery to heal and heals the maximum amount. Epic Feat You grant the effect to all staggered allies. If you have a positive icon relationship with the Priestess, you gain this feat for free."
+    },
+    {
+      "name": "Regroup!",
+      "source": "EB",
+      "full_text": "Regroup! Source EB Flexible melee attack Triggering Roll: Any hit Effect: At the end of your turn, the battle effectively starts over, with the escalation die at 1 and every participant rerolling initiative. All participants regain per-battle spells and effects as if they’d never been expended. Epic Feat You can set the escalation die to 4 if you wish."
+    },
+    {
+      "name": "Snap Out of It!",
+      "source": "EB",
+      "full_text": "Snap Out of It! Source EB Flexible melee attack Triggering Roll: Natural even roll Effect: A nearby ally loses one of the following conditions: confused, dazed, fear, hampered, stunned, vulnerable, and weakened. Epic Feat The battle cry can affect you instead of an ally if you wish. 9th Level Songs & Spells"
+    },
+    {
+      "name": "Borrow from the Future",
+      "source": "EB",
+      "full_text": "Borrow from the Future Source EB Close-quarters spell; Recharge 16+ after battle Target: You and all nearby or far away allies Effect: Reduce the escalation die by 1 Until the start of your next turn, targets of this spell gain a +2 bonus on all attack rolls."
+    },
+    {
+      "name": "Dance to My Tune",
+      "source": "DATP",
+      "full_text": "Dance to My Tune Source DATP Ranged spell; Daily Target: One nearby enemy with 300 hit points or fewer Attack: Charisma + Level vs. MD Hit: You dominate the target (save ends). At the start of the target’s turn, you can command it to act as you like. If you give the target a command that it has a strong reason to resist, such as one that would harm itself or its friends, it can save against the effect immediately (in addition to the normal save at the end of its turn). Miss: The target notices your attempt to intrude into its mind. Epic Feat On a natural even miss, your domination attempt remains undetected."
+    },
+    {
+      "name": "Grand Illusion",
+      "source": "DATP",
+      "full_text": "Grand Illusion Source DATP Ranged spell; Daily Target: An entire castle or similar sized area Effect: You create an illusion that covers the entire area with new sights, sounds, and smells. The illusion is not solid, so if you were to create an illusory wall, anyone can walk right through it. The closer the illusion is to the shape of the terrain it covers, the more believable it is. Those who perceive the illusion, but have a reason to doubt it, can make a save to see through it. They still see the illusion, but can distinguish it from the reality beneath. Failed saves can be repeated after one hour. The illusion lasts for up to a day, but can be made to last longer when cast as a ritual. Epic Feat You can add semi-real elements to the illusion, such as food that really nourishes or water that really is wet. If you have a positive icon relationship with the Archmage, you gain this feat for free."
+    },
+    {
+      "name": "Song of Sacrifice",
+      "source": "EB",
+      "full_text": "Song of Sacrifice Source EB Bardic song; Daily Quick action each turn; 6+ to sustain Opening & Sustained Effect: Spend a recovery and divide the healing among nearby allies as you wish. Every ally you heal can immediately makes a save (at whatever difficulty would otherwise apply) to end any condition (stunned, vulnerable, and so on) suffered. If an ally is afflicted with multiple conditions, save against each of them separately. Final Verse: RAll nearby allies can immediately heal using their recoveries, or yours if you wish."
+    },
+    {
+      "name": "Wail of the Banshee",
+      "source": "DATP",
+      "full_text": "Wail of the Banshee Source DATP Bardic song; Daily Standard action each turn; 16+ to sustain Opening & Sustained Effect: Make the following attack against a nearby enemy. Attack: Charisma + Level vs. PD Hit: The target loses half its current hit points, up to a maximum of 50 x the escalation die. Miss: The target loses half its current hit points, up to a maximum of 10 x the escalation die. Final Verse: Repeat the attack. On a hit, if the target currently has 300 hp or fewer, it starts making last gasp saves (16+). It dies after the fourth failed save. Epic Feat When you make the attack, also deal 5 x the escalation die damage to all nearby enemies that you don’t target. If you have a positive icon relationship with the Lich King, you gain this feat for free. Errata March of the Emperor: Target now limited to one group of mooks, with up to one mook per song level + Cha. Section 15: Copyright Notice DATP: Dark Alleys & Twisted Paths . ©2019, Kinoko Games EB: The Escalated Bard . © 2019, DASTOW Games. Stacey Janssen and David Noonan. Check out our other SRD sites! Traveller SRD | 5th Edition SRD | Dungeon World SRD | 13th Age SRD | d20HeroSRD | d20PFSRD | 3.5e SRD | GumshoeSRD | FateCoreSRD | Starjammer SRD | OGN Articles | Fudge SRD | Here Be Monsters | d20 Anime SRD | PF2 SRD | 4 Color SRD (Astonishing Super Heroes) | Into The Unknown | ACK-SRD | 2d20SRD | Everyday Heroes SRD | Heroes and Monsters SRD | Gods and Monsters SRD | Cepheus SRD | Five Torches Deep SRD | Forge Engine SRD | Cairn SRD | Open Fantasy SRD | Monad Echo SRD | True20 SRD | Warrior, Rogue, Mage SRD | Basic Fantasy SRD | OSE SRD | QuestWorlds SRD | Black Flag SRD | PF2SRD (ORC) | Year Zero SRD (OGL) | Grimwild SRD | 2025 5e SRD (5.2) | Trophy SRD OGN Updates This site may earn affiliate commissions from the links on this page. OGN SRD v1.15.3 using Bootstrap New Pages | Recent Changes | Privacy Policy"
+    }
+  ]
+}

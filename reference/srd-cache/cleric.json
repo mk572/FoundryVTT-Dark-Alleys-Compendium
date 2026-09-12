@@ -1,0 +1,360 @@
+{
+  "class": "Cleric",
+  "source_url": "https://www.13thagesrd.com/classes/cleric/cleric-domains-and-spells-3pp/",
+  "fetched_at": "2026-09-12",
+  "page_structure": "Very different from Barbarian/Bard. The page adds a 3-spell list to EVERY cleric domain (core-book domains and new 3rd-party domains alike), plus a flat \"Cleric Spells (All Domains)\" list usable regardless of domain, plus a short \"Cleric Rituals\" section. Individual domain-specific spells within a domain's 3-spell list are NOT individually Source-tagged — only domain SECTIONS carry an explicit Source tag when the domain itself isn't from DATP (this book pioneered the domain-spell-list concept, so untagged/DATP is the default and only deviations get an explicit tag). The page also has a compact summary table (domain name -> comma list of its 3ish spell names) near the top that is INTERNALLY STALE relative to the page's own detailed spell write-ups further down — 3+ confirmed cases where the summary table still shows an old spell name (e.g. \"Water Breathing\") that was renamed in the actual detailed entry (\"Purification\") elsewhere on the same page, and the summary table sometimes omits spells that do have full write-ups later on the page. Always verify against the detailed write-up section, not just the summary table.",
+  "source_abbreviations": {
+    "DATP": "Dark Alleys & Twisted Paths (this module's source book) — also spelled \"DaTP\" on some tags found 2026-09-12; confirmed by the project owner to be an SRD-side typo since fixed upstream. Untagged domain sections default to this source per the project owner (2026-09-13) — the SRD only tags domains explicitly when the source is something OTHER than DATP.",
+    "13ClD / 13ClDS / 13CDS": "A separate, unrelated third-party \"13th Cleric Domains (and Spells)\" product — NOT Dark Alleys & Twisted Paths. This module's own  pack (correctly named/labelled by its original author) is entirely sourced from this product, not DATP.",
+    "EC": "unconfirmed abbreviation seen on this page — meaning not looked up",
+    "EB": "The Escalated Bard (confirmed via a copyright footer on the Bard page) — appears once on the Cleric page too (the \"Nature\" domain)",
+    "DPAS": "Dark Pacts (13th Age 2e) — the unrelated module by hairyscotsman + the project owner, discussed elsewhere this session. Appears as the source of the cleric \"Oracle\" domain on this page."
+  },
+  "domain_sections_with_explicit_non_datp_source": [
+    {
+      "domain": "Elements / Weather",
+      "source": "13ClD"
+    },
+    {
+      "domain": "Liberation / Anarchy",
+      "source": "13CDS"
+    },
+    {
+      "domain": "Light OR Darkness",
+      "source": "EC"
+    },
+    {
+      "domain": "Luck",
+      "source": "13CDS"
+    },
+    {
+      "domain": "Mind / Dream",
+      "source": "EC"
+    },
+    {
+      "domain": "Nature",
+      "source": "EB"
+    },
+    {
+      "domain": "Oracle",
+      "source": "DPAS"
+    }
+  ],
+  "domain_spell_name_lists_datp_scope": {
+    "Air / Storm / Thunder": [
+      "Thundering Blow",
+      "Air Bubble",
+      "Storm Cloud"
+    ],
+    "Animal / Beast": [
+      "Poison Claw",
+      "Voice of Beasts",
+      "Celestial Guardian"
+    ],
+    "Archery / Hunting": [
+      "Exalted Shot",
+      "Blessing of the Hunt",
+      "Holy Arrow"
+    ],
+    "Chaos / Disorder / Rebellion": [
+      "Chaos Hammer",
+      "Haywire",
+      "Incite Rebellion"
+    ],
+    "Darkness / Night": [
+      "Embrace of the Night",
+      "Darkness",
+      "Meld into the Shadows",
+      "Disappear into the Night"
+    ],
+    "Doom / Destruction": [
+      "Doomhammer",
+      "Doom",
+      "Touch of Despair"
+    ],
+    "Dragon": [
+      "Divine Odem",
+      "Sense Dragons",
+      "Summon Metallic Dragon"
+    ],
+    "Earth / Mountain": [
+      "Earthen Hail",
+      "Return to Dust",
+      "Rock Shield",
+      "Earthquake"
+    ],
+    "Evil / Egoism": [
+      "Festering Evil",
+      "Blasphemy",
+      "Slay Living"
+    ],
+    "Farming / Harvest": [
+      "Cut the Weeds",
+      "Protect the Harvest",
+      "Reap What You Sow"
+    ],
+    "Fire": [
+      "Burning Brand",
+      "Penance by Fire",
+      "Flame Strike"
+    ],
+    "Freedom / Travel": [
+      "Freedom Bells",
+      "Blessed Journey",
+      "Freedom of Movement",
+      "Traveller’s Footsteps"
+    ],
+    "Good / Selflessness": [
+      "Aiding Strike",
+      "Martyr's Shield",
+      "Righteous Resolve",
+      "Carry On, My Friend"
+    ],
+    "Healing": [
+      "Healing Strike",
+      "Restoration",
+      "Flash Heal"
+    ],
+    "Justice / Vengeance": [
+      "Hammer of Retribution",
+      "Eyes of the Judge",
+      "Compel Duel",
+      "Banishment"
+    ],
+    "Knowledge / Lore": [
+      "Sacred Mantra",
+      "Divine Insight",
+      "Pious Tongue",
+      "Intuitive Reading"
+    ],
+    "Life / Death": [
+      "Invigorate",
+      "Death Ward",
+      "Symbol of Life",
+      "Raise Dead",
+      "Gate to the Underworld"
+    ],
+    "Love / Beauty": [
+      "Radiant Heart",
+      "Call for a White Knight",
+      "Love Charm"
+    ],
+    "Luck / Fortune": [
+      "Lucky Star",
+      "Fortuna’s Frown",
+      "Serendipity"
+    ],
+    "Madness / Nightmare": [
+      "Manic Cackle",
+      "Fever Dream",
+      "Waking Nightmare"
+    ],
+    "Magic / Arcana": [
+      "Magic Spark",
+      "The Might of Magic",
+      "Shield of the Archons"
+    ],
+    "Metal / Smithing": [
+      "Blessed Steel",
+      "Heat Metal",
+      "Blade Barrier"
+    ],
+    "Music / Song": [
+      "Divine Cantata",
+      "Sacred Hymn",
+      "Angelic Chorus"
+    ],
+    "Pain / Suffering": [
+      "Inflict Wounds",
+      "Thorny Crown",
+      "Harm"
+    ],
+    "Plant / Forest": [
+      "Thorn Whip",
+      "Binding Vines",
+      "Ensnaring Roots"
+    ],
+    "Protection / Community": [
+      "Shielding Strike",
+      "Shield Other",
+      "Blessed Orator",
+      "Summon Guardian of Faith",
+      "Walk Unharmed"
+    ],
+    "Secrets / Cultism": [
+      "Ominous Chant",
+      "Encrypt",
+      "Erase Memory"
+    ],
+    "Spirits / Undeath": [
+      "Withering Touch",
+      "Captive Spirit",
+      "Bolster Undead"
+    ],
+    "Strength": [
+      "Powerful Blow",
+      "Bend Bars and Lift Gates",
+      "Siphon Strength"
+    ],
+    "Sun / Anti-Undead": [
+      "Ray of Light",
+      "Consecration",
+      "Searing Light"
+    ],
+    "Time": [
+      "Sands of Time",
+      "Temporal Disruption",
+      "Visions of the Past"
+    ],
+    "Trickery / Illusion": [
+      "Wink of the Trickster",
+      "Taunt and Tease",
+      "Trickster’s Guise",
+      "Borrowed Trick"
+    ],
+    "War / Leadership": [
+      "Lead the Assault",
+      "Booming Command",
+      "Elevated Command"
+    ],
+    "Water / Sea / River": [
+      "Jetblast",
+      "Neutralize Poison",
+      "Water Breathing"
+    ],
+    "Winter / Ice": [
+      "Ice Shards",
+      "Frost Hammer",
+      "Snow Storm"
+    ]
+  },
+  "all_domains_flat_spell_list": [
+    {
+      "name": "Divine Guidance",
+      "source": "DaTP"
+    },
+    {
+      "name": "Divine Opportunity",
+      "source": "13ClDS"
+    },
+    {
+      "name": "Martyr’s Touch",
+      "source": "13CDS"
+    },
+    {
+      "name": "Minor Miracle",
+      "source": "DaTP"
+    },
+    {
+      "name": "Remove Fear",
+      "source": "DaTP"
+    },
+    {
+      "name": "Spark of Hope",
+      "source": "13CDS"
+    },
+    {
+      "name": "Compelling Litany",
+      "source": "13CDS"
+    },
+    {
+      "name": "Deny the Dead",
+      "source": "EC"
+    },
+    {
+      "name": "Divine Mandate",
+      "source": "EC"
+    },
+    {
+      "name": "Hallowed Ground",
+      "source": "13CDS"
+    },
+    {
+      "name": "Spiritual Weapon",
+      "source": "DaTP"
+    },
+    {
+      "name": "Castigation",
+      "source": "13CDS"
+    },
+    {
+      "name": "Clairvoyant Vision",
+      "source": "EC"
+    },
+    {
+      "name": "Cursed by the Gods",
+      "source": "EC"
+    },
+    {
+      "name": "Death’s Door",
+      "source": "EC"
+    },
+    {
+      "name": "Divine Commandment",
+      "source": "EC"
+    },
+    {
+      "name": "March of Saints",
+      "source": "13CDS"
+    },
+    {
+      "name": "Summon Planetar",
+      "source": "DaTP"
+    },
+    {
+      "name": "Transfix",
+      "source": "EC"
+    },
+    {
+      "name": "Transfix",
+      "source": "EC"
+    },
+    {
+      "name": "All-Seeing Eye",
+      "source": "EC"
+    },
+    {
+      "name": "Bolt of the Blue",
+      "source": "EC"
+    },
+    {
+      "name": "Divine Dominion",
+      "source": "13CDS"
+    },
+    {
+      "name": "Glimpse of Perdition",
+      "source": "13CDS"
+    },
+    {
+      "name": "I Banish Thee",
+      "source": "EC"
+    },
+    {
+      "name": "Pernicious Curse",
+      "source": "EC"
+    },
+    {
+      "name": "Deific Weapon",
+      "source": "13CDS"
+    },
+    {
+      "name": "Divine Judgment",
+      "source": "EC"
+    },
+    {
+      "name": "Holy Raiment",
+      "source": "EC"
+    },
+    {
+      "name": "Legendary Omen",
+      "source": "EC"
+    }
+  ],
+  "notes": [
+    "13-cld-cleric pack: confirmed 0 of its 13 items are DATP-sourced (all trace to 13ClD/13ClDS/13CDS) — correctly excluded from DATP comparison entirely.",
+    "dark-alleys-cleric \"Domain: Any\" group (5 items): exact match to the 5 DATP-tagged entries in all_domains_flat_spell_list (Divine Guidance, Minor Miracle, Remove Fear, Spiritual Weapon, Summon Planetar).",
+    "dark-alleys-cleric individual domains (~34, ~100 spells): name-level pass done 2026-09-12, all present and correct once the summary-table staleness above is accounted for. Full mechanical (dice/numbers/feat-tier) comparison NOT yet done — only presence/naming was checked. Paused by the user before going deeper.",
+    "\"Ritual\" group (Blessed Forge, Ceremony of Blessing): confirmed present on the SRD under a \"Cleric Rituals\" section.",
+    "Module domain \"Fire/Volcano\" vs SRD's plain \"Fire\": identical spell content, cosmetic domain-label difference only."
+  ]
+}
