@@ -5,6 +5,21 @@ background and technical detail live in the project's `../CLAUDE.md` — this
 file is just the to-do list. The user has more items in mind not yet
 written down here; treat this as a starting point, not the full scope.
 
+## Ranger's Arcane Archer fixed; power-usage-line detection improved (2026-09-14)
+
+Refreshes `packs/ranger` from `13a-rules-db` (commit `8fd08ad`, bump to
+0.6.7). The project owner fixed the live SRD page (Arcane Archer's
+powers were missing their "Close-quarters power" usage-line entries);
+re-scraping surfaced that the type detector added earlier the same day
+only ever checked usageLine for "spell"/"Flexible", never "power" — same
+convention, different real archmage powerType value. Fixed and merged:
+24 entries retyped talent → power, 7 more confirmed-phantom "X Sphere"
+divider entries removed. Full detail in `13a-rules-db/docs/TASKS.md`.
+**Same usage-line convention confirmed present in Psion (~90 entries,
+its whole kit) and smaller counts in Rogue/Savage/Monk/Paladin — not
+yet re-scraped/merged for any of them**, flagged there for a dedicated
+follow-up pass rather than done unprompted.
+
 ## Druid Problems 1 & 7 fixed — real power types, not all "talent" (2026-09-14)
 
 Refreshes `packs/dark-alleys-druid` from `13a-rules-db` (commit `911e2e4`,
