@@ -88,6 +88,125 @@
       "system": "archmage",
       "path": "packs/dark-alleys-occultist-spells",
       "type": "Item"
+    },
+    {
+      "name": "barbarian",
+      "label": "Barbarian",
+      "system": "archmage",
+      "path": "packs/barbarian",
+      "type": "Item"
+    },
+    {
+      "name": "bard",
+      "label": "Bard",
+      "system": "archmage",
+      "path": "packs/bard",
+      "type": "Item"
+    },
+    {
+      "name": "chaos-mage",
+      "label": "Chaos Mage",
+      "system": "archmage",
+      "path": "packs/chaos-mage",
+      "type": "Item"
+    },
+    {
+      "name": "cleric",
+      "label": "Cleric",
+      "system": "archmage",
+      "path": "packs/cleric",
+      "type": "Item"
+    },
+    {
+      "name": "cleric-summons",
+      "label": "Cleric (Summons)",
+      "system": "archmage",
+      "path": "packs/cleric-summons",
+      "type": "Actor"
+    },
+    {
+      "name": "commander",
+      "label": "Commander",
+      "system": "archmage",
+      "path": "packs/commander",
+      "type": "Item"
+    },
+    {
+      "name": "fighter",
+      "label": "Fighter",
+      "system": "archmage",
+      "path": "packs/fighter",
+      "type": "Item"
+    },
+    {
+      "name": "monk",
+      "label": "Monk",
+      "system": "archmage",
+      "path": "packs/monk",
+      "type": "Item"
+    },
+    {
+      "name": "necromancer",
+      "label": "Necromancer",
+      "system": "archmage",
+      "path": "packs/necromancer",
+      "type": "Item"
+    },
+    {
+      "name": "necromancer-summons",
+      "label": "Necromancer (Summons)",
+      "system": "archmage",
+      "path": "packs/necromancer-summons",
+      "type": "Actor"
+    },
+    {
+      "name": "occultist",
+      "label": "Occultist",
+      "system": "archmage",
+      "path": "packs/occultist",
+      "type": "Item"
+    },
+    {
+      "name": "paladin",
+      "label": "Paladin",
+      "system": "archmage",
+      "path": "packs/paladin",
+      "type": "Item"
+    },
+    {
+      "name": "ranger",
+      "label": "Ranger",
+      "system": "archmage",
+      "path": "packs/ranger",
+      "type": "Item"
+    },
+    {
+      "name": "rogue",
+      "label": "Rogue",
+      "system": "archmage",
+      "path": "packs/rogue",
+      "type": "Item"
+    },
+    {
+      "name": "sorcerer",
+      "label": "Sorcerer",
+      "system": "archmage",
+      "path": "packs/sorcerer",
+      "type": "Item"
+    },
+    {
+      "name": "wizard",
+      "label": "Wizard",
+      "system": "archmage",
+      "path": "packs/wizard",
+      "type": "Item"
+    },
+    {
+      "name": "wizard-summons",
+      "label": "Wizard (Summons)",
+      "system": "archmage",
+      "path": "packs/wizard-summons",
+      "type": "Actor"
     }
   ],
   "manifest": "https://github.com/mk572/FoundryVTT-Dark-Alleys-Compendium/releases/download/latest/module.json",
