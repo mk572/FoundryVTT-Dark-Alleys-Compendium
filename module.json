@@ -257,6 +257,13 @@
       "system": "archmage",
       "path": "packs/warlock",
       "type": "Item"
+    },
+    {
+      "name": "druid-dark-alleys",
+      "label": "Druid (Dark Alleys)",
+      "system": "archmage",
+      "path": "packs/druid-dark-alleys",
+      "type": "Item"
     }
   ],
   "manifest": "https://github.com/mk572/FoundryVTT-Dark-Alleys-Compendium/releases/download/latest/module.json",

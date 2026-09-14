@@ -35,6 +35,32 @@ Hooks.on("ready", function () {
   CONFIG.ARCHMAGE.keyModifiers["abomination"]["wizard"] = ["str","int"];
   console.log("Abomination (13th Age) class loaded successfully.");
 
+  console.log("Druid (Dark Alleys) (13th Age) class injecting data into the system...");
+  CONFIG.ARCHMAGE.classList["druiddarkalleys"] = "Druid (Dark Alleys)";
+  CONFIG.ARCHMAGE.classes["druiddarkalleys"] = {"hp":6,"ac_lgt":10,"ac_hvy":14,"ac_hvy_pen":-2,"shld_pen":-2,"pd":11,"md":11,"rec_die":6,"wpn_1h":6,"wpn_2h":8,"wpn_2h_pen":0,"wpn_rngd":6,"skilled_warrior":false};
+  CONFIG.ARCHMAGE.keyModifiers["druiddarkalleys"] ??= {};
+  CONFIG.ARCHMAGE.keyModifiers["druiddarkalleys"]["abomination"] = ["str","wis"];
+  CONFIG.ARCHMAGE.keyModifiers["druiddarkalleys"]["barbarian"] = ["str","wis"];
+  CONFIG.ARCHMAGE.keyModifiers["druiddarkalleys"]["bard"] = ["wis","cha"];
+  CONFIG.ARCHMAGE.keyModifiers["druiddarkalleys"]["chaos-mage"] = ["wis","cha"];
+  CONFIG.ARCHMAGE.keyModifiers["druiddarkalleys"]["cleric"] = ["str","wis"];
+  CONFIG.ARCHMAGE.keyModifiers["druiddarkalleys"]["commander"] = ["wis","cha"];
+  CONFIG.ARCHMAGE.keyModifiers["druiddarkalleys"]["fateweaver"] = ["str","wis"];
+  CONFIG.ARCHMAGE.keyModifiers["druiddarkalleys"]["fighter"] = ["str","wis"];
+  CONFIG.ARCHMAGE.keyModifiers["druiddarkalleys"]["monk"] = ["dex","wis"];
+  CONFIG.ARCHMAGE.keyModifiers["druiddarkalleys"]["necromancer"] = ["int","wis"];
+  CONFIG.ARCHMAGE.keyModifiers["druiddarkalleys"]["occultist"] = ["int","wis"];
+  CONFIG.ARCHMAGE.keyModifiers["druiddarkalleys"]["paladin"] = ["str","wis"];
+  CONFIG.ARCHMAGE.keyModifiers["druiddarkalleys"]["psion"] = ["int","wis"];
+  CONFIG.ARCHMAGE.keyModifiers["druiddarkalleys"]["ranger"] = ["dex","wis"];
+  CONFIG.ARCHMAGE.keyModifiers["druiddarkalleys"]["rogue"] = ["dex","wis"];
+  CONFIG.ARCHMAGE.keyModifiers["druiddarkalleys"]["savage"] = ["str","wis"];
+  CONFIG.ARCHMAGE.keyModifiers["druiddarkalleys"]["sorcerer"] = ["wis","cha"];
+  CONFIG.ARCHMAGE.keyModifiers["druiddarkalleys"]["swordmage"] = ["int","wis"];
+  CONFIG.ARCHMAGE.keyModifiers["druiddarkalleys"]["warlock"] = ["wis","cha"];
+  CONFIG.ARCHMAGE.keyModifiers["druiddarkalleys"]["wizard"] = ["int","wis"];
+  console.log("Druid (Dark Alleys) (13th Age) class loaded successfully.");
+
   console.log("Fateweaver (13th Age) class injecting data into the system...");
   CONFIG.ARCHMAGE.classList["fateweaver"] = "Fateweaver";
   CONFIG.ARCHMAGE.classes["fateweaver"] = {"hp":5,"ac_lgt":11,"ac_hvy":12,"ac_hvy_pen":-2,"shld_pen":-1,"pd":10,"md":12,"rec_die":6,"wpn_1h":6,"wpn_2h":10,"wpn_2h_pen":-5,"wpn_rngd":6,"skilled_warrior":false};
