@@ -5,6 +5,23 @@ background and technical detail live in the project's `../CLAUDE.md` — this
 file is just the to-do list. The user has more items in mind not yet
 written down here; treat this as a starting point, not the full scope.
 
+## Cleric fixes from a live review (2026-09-14) — full writeup in 13a-rules-db
+
+Refreshed `packs/cleric`, `packs/cleric-summons`, `packs/chaos-mage`,
+`packs/dark-alleys-druid`, `packs/ranger` and `scripts/setup.js` from
+`13a-rules-db` (commit `88ef328`) to ship 5 fixes from a live Cleric
+review: DATP domains now show up as selectable talents (were missing a
+`level`, invisible in Import Powers), redundant "(Nth Level)" stripped
+from 123 Cleric names (+178 across the other 3 refreshed classes), 3
+wrong `level` values corrected, and the scraper itself
+(`scripts/scrape_srd_by_headings.py` in 13a-rules-db) fixed so this
+class of bug doesn't recur. Full detail, including the still-open
+domain-gated-spell-visibility design question (Cleric spells should only
+be selectable once the matching domain is chosen — data model already
+supports it via `granted_spells`, nothing consumes it yet) and the
+still-no-images task, is in `13a-rules-db/docs/TASKS.md`'s "Cleric
+review" entry — don't duplicate it here, this is a pointer.
+
 ## Removed 10 legacy pre-2026 packs from the live module (2026-09-14)
 
 A reviewer reported "the power importer opens [powers], the sheet does
