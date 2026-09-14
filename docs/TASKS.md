@@ -39,15 +39,20 @@ sorts the ~280 entries by circle instead of one flat list. Bumped to
 `talent` regardless of circle), 13TW base content cloning, and the
 animal companion investigation — see 13a-rules-db's TASKS.md.
 
-## Tier-divider scraper fix — packs not yet refreshed here (2026-09-14)
+## Tier-divider scraper fix — now shipped (2026-09-14)
 
 `13a-rules-db` commit `2abd64b` fixed a scraper bug affecting Ranger,
 Barbarian, Paladin, Occultist and Fighter (Champion/Epic tier talents
 were either phantom-scraped as fake entries or silently stuck at level 1
 instead of their real 5/8 — see that repo's TASKS.md for full detail).
-**Not yet copied into this module's `packs/`** — do that refresh (and a
-version bump) in the same pass as whichever of these 5 classes gets
-tested next, rather than a blind refresh-everything pass.
+Deliberately deferred copying it into this module's `packs/` at the time
+— **that turned out to be the wrong call**: the project owner found
+Ranger's Champion/Epic talents still at level 1 in the published `0.6.5`
+release, since the fix genuinely never shipped. Refreshed all 5 packs at
+once this round rather than wait for the other 4 to be reported
+separately — verified level distributions match the source exactly
+(Barbarian 5/8, Paladin 5/8, Occultist 5/8, Fighter 5/6/8 — Fighter's own
+Champion tier is 6, not 5 — Ranger 5/8). Bumped to `0.6.6`.
 
 ## Cleric Invocations added, 35 new items (2026-09-14) — full writeup in 13a-rules-db
 
