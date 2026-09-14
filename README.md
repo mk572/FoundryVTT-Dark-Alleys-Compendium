@@ -15,3 +15,6 @@ The latest version will always be available here: https://github.com/mk572/Found
 ```
 https://github.com/mk572/FoundryVTT-Dark-Alleys-Compendium/releases/download/latest/module.json
 ```
+
+New to Foundry modules, or want step-by-step instructions? See
+[INSTALL.md](INSTALL.md).
