@@ -8,8 +8,10 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
-    # create a zip file with all files required by the module to add to the release
-    - run: zip -r ./dark-alleys-compendium.zip module.json README.md INSTALL.md scripts/ packs/
+    # create a zip file with all files required by the module to add to the release.
+    # Kept in scripts/build-release-zip.sh, not inlined here, so future changes to
+    # what's bundled don't require editing a .github/workflows/* file.
+    - run: bash scripts/build-release-zip.sh
 
     # Get the version from 'module.json'
     - name: Get Version
