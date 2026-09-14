@@ -5,6 +5,14 @@ background and technical detail live in the project's `../CLAUDE.md` — this
 file is just the to-do list. The user has more items in mind not yet
 written down here; treat this as a starting point, not the full scope.
 
+## Cleric Invocations added, 35 new items (2026-09-14) — full writeup in 13a-rules-db
+
+Refreshed `packs/cleric` again from `13a-rules-db` commit `46ed1ee`
+(version bump to 0.6.3) — adds 35 "Invocation of X" talent entries, one
+per domain, matching how base archmage's own Cleric class already works
+(a domain and its invocation are two separate selectable items). Full
+detail in `13a-rules-db/docs/TASKS.md`'s "Cleric Issue 6" entry.
+
 ## Cleric fixes from a live review (2026-09-14) — full writeup in 13a-rules-db
 
 Refreshed `packs/cleric`, `packs/cleric-summons`, `packs/chaos-mage`,

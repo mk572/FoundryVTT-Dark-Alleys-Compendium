@@ -2,7 +2,7 @@
   "id": "13a-dark-alleys-compendium",
   "title": "13th Age Dark Alleys Compendium",
   "description": "Game rules & Compendiums for the 13th Age Compatible expansion book Dark Alleys & Twisted Path for Foundry Virtual Tabletop ",
-  "version": "0.6.2",
+  "version": "0.6.3",
   "compatibility": {
     "minimum": "13",
     "verified": "14"
@@ -18,7 +18,9 @@
       }
     ]
   },
-  "scripts": ["scripts/setup.js"],
+  "scripts": [
+    "scripts/setup.js"
+  ],
   "packs": [
     {
       "name": "barbarian",
