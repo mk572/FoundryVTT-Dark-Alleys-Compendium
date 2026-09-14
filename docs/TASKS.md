@@ -5,6 +5,30 @@ background and technical detail live in the project's `../CLAUDE.md` — this
 file is just the to-do list. The user has more items in mind not yet
 written down here; treat this as a starting point, not the full scope.
 
+## Full pack refresh from 13a-rules-db, bump to 0.6.8 (2026-09-15)
+
+Refreshed all 25 packs from `13a-rules-db`'s `dist/foundry/` (this
+project was stale relative to several rounds of fixes made there —
+see that project's `docs/TASKS.md`/`docs/TASKS-DONE.md` for full
+detail). Requested by the project owner specifically so any live
+testing done next session starts from current state, not a partial/
+stale one — not itself claimed production-ready. Notable changes
+included in this refresh: the "Nth level spell" scaling-text scraper
+fix (spellLevel2-11 fields now populated correctly across ~10 classes),
+Bard's full re-import (cleared 29 fields of raw Foundry syntax that had
+leaked into source data), Wizard's Cantrips/Utility Spells
+categorization + a corrupted True Seeing entry fixed, and the earlier
+Ranger Arcane Archer / tier-divider fixes already shipped at 0.6.7.
+**Not included**: the roll tagger's clickable-roll conversions
+(`13a-rules-db`'s `export-to-foundry.mjs` doesn't read from its own
+`dist/tagged/` yet — see that project's task T003, now marked as next
+priority) — every power's mechanical text is still plain English, same
+as every prior release.
+
+**Not yet verified live in Forge** — pushed and version-bumped only;
+no live-world check done for this specific release. Do that before
+relying on it for real testing.
+
 ## Ranger's Arcane Archer fixed; power-usage-line detection improved (2026-09-14)
 
 Refreshes `packs/ranger` from `13a-rules-db` (commit `8fd08ad`, bump to
