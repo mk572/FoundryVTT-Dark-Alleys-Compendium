@@ -1,0 +1,276 @@
+{
+  "name": "Bouncer",
+  "type": "power",
+  "flags": {},
+  "img": "icons/svg/d20.svg",
+  "_id": "yv5Z464NbMihh52M",
+  "system": {
+    "name": {
+      "type": "String",
+      "label": "Name"
+    },
+    "description": {
+      "type": "String",
+      "label": "Description"
+    },
+    "powerSource": {
+      "type": "String",
+      "label": "Power Source",
+      "value": "class"
+    },
+    "powerType": {
+      "type": "String",
+      "label": "Power Type",
+      "value": "talent"
+    },
+    "powerUsage": {
+      "type": "String",
+      "label": "Power Usage",
+      "value": ""
+    },
+    "powerLevel": {
+      "type": "Number",
+      "label": "Level",
+      "value": 1
+    },
+    "actionType": {
+      "type": "String",
+      "label": "Action",
+      "value": ""
+    },
+    "range": {
+      "type": "String",
+      "label": "Range",
+      "value": ""
+    },
+    "trigger": {
+      "type": "String",
+      "label": "Trigger",
+      "value": ""
+    },
+    "target": {
+      "type": "String",
+      "label": "Target",
+      "value": ""
+    },
+    "always": {
+      "type": "String",
+      "label": "Always",
+      "value": ""
+    },
+    "attack": {
+      "type": "String",
+      "label": "Attack",
+      "value": ""
+    },
+    "hit": {
+      "type": "String",
+      "label": "Hit",
+      "value": ""
+    },
+    "hitEven": {
+      "type": "String",
+      "label": "Natural Even Hit",
+      "value": ""
+    },
+    "hitOdd": {
+      "type": "String",
+      "label": "Natural Odd Hit",
+      "value": ""
+    },
+    "crit": {
+      "type": "String",
+      "label": "Crit",
+      "value": ""
+    },
+    "miss": {
+      "type": "String",
+      "label": "Miss",
+      "value": ""
+    },
+    "missEven": {
+      "type": "String",
+      "label": "Even Miss",
+      "value": ""
+    },
+    "missOdd": {
+      "type": "String",
+      "label": "Odd Miss",
+      "value": ""
+    },
+    "cost": {
+      "type": "String",
+      "label": "Cost",
+      "value": ""
+    },
+    "castBroadEffect": {
+      "type": "String",
+      "label": "Cast for Broad Effect",
+      "value": ""
+    },
+    "castPower": {
+      "type": "String",
+      "label": "Cast for Power",
+      "value": ""
+    },
+    "sustainedEffect": {
+      "type": "String",
+      "label": "Opening and Sustained Effect",
+      "value": ""
+    },
+    "finalVerse": {
+      "type": "String",
+      "label": "Final Verse",
+      "value": ""
+    },
+    "special": {
+      "type": "String",
+      "label": "Special",
+      "value": ""
+    },
+    "effect": {
+      "type": "String",
+      "label": "Effect",
+      "value": "<p dir=\"ltr\">Your unarmed attacks take no attack penalty, use d8 damage dice, and benefit from two-weapon fighting (reroll natural 2 on the attack). You can use true magic item bracers like a monk to improve your unarmed attacks.</p>\n<p><span id=\"docs-internal-guid-a819b064-7fff-8d20-e16b-0aa563190de0\"></span></p>\n<p dir=\"ltr\">Once per battle, when you hit with an unarmed melee attack, you can declare a wrestling stunt. Choose one of the effects below:</p>\n<p dir=\"ltr\"><span id=\"docs-internal-guid-260728d0-7fff-c91c-02d6-66dba78c7198\"></span></p>\n<ul>\n<li dir=\"ltr\">\n<p dir=\"ltr\" role=\"presentation\">The target is dazed: -4 to attacks; save ends.</p>\n</li>\n<li dir=\"ltr\">\n<p dir=\"ltr\" role=\"presentation\">Force the target off guard: -4 to AC and PD; save ends.</p>\n</li>\n<li dir=\"ltr\">\n<p dir=\"ltr\" role=\"presentation\">Choke (or twist) the target: deal 1d6 per level extra damage; this damage is not doubled on a critical hit.</p>\n</li>\n<li dir=\"ltr\">\n<p dir=\"ltr\" role=\"presentation\">Throw the target: normal size or smaller only; attacks against it have advantage until it takes a move action; you can choose to pop free from it.</p>\n</li>\n<li dir=\"ltr\">\n<p dir=\"ltr\" role=\"presentation\">Restrain the target: normal size or smaller only; the target has disadvantage on disengage checks and attack rolls (save ends); also ends when you or the target disengages. While restraining an enemy, the only attacks you can make are unarmed melee attacks against that target.</p>\n</li>\n<li dir=\"ltr\">\n<p dir=\"ltr\" role=\"presentation\">Hold on to the target (large or huge enemies only): when the target moves, you stay engaged with it even if it disengages from other combatants; it can shake you off if it succeeds at an attack against you (this is a different effect from a grab).</p>\n</li>\n</ul>"
+    },
+    "spellLevel3": {
+      "type": "String",
+      "label": "3rd Level Spell",
+      "value": ""
+    },
+    "spellLevel5": {
+      "type": "String",
+      "label": "5th Level Spell",
+      "value": ""
+    },
+    "spellLevel7": {
+      "type": "String",
+      "label": "7th Level Spell",
+      "value": ""
+    },
+    "spellLevel9": {
+      "type": "String",
+      "label": "9th Level Spell",
+      "value": ""
+    },
+    "spellChain": {
+      "type": "String",
+      "label": "Chain Spell",
+      "value": ""
+    },
+    "breathWeapon": {
+      "type": "String",
+      "label": "Breath Weapon",
+      "value": ""
+    },
+    "recharge": {
+      "type": "Number",
+      "label": "Recharge",
+      "value": 0
+    },
+    "quantity": {
+      "type": "Number",
+      "label": "Uses",
+      "value": 1
+    },
+    "feats": {
+      "0": {
+        "description": {
+          "type": "String",
+          "value": "<p><span id=\"docs-internal-guid-5097d180-7fff-9300-5396-42ca8f4b1f99\"></span></p>\n<p dir=\"ltr\">When you use your wrestling stunt on a critical hit, you can choose two of the effects.</p>"
+        },
+        "isActive": {
+          "type": "Boolean",
+          "value": false
+        },
+        "tier": {
+          "type": "String",
+          "value": "adventurer"
+        },
+        "powerUsage": {
+          "type": "String",
+          "value": ""
+        },
+        "quantity": {
+          "type": "Number",
+          "value": null
+        },
+        "maxQuantity": {
+          "type": "Number",
+          "value": null
+        }
+      },
+      "1": {
+        "description": {
+          "type": "String",
+          "value": "<p><span id=\"docs-internal-guid-484295ad-7fff-ca77-befe-ba4f43cf7e5e\"></span></p>\n<p dir=\"ltr\">When you rally during a battle, you can declare a wrestling stunt a second time this battle.</p>"
+        },
+        "isActive": {
+          "type": "Boolean",
+          "value": false
+        },
+        "tier": {
+          "type": "String",
+          "value": "champion"
+        },
+        "powerUsage": {
+          "type": "String",
+          "value": ""
+        },
+        "quantity": {
+          "type": "Number",
+          "value": null
+        },
+        "maxQuantity": {
+          "type": "Number",
+          "value": null
+        }
+      },
+      "2": {
+        "description": {
+          "type": "String",
+          "value": "<p><span id=\"docs-internal-guid-65fd904a-7fff-ecac-3c95-5da9a2cf2fb1\"></span></p>\n<p dir=\"ltr\">When the escalation die is 2+, increase your unarmed damage dice to d10s.</p>"
+        },
+        "isActive": {
+          "type": "Boolean",
+          "value": false
+        },
+        "tier": {
+          "type": "String",
+          "value": "epic"
+        },
+        "powerUsage": {
+          "type": "String",
+          "value": ""
+        },
+        "quantity": {
+          "type": "Number",
+          "value": null
+        },
+        "maxQuantity": {
+          "type": "Number",
+          "value": null
+        }
+      }
+    }
+  },
+  "ownership": {
+    "default": 0,
+    "UzA77dWItspmhNMp": 3
+  },
+  "effects": [],
+  "sort": 0,
+  "folder": null,
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "14",
+    "systemId": "archmage",
+    "systemVersion": "1.40.1",
+    "createdTime": null,
+    "modifiedTime": 1789220687009,
+    "lastModifiedBy": null,
+    "exportSource": null
+  },
+  "_key": "!items!yv5Z464NbMihh52M"
+}

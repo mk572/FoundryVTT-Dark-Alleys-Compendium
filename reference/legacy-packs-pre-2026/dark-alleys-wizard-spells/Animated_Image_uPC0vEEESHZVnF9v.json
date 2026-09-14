@@ -1,0 +1,282 @@
+{
+  "_id": "uPC0vEEESHZVnF9v",
+  "name": "Animated Image",
+  "type": "power",
+  "flags": {
+    "dynamiceffects": {
+      "equipActive": false,
+      "alwaysActive": false
+    }
+  },
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "name": {
+      "type": "String",
+      "label": "Name"
+    },
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "powerSource": {
+      "type": "String",
+      "label": "Power Source",
+      "value": "class"
+    },
+    "powerType": {
+      "type": "String",
+      "label": "Power Type",
+      "value": "spell"
+    },
+    "powerUsage": {
+      "type": "String",
+      "label": "Power Usage",
+      "value": ""
+    },
+    "powerLevel": {
+      "type": "Number",
+      "label": "Level",
+      "value": null
+    },
+    "actionType": {
+      "type": "String",
+      "label": "Action",
+      "value": "standard"
+    },
+    "range": {
+      "type": "String",
+      "label": "Range",
+      "value": "Ranged"
+    },
+    "trigger": {
+      "type": "String",
+      "label": "Trigger",
+      "value": ""
+    },
+    "target": {
+      "type": "String",
+      "label": "Target",
+      "value": ""
+    },
+    "always": {
+      "type": "String",
+      "label": "Always",
+      "value": ""
+    },
+    "attack": {
+      "type": "String",
+      "label": "Attack",
+      "value": ""
+    },
+    "hit": {
+      "type": "String",
+      "label": "Hit",
+      "value": ""
+    },
+    "hitEven": {
+      "type": "String",
+      "label": "Natural Even Hit",
+      "value": ""
+    },
+    "hitOdd": {
+      "type": "String",
+      "label": "Natural Odd Hit",
+      "value": ""
+    },
+    "crit": {
+      "type": "String",
+      "label": "Crit",
+      "value": ""
+    },
+    "miss": {
+      "type": "String",
+      "label": "Miss",
+      "value": ""
+    },
+    "missEven": {
+      "type": "String",
+      "label": "Natural Even Miss",
+      "value": ""
+    },
+    "missOdd": {
+      "type": "String",
+      "label": "Natural Odd Miss",
+      "value": ""
+    },
+    "cost": {
+      "type": "String",
+      "label": "Cost",
+      "value": ""
+    },
+    "castBroadEffect": {
+      "type": "String",
+      "label": "Cast for Broad Effect",
+      "value": ""
+    },
+    "castPower": {
+      "type": "String",
+      "label": "Cast for Power",
+      "value": ""
+    },
+    "sustainedEffect": {
+      "type": "String",
+      "label": "Opening and Sustained Effect",
+      "value": ""
+    },
+    "finalVerse": {
+      "type": "String",
+      "label": "Final verse",
+      "value": ""
+    },
+    "special": {
+      "type": "String",
+      "label": "Special",
+      "value": ""
+    },
+    "effect": {
+      "type": "String",
+      "label": "Effect",
+      "value": "Create a two-dimensional illusion, up to the size of a large painting, with an animated effect such as eyes that follow the viewer, falling snow or a change of seasons. Make a skill check to determine the artistic value of the image. The image lasts about 10 minutes."
+    },
+    "spellLevel3": {
+      "type": "String",
+      "label": "3rd Level Spell",
+      "value": ""
+    },
+    "spellLevel5": {
+      "type": "String",
+      "label": "5th Level Spell",
+      "value": "The spell lasts for 1 day."
+    },
+    "spellLevel7": {
+      "type": "String",
+      "label": "7th Level Spell",
+      "value": ""
+    },
+    "spellLevel9": {
+      "type": "String",
+      "label": "9th Level Spell",
+      "value": ""
+    },
+    "spellChain": {
+      "type": "String",
+      "label": "Chain Spell",
+      "value": ""
+    },
+    "breathWeapon": {
+      "type": "String",
+      "label": "Breath Weapon",
+      "value": ""
+    },
+    "recharge": {
+      "type": "Number",
+      "label": "Recharge",
+      "value": 0
+    },
+    "quantity": {
+      "type": "Number",
+      "label": "Uses",
+      "value": 1
+    },
+    "feats": {
+      "0": {
+        "description": {
+          "type": "String",
+          "value": "You can program the image to appear and perform a predetermined movement when a defined trigger occurs, such as when a person steps through a door."
+        },
+        "isActive": {
+          "type": "Boolean",
+          "value": false
+        },
+        "tier": {
+          "type": "String",
+          "value": "adventurer"
+        },
+        "powerUsage": {
+          "type": "String",
+          "value": ""
+        },
+        "quantity": {
+          "type": "Number",
+          "value": null
+        },
+        "maxQuantity": {
+          "type": "Number",
+          "value": null
+        }
+      },
+      "1": {
+        "description": {
+          "type": "String",
+          "value": "You can program the image to appear and perform a predetermined movement when a defined trigger occurs, such as when a person steps through a door."
+        },
+        "isActive": {
+          "type": "Boolean",
+          "value": false
+        },
+        "tier": {
+          "type": "String",
+          "value": "champion"
+        },
+        "powerUsage": {
+          "type": "String",
+          "value": ""
+        },
+        "quantity": {
+          "type": "Number",
+          "value": null
+        },
+        "maxQuantity": {
+          "type": "Number",
+          "value": null
+        }
+      },
+      "2": {
+        "description": {
+          "type": "String",
+          "value": "You can program the image to appear and perform a predetermined movement when a defined trigger occurs, such as when a person steps through a door."
+        },
+        "isActive": {
+          "type": "Boolean",
+          "value": false
+        },
+        "tier": {
+          "type": "String",
+          "value": "epic"
+        },
+        "powerUsage": {
+          "type": "String",
+          "value": ""
+        },
+        "quantity": {
+          "type": "Number",
+          "value": null
+        },
+        "maxQuantity": {
+          "type": "Number",
+          "value": null
+        }
+      }
+    }
+  },
+  "ownership": {
+    "default": 0,
+    "ANHn7Sw4w0uRlS0W": 3
+  },
+  "effects": [],
+  "sort": 0,
+  "folder": null,
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "14",
+    "systemId": "archmage",
+    "systemVersion": "1.40.1",
+    "createdTime": null,
+    "modifiedTime": 1789220686985,
+    "lastModifiedBy": null,
+    "exportSource": null
+  },
+  "_key": "!items!uPC0vEEESHZVnF9v"
+}

@@ -1,0 +1,198 @@
+{
+  "name": "Arcane Eye 13WCS",
+  "type": "power",
+  "flags": {},
+  "img": "icons/svg/mystery-man.svg",
+  "_id": "wmRI8C5X0MutB4t5",
+  "system": {
+    "name": {
+      "type": "String",
+      "label": "Name"
+    },
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "powerSource": {
+      "type": "String",
+      "label": "Power Source",
+      "value": "class"
+    },
+    "powerType": {
+      "type": "String",
+      "label": "Power Type",
+      "value": "spell"
+    },
+    "powerUsage": {
+      "type": "String",
+      "label": "Power Usage",
+      "value": "daily"
+    },
+    "powerLevel": {
+      "type": "Number",
+      "label": "Level",
+      "value": ""
+    },
+    "actionType": {
+      "type": "String",
+      "label": "Action",
+      "value": "standard"
+    },
+    "range": {
+      "type": "String",
+      "label": "Range",
+      "value": "Ranged"
+    },
+    "trigger": {
+      "type": "String",
+      "label": "Trigger",
+      "value": ""
+    },
+    "target": {
+      "type": "String",
+      "label": "Target",
+      "value": ""
+    },
+    "always": {
+      "type": "String",
+      "label": "Always",
+      "value": ""
+    },
+    "attack": {
+      "type": "String",
+      "label": "Attack",
+      "value": ""
+    },
+    "hit": {
+      "type": "String",
+      "label": "Hit",
+      "value": ""
+    },
+    "hitEven": {
+      "type": "String",
+      "label": "Natural Even Hit",
+      "value": ""
+    },
+    "hitOdd": {
+      "type": "String",
+      "label": "Natural Odd Hit",
+      "value": ""
+    },
+    "crit": {
+      "type": "String",
+      "label": "Crit",
+      "value": ""
+    },
+    "miss": {
+      "type": "String",
+      "label": "Miss",
+      "value": ""
+    },
+    "missEven": {
+      "type": "String",
+      "label": "Natural Even Miss",
+      "value": ""
+    },
+    "missOdd": {
+      "type": "String",
+      "label": "Natural Odd Miss",
+      "value": ""
+    },
+    "cost": {
+      "type": "String",
+      "label": "Cost",
+      "value": ""
+    },
+    "castBroadEffect": {
+      "type": "String",
+      "label": "Cast for Broad Effect",
+      "value": ""
+    },
+    "castPower": {
+      "type": "String",
+      "label": "Cast for Power",
+      "value": ""
+    },
+    "sustainedEffect": {
+      "type": "String",
+      "label": "Opening and Sustained Effect",
+      "value": ""
+    },
+    "finalVerse": {
+      "type": "String",
+      "label": "Final verse",
+      "value": ""
+    },
+    "special": {
+      "type": "String",
+      "label": "Special",
+      "value": ""
+    },
+    "effect": {
+      "type": "String",
+      "label": "Effect",
+      "value": "You create a glowing eyeball one inch in diameter made of raw arcane energy that can float up to a typical far-away distance from you in any direction (but no more than a city block’s distance or so). It works like a normal human eyeball and is dependant upon light to process images. Anything the eye can see, you can also. It moves at average walking speed for your species on your mental command—you can command it to stop, slow down, change direction, or return to you as desired. The eye persists for 1 minute per level; it has an AC and PD of 10 and is immediately destroyed if it takes any amount of damage."
+    },
+    "spellLevel3": {
+      "type": "String",
+      "label": "3rd Level Spell",
+      "value": ""
+    },
+    "spellLevel5": {
+      "type": "String",
+      "label": "5th Level Spell",
+      "value": "The arcane eye can now see in total darkness."
+    },
+    "spellLevel7": {
+      "type": "String",
+      "label": "7th Level Spell",
+      "value": "The eye’s form is blurred and translucent, making it invisible to Champion-tier or lower creatures that can’t normally see invisible things."
+    },
+    "spellLevel9": {
+      "type": "String",
+      "label": "9th Level Spell",
+      "value": "The eye can see invisible creatures or objects within its line of sight."
+    },
+    "spellChain": {
+      "type": "String",
+      "label": "Chain Spell",
+      "value": ""
+    },
+    "breathWeapon": {
+      "type": "String",
+      "label": "Breath Weapon",
+      "value": ""
+    },
+    "recharge": {
+      "type": "Number",
+      "label": "Recharge",
+      "value": 0
+    },
+    "quantity": {
+      "type": "Number",
+      "label": "Uses",
+      "value": 1
+    },
+    "feats": {}
+  },
+  "ownership": {
+    "default": 0,
+    "ANHn7Sw4w0uRlS0W": 3
+  },
+  "effects": [],
+  "sort": 0,
+  "folder": null,
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "14",
+    "systemId": "archmage",
+    "systemVersion": "1.40.1",
+    "createdTime": null,
+    "modifiedTime": 1789220686980,
+    "lastModifiedBy": null,
+    "exportSource": null
+  },
+  "_key": "!items!wmRI8C5X0MutB4t5"
+}

@@ -1,0 +1,297 @@
+{
+  "_id": "pFOdkV4l28axxBBX",
+  "name": "Booming Command",
+  "type": "power",
+  "flags": {},
+  "img": "icons/svg/mystery-man.svg",
+  "effects": [],
+  "system": {
+    "name": {
+      "type": "String",
+      "label": "Name"
+    },
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "group": {
+      "type": "String",
+      "label": "Group",
+      "value": "Domain: War/Leadership"
+    },
+    "powerSource": {
+      "type": "String",
+      "label": "Power Source",
+      "value": "class"
+    },
+    "powerSourceName": {
+      "type": "String",
+      "label": "Power Source Name",
+      "value": "Cleric"
+    },
+    "powerType": {
+      "type": "String",
+      "label": "Power Type",
+      "value": "spell"
+    },
+    "powerUsage": {
+      "type": "String",
+      "label": "Power Usage",
+      "value": "daily"
+    },
+    "powerLevel": {
+      "type": "Number",
+      "label": "Level",
+      "value": 1
+    },
+    "actionType": {
+      "type": "String",
+      "label": "Action",
+      "value": "standard"
+    },
+    "range": {
+      "type": "String",
+      "label": "Range",
+      "value": "Close-quarters"
+    },
+    "trigger": {
+      "type": "String",
+      "label": "Trigger",
+      "value": ""
+    },
+    "target": {
+      "type": "String",
+      "label": "Target",
+      "value": "One nearby enemy"
+    },
+    "always": {
+      "type": "String",
+      "label": "Always",
+      "value": ""
+    },
+    "attack": {
+      "type": "String",
+      "label": "Attack",
+      "value": "[[d20 + @atk.d.bonus + @wis.mod + @std ]] vs. MD"
+    },
+    "hit": {
+      "type": "String",
+      "label": "Hit",
+      "value": "[[@atk.d.bonus + 3d8 + @wis.dmg ]] thunder damage"
+    },
+    "hitEven": {
+      "type": "String",
+      "label": "Natural Even Hit",
+      "value": ""
+    },
+    "hitOdd": {
+      "type": "String",
+      "label": "Natural Odd Hit",
+      "value": ""
+    },
+    "crit": {
+      "type": "String",
+      "label": "Crit",
+      "value": ""
+    },
+    "miss": {
+      "type": "String",
+      "label": "Miss",
+      "value": "[[@lvl]] damage"
+    },
+    "missEven": {
+      "type": "String",
+      "label": "Natural Even Miss",
+      "value": ""
+    },
+    "missOdd": {
+      "type": "String",
+      "label": "Natural Odd Miss",
+      "value": ""
+    },
+    "cost": {
+      "type": "String",
+      "label": "Cost",
+      "value": ""
+    },
+    "castBroadEffect": {
+      "type": "String",
+      "label": "Cast for Broad Effect",
+      "value": ""
+    },
+    "castPower": {
+      "type": "String",
+      "label": "Cast for Power",
+      "value": ""
+    },
+    "sustainedEffect": {
+      "type": "String",
+      "label": "Opening and Sustained Effect",
+      "value": ""
+    },
+    "finalVerse": {
+      "type": "String",
+      "label": "Final verse",
+      "value": ""
+    },
+    "special": {
+      "type": "String",
+      "label": "Special",
+      "value": ""
+    },
+    "effect": {
+      "type": "String",
+      "label": "Effect",
+      "value": "You give the target a simple, three-word command, such as \"drop your weapon\" or \"run away quickly\". If the target obeys, no other effect happens. If it doesn’t, make the following attack against it:"
+    },
+    "spellLevel3": {
+      "type": "String",
+      "label": "3rd Level Spell",
+      "value": "[[4d8+ @wis.dmg+@atk.d.bonus]] thunder damage"
+    },
+    "spellLevel5": {
+      "type": "String",
+      "label": "5th Level Spell",
+      "value": "[[6d8+ @wis.dmg+@atk.d.bonus]] thunder damage"
+    },
+    "spellLevel7": {
+      "type": "String",
+      "label": "7th Level Spell",
+      "value": "[[9d8+ @wis.dmg+@atk.d.bonus]] thunder damage"
+    },
+    "spellLevel9": {
+      "type": "String",
+      "label": "9th Level Spell",
+      "value": "[[2d6*10+ @wis.dmg+@atk.d.bonus]] thunder damage"
+    },
+    "spellChain": {
+      "type": "String",
+      "label": "Chain Spell",
+      "value": ""
+    },
+    "breathWeapon": {
+      "type": "String",
+      "label": "Breath Weapon",
+      "value": ""
+    },
+    "recharge": {
+      "type": "Number",
+      "label": "Recharge",
+      "value": null
+    },
+    "rechargeAttempts": {
+      "type": "Number",
+      "label": "Number of Recharges Attempted",
+      "value": 0
+    },
+    "quantity": {
+      "type": "Number",
+      "label": "Uses",
+      "value": 1
+    },
+    "maxQuantity": {
+      "type": "Number",
+      "label": "Max Uses",
+      "value": 1
+    },
+    "feats": {
+      "0": {
+        "description": {
+          "type": "String",
+          "value": "The command can be up to 5 words."
+        },
+        "isActive": {
+          "type": "Boolean",
+          "value": false
+        },
+        "tier": {
+          "type": "String",
+          "value": "adventurer"
+        },
+        "powerUsage": {
+          "type": "String",
+          "value": ""
+        },
+        "quantity": {
+          "type": "Number",
+          "value": null
+        },
+        "maxQuantity": {
+          "type": "Number",
+          "value": null
+        }
+      },
+      "1": {
+        "description": {
+          "type": "String",
+          "value": "<p>Target [[1d3]] enemies instead.</p>"
+        },
+        "isActive": {
+          "type": "Boolean",
+          "value": false
+        },
+        "tier": {
+          "type": "String",
+          "value": "champion"
+        },
+        "powerUsage": {
+          "type": "String",
+          "value": ""
+        },
+        "quantity": {
+          "type": "Number",
+          "value": null
+        },
+        "maxQuantity": {
+          "type": "Number",
+          "value": null
+        }
+      },
+      "2": {
+        "description": {
+          "type": "String",
+          "value": "<p>Target [[1d4]] enemies instead.</p>"
+        },
+        "isActive": {
+          "type": "Boolean",
+          "value": false
+        },
+        "tier": {
+          "type": "String",
+          "value": "epic"
+        },
+        "powerUsage": {
+          "type": "String",
+          "value": ""
+        },
+        "quantity": {
+          "type": "Number",
+          "value": null
+        },
+        "maxQuantity": {
+          "type": "Number",
+          "value": null
+        }
+      }
+    }
+  },
+  "ownership": {
+    "default": 0,
+    "A901bz1OKzb5sxyf": 3
+  },
+  "sort": 0,
+  "folder": null,
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "14",
+    "systemId": "archmage",
+    "systemVersion": "1.40.1",
+    "createdTime": null,
+    "modifiedTime": 1789220686954,
+    "lastModifiedBy": null,
+    "exportSource": null
+  },
+  "_key": "!items!pFOdkV4l28axxBBX"
+}

@@ -1,0 +1,244 @@
+{
+  "_id": "oSfolc6uOwvSGlVS",
+  "name": "Divine Dominion",
+  "type": "power",
+  "flags": {},
+  "img": "icons/svg/mystery-man.svg",
+  "effects": [],
+  "system": {
+    "name": {
+      "type": "String",
+      "label": "Name"
+    },
+    "description": {
+      "type": "String",
+      "label": "Description"
+    },
+    "group": {
+      "type": "String",
+      "label": "Group",
+      "value": "Domain: Any"
+    },
+    "powerSource": {
+      "type": "String",
+      "label": "Power Source",
+      "value": "class"
+    },
+    "powerSourceName": {
+      "type": "String",
+      "label": "Power Source Name",
+      "value": "Cleric"
+    },
+    "powerType": {
+      "type": "String",
+      "label": "Power Type",
+      "value": "spell"
+    },
+    "powerUsage": {
+      "type": "String",
+      "label": "Power Usage",
+      "value": "daily"
+    },
+    "powerLevel": {
+      "type": "Number",
+      "label": "Level",
+      "value": 7
+    },
+    "actionType": {
+      "type": "String",
+      "label": "Action",
+      "value": "standard"
+    },
+    "range": {
+      "type": "String",
+      "label": "Range",
+      "value": "Ranged"
+    },
+    "trigger": {
+      "type": "String",
+      "label": "Trigger",
+      "value": ""
+    },
+    "target": {
+      "type": "String",
+      "label": "Target",
+      "value": "1 nearby enemy"
+    },
+    "always": {
+      "type": "String",
+      "label": "Always",
+      "value": ""
+    },
+    "attack": {
+      "type": "String",
+      "label": "Attack",
+      "value": "[[d20 + @wis.mod + @std + @atk.d.bonus]] vs. MD"
+    },
+    "hit": {
+      "type": "String",
+      "label": "Hit",
+      "value": "If the target enemy is not a demon, devil, or undead, you assume control of that enemy on its next turn for the duration of a single action. If it is a demon, devil, or undead, it instead suffers [[8d12]] holy damage and is hampered until it makes a normal save (11+)."
+    },
+    "hitEven": {
+      "type": "String",
+      "label": "Natural Even Hit",
+      "value": ""
+    },
+    "hitOdd": {
+      "type": "String",
+      "label": "Natural Odd Hit",
+      "value": ""
+    },
+    "crit": {
+      "type": "String",
+      "label": "Crit",
+      "value": ""
+    },
+    "miss": {
+      "type": "String",
+      "label": "Miss",
+      "value": "The enemy is hampered until it makes a normal save (11+). If it is a demon, devil, or undead, it suffers half the listed damage."
+    },
+    "missEven": {
+      "type": "String",
+      "label": "Even Miss",
+      "value": ""
+    },
+    "missOdd": {
+      "type": "String",
+      "label": "Odd Miss",
+      "value": ""
+    },
+    "cost": {
+      "type": "String",
+      "label": "Cost",
+      "value": ""
+    },
+    "castBroadEffect": {
+      "type": "String",
+      "label": "Cast for Broad Effect",
+      "value": ""
+    },
+    "castPower": {
+      "type": "String",
+      "label": "Cast for Power",
+      "value": ""
+    },
+    "sustainedEffect": {
+      "type": "String",
+      "label": "Opening and Sustained Effect",
+      "value": ""
+    },
+    "finalVerse": {
+      "type": "String",
+      "label": "Final Verse",
+      "value": ""
+    },
+    "special": {
+      "type": "String",
+      "label": "Special",
+      "value": ""
+    },
+    "effect": {
+      "type": "String",
+      "label": "Effect",
+      "value": ""
+    },
+    "spellLevel3": {
+      "type": "String",
+      "label": "3rd Level Spell",
+      "value": ""
+    },
+    "spellLevel5": {
+      "type": "String",
+      "label": "5th Level Spell",
+      "value": ""
+    },
+    "spellLevel7": {
+      "type": "String",
+      "label": "7th Level Spell",
+      "value": ""
+    },
+    "spellLevel9": {
+      "type": "String",
+      "label": "9th Level Spell",
+      "value": "Control target for its entire next turn; [[2d8 * 10]] damage to demon/devil/undead"
+    },
+    "spellChain": {
+      "type": "String",
+      "label": "Chain Spell",
+      "value": ""
+    },
+    "breathWeapon": {
+      "type": "String",
+      "label": "Breath Weapon",
+      "value": ""
+    },
+    "recharge": {
+      "type": "Number",
+      "label": "Recharge",
+      "value": null
+    },
+    "rechargeAttempts": {
+      "type": "Number",
+      "label": "Number of Recharges Attempted",
+      "value": 0
+    },
+    "quantity": {
+      "type": "Number",
+      "label": "Uses",
+      "value": 1
+    },
+    "maxQuantity": {
+      "type": "Number",
+      "label": "Max Uses",
+      "value": 1
+    },
+    "feats": {
+      "0": {
+        "description": {
+          "type": "String",
+          "value": "<p>Once per level, if the target enemy is staggered and you hit with this spell, you can spend an icon relationship point on which you rolled a 5 or 6 at the start of the session to sway that enemy&rsquo;s allegiance to your side. The icon relationship used must make sense in the context of the story, but GMs are encouraged to work with the player to help narrate this sensibly and make full use of this feat.</p>"
+        },
+        "isActive": {
+          "type": "Boolean",
+          "value": false
+        },
+        "tier": {
+          "type": "String",
+          "value": "epic"
+        },
+        "powerUsage": {
+          "type": "String",
+          "value": ""
+        },
+        "quantity": {
+          "type": "Number",
+          "value": null
+        },
+        "maxQuantity": {
+          "type": "Number",
+          "value": null
+        }
+      }
+    }
+  },
+  "ownership": {
+    "default": 0,
+    "A901bz1OKzb5sxyf": 3
+  },
+  "sort": 0,
+  "folder": null,
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "14",
+    "systemId": "archmage",
+    "systemVersion": "1.40.1",
+    "createdTime": null,
+    "modifiedTime": 1789220686938,
+    "lastModifiedBy": null,
+    "exportSource": null
+  },
+  "_key": "!items!oSfolc6uOwvSGlVS"
+}

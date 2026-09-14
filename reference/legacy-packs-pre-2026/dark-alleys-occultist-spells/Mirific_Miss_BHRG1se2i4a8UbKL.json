@@ -1,0 +1,277 @@
+{
+  "name": "Mirific Miss",
+  "type": "power",
+  "flags": {},
+  "img": "icons/svg/mystery-man.svg",
+  "_id": "BHRG1se2i4a8UbKL",
+  "system": {
+    "name": {
+      "type": "String",
+      "label": "Name"
+    },
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "powerSource": {
+      "type": "String",
+      "label": "Power Source",
+      "value": "class"
+    },
+    "powerType": {
+      "type": "String",
+      "label": "Power Type",
+      "value": "spell"
+    },
+    "powerUsage": {
+      "type": "String",
+      "label": "Power Usage",
+      "value": ""
+    },
+    "powerLevel": {
+      "type": "Number",
+      "label": "Level",
+      "value": 1
+    },
+    "actionType": {
+      "type": "String",
+      "label": "Action",
+      "value": "interrupt"
+    },
+    "range": {
+      "type": "String",
+      "label": "Range",
+      "value": "Ranged"
+    },
+    "trigger": {
+      "type": "String",
+      "label": "Trigger",
+      "value": "One of your allies misses a nearby enemy with an attack."
+    },
+    "target": {
+      "type": "String",
+      "label": "Target",
+      "value": "The enemy missed by the attack"
+    },
+    "always": {
+      "type": "String",
+      "label": "Always",
+      "value": ""
+    },
+    "attack": {
+      "type": "String",
+      "label": "Attack",
+      "value": "[[d20 + @atk.a.bonus + @int.mod + @std ]] vs. MD"
+    },
+    "hit": {
+      "type": "String",
+      "label": "Hit",
+      "value": ""
+    },
+    "hitEven": {
+      "type": "String",
+      "label": "Natural Even Hit",
+      "value": "deal psychic damage to the target equal to [[1d8]] + wisdom plus the amount of miss damage dealt by your ally."
+    },
+    "hitOdd": {
+      "type": "String",
+      "label": "Natural Odd Hit",
+      "value": "deal [[1d4]] + wisdom psychic damage to the target, and your ally gains temporary hit points equal to the miss damage they dealt to the target."
+    },
+    "crit": {
+      "type": "String",
+      "label": "Crit",
+      "value": ""
+    },
+    "miss": {
+      "type": "String",
+      "label": "Miss",
+      "value": "You gain temporary hit points equal to the miss damage dealt by your ally."
+    },
+    "missEven": {
+      "type": "String",
+      "label": "Natural Even Miss",
+      "value": ""
+    },
+    "missOdd": {
+      "type": "String",
+      "label": "Natural Odd Miss",
+      "value": ""
+    },
+    "cost": {
+      "type": "String",
+      "label": "Cost",
+      "value": ""
+    },
+    "castBroadEffect": {
+      "type": "String",
+      "label": "Cast for Broad Effect",
+      "value": ""
+    },
+    "castPower": {
+      "type": "String",
+      "label": "Cast for Power",
+      "value": ""
+    },
+    "sustainedEffect": {
+      "type": "String",
+      "label": "Opening and Sustained Effect",
+      "value": ""
+    },
+    "finalVerse": {
+      "type": "String",
+      "label": "Final verse",
+      "value": ""
+    },
+    "special": {
+      "type": "String",
+      "label": "Special",
+      "value": "Retain Focus: 1–5"
+    },
+    "effect": {
+      "type": "String",
+      "label": "Effect",
+      "value": ""
+    },
+    "spellLevel3": {
+      "type": "String",
+      "label": "3rd Level Spell",
+      "value": ""
+    },
+    "spellLevel5": {
+      "type": "String",
+      "label": "5th Level Spell",
+      "value": "[[5d8]]/[[5d4]] damage"
+    },
+    "spellLevel7": {
+      "type": "String",
+      "label": "7th Level Spell",
+      "value": "[[7d8]]/[[7d4]] damage"
+    },
+    "spellLevel9": {
+      "type": "String",
+      "label": "9th Level Spell",
+      "value": "[[9d8]]/[[9d4]] damage"
+    },
+    "spellChain": {
+      "type": "String",
+      "label": "Chain Spell",
+      "value": ""
+    },
+    "breathWeapon": {
+      "type": "String",
+      "label": "Breath Weapon",
+      "value": ""
+    },
+    "recharge": {
+      "type": "Number",
+      "label": "Recharge",
+      "value": 0
+    },
+    "quantity": {
+      "type": "Number",
+      "label": "Uses",
+      "value": 1
+    },
+    "feats": {
+      "0": {
+        "description": {
+          "type": "String",
+          "value": "On a natural 5, 10, 15, or 20 on your attack roll, your ally can reroll the attack. (This can turn the triggering attack into a hit, meaning zero miss damage for the purpose of this spell)"
+        },
+        "isActive": {
+          "type": "Boolean",
+          "value": false
+        },
+        "tier": {
+          "type": "String",
+          "value": "adventurer"
+        },
+        "powerUsage": {
+          "type": "String",
+          "value": ""
+        },
+        "quantity": {
+          "type": "Number",
+          "value": null
+        },
+        "maxQuantity": {
+          "type": "Number",
+          "value": null
+        }
+      },
+      "1": {
+        "description": {
+          "type": "String",
+          "value": "On a natural 5, 10, 15, or 20 on your attack roll, your ally can reroll the attack. (This can turn the triggering attack into a hit, meaning zero miss damage for the purpose of this spell)"
+        },
+        "isActive": {
+          "type": "Boolean",
+          "value": false
+        },
+        "tier": {
+          "type": "String",
+          "value": "champion"
+        },
+        "powerUsage": {
+          "type": "String",
+          "value": ""
+        },
+        "quantity": {
+          "type": "Number",
+          "value": null
+        },
+        "maxQuantity": {
+          "type": "Number",
+          "value": null
+        }
+      },
+      "2": {
+        "description": {
+          "type": "String",
+          "value": "On a natural 5, 10, 15, or 20 on your attack roll, your ally can reroll the attack. (This can turn the triggering attack into a hit, meaning zero miss damage for the purpose of this spell)"
+        },
+        "isActive": {
+          "type": "Boolean",
+          "value": false
+        },
+        "tier": {
+          "type": "String",
+          "value": "epic"
+        },
+        "powerUsage": {
+          "type": "String",
+          "value": ""
+        },
+        "quantity": {
+          "type": "Number",
+          "value": null
+        },
+        "maxQuantity": {
+          "type": "Number",
+          "value": null
+        }
+      }
+    }
+  },
+  "ownership": {
+    "default": 0,
+    "tiK9ZaJs3ZbloV9w": 3
+  },
+  "effects": [],
+  "sort": 0,
+  "folder": null,
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "14",
+    "systemId": "archmage",
+    "systemVersion": "1.40.1",
+    "createdTime": null,
+    "modifiedTime": 1789220687040,
+    "lastModifiedBy": null,
+    "exportSource": null
+  },
+  "_key": "!items!BHRG1se2i4a8UbKL"
+}

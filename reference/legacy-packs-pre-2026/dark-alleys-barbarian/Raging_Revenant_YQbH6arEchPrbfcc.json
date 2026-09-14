@@ -1,0 +1,276 @@
+{
+  "name": "Raging Revenant",
+  "type": "power",
+  "flags": {},
+  "img": "icons/svg/d20.svg",
+  "_id": "YQbH6arEchPrbfcc",
+  "system": {
+    "name": {
+      "type": "String",
+      "label": "Name"
+    },
+    "description": {
+      "type": "String",
+      "label": "Description"
+    },
+    "powerSource": {
+      "type": "String",
+      "label": "Power Source",
+      "value": "class"
+    },
+    "powerType": {
+      "type": "String",
+      "label": "Power Type",
+      "value": "talent"
+    },
+    "powerUsage": {
+      "type": "String",
+      "label": "Power Usage",
+      "value": ""
+    },
+    "powerLevel": {
+      "type": "Number",
+      "label": "Level",
+      "value": 1
+    },
+    "actionType": {
+      "type": "String",
+      "label": "Action",
+      "value": ""
+    },
+    "range": {
+      "type": "String",
+      "label": "Range",
+      "value": ""
+    },
+    "trigger": {
+      "type": "String",
+      "label": "Trigger",
+      "value": ""
+    },
+    "target": {
+      "type": "String",
+      "label": "Target",
+      "value": ""
+    },
+    "always": {
+      "type": "String",
+      "label": "Always",
+      "value": ""
+    },
+    "attack": {
+      "type": "String",
+      "label": "Attack",
+      "value": ""
+    },
+    "hit": {
+      "type": "String",
+      "label": "Hit",
+      "value": ""
+    },
+    "hitEven": {
+      "type": "String",
+      "label": "Natural Even Hit",
+      "value": ""
+    },
+    "hitOdd": {
+      "type": "String",
+      "label": "Natural Odd Hit",
+      "value": ""
+    },
+    "crit": {
+      "type": "String",
+      "label": "Crit",
+      "value": ""
+    },
+    "miss": {
+      "type": "String",
+      "label": "Miss",
+      "value": ""
+    },
+    "missEven": {
+      "type": "String",
+      "label": "Even Miss",
+      "value": ""
+    },
+    "missOdd": {
+      "type": "String",
+      "label": "Odd Miss",
+      "value": ""
+    },
+    "cost": {
+      "type": "String",
+      "label": "Cost",
+      "value": ""
+    },
+    "castBroadEffect": {
+      "type": "String",
+      "label": "Cast for Broad Effect",
+      "value": ""
+    },
+    "castPower": {
+      "type": "String",
+      "label": "Cast for Power",
+      "value": ""
+    },
+    "sustainedEffect": {
+      "type": "String",
+      "label": "Opening and Sustained Effect",
+      "value": ""
+    },
+    "finalVerse": {
+      "type": "String",
+      "label": "Final Verse",
+      "value": ""
+    },
+    "special": {
+      "type": "String",
+      "label": "Special",
+      "value": ""
+    },
+    "effect": {
+      "type": "String",
+      "label": "Effect",
+      "value": "<p dir=\"ltr\"><strong>Special: </strong>You cannot take this talent at character creation. Instead, when your PC dies, resurrect him or her and swap out one barbarian talent for this one.</p>\n<p dir=\"ltr\">Whenever you face those who killed you, you can rage for free.</p>\n<p><span id=\"docs-internal-guid-f05d75d3-7fff-d073-43e0-d959e789224a\"></span></p>\n<p dir=\"ltr\">However, you left a part of your soul down below. You are now Sorta Dead, as per the necromancer talent. If you get killed again, you can return without taking the talent another time. You travel for 1d6 days as you make your way back from the Underworld. Each time you die, you lose a recovery permanently, until you have none left and your soul is trapped in the afterlife eternally. Let&rsquo;s hope you have found peace by then.</p>"
+    },
+    "spellLevel3": {
+      "type": "String",
+      "label": "3rd Level Spell",
+      "value": ""
+    },
+    "spellLevel5": {
+      "type": "String",
+      "label": "5th Level Spell",
+      "value": ""
+    },
+    "spellLevel7": {
+      "type": "String",
+      "label": "7th Level Spell",
+      "value": ""
+    },
+    "spellLevel9": {
+      "type": "String",
+      "label": "9th Level Spell",
+      "value": ""
+    },
+    "spellChain": {
+      "type": "String",
+      "label": "Chain Spell",
+      "value": ""
+    },
+    "breathWeapon": {
+      "type": "String",
+      "label": "Breath Weapon",
+      "value": ""
+    },
+    "recharge": {
+      "type": "Number",
+      "label": "Recharge",
+      "value": 0
+    },
+    "quantity": {
+      "type": "Number",
+      "label": "Uses",
+      "value": 1
+    },
+    "feats": {
+      "0": {
+        "description": {
+          "type": "String",
+          "value": "<p><span id=\"docs-internal-guid-ebb45d9e-7fff-20b7-3026-3a751d0a1424\">You suck the life out of your surroundings to sustain yourself. When you make a recovery roll to heal, and a die comes up as the maximum, deal negative energy damage equal to that die to each enemy engaged with you</span></p>"
+        },
+        "isActive": {
+          "type": "Boolean",
+          "value": false
+        },
+        "tier": {
+          "type": "String",
+          "value": "adventurer"
+        },
+        "powerUsage": {
+          "type": "String",
+          "value": ""
+        },
+        "quantity": {
+          "type": "Number",
+          "value": null
+        },
+        "maxQuantity": {
+          "type": "Number",
+          "value": null
+        }
+      },
+      "1": {
+        "description": {
+          "type": "String",
+          "value": "<p><span id=\"docs-internal-guid-20ddee9e-7fff-4b83-25c2-70a25b7ef094\"></span></p>\n<p dir=\"ltr\">When you are reduced to zero hit points or below while raging, your Rage ends, but you no longer fall unconscious. You can still die after failing death saves, or when you reach negative hit points equal to half your maximum hit points, but until that point, you can act normally.</p>"
+        },
+        "isActive": {
+          "type": "Boolean",
+          "value": false
+        },
+        "tier": {
+          "type": "String",
+          "value": "champion"
+        },
+        "powerUsage": {
+          "type": "String",
+          "value": ""
+        },
+        "quantity": {
+          "type": "Number",
+          "value": null
+        },
+        "maxQuantity": {
+          "type": "Number",
+          "value": null
+        }
+      },
+      "2": {
+        "description": {
+          "type": "String",
+          "value": "<p><span id=\"docs-internal-guid-f8791141-7fff-6b57-385a-bfad9fcb48a3\"></span></p>\n<p dir=\"ltr\">As per the champion-tier feat, but you keep raging even when at negative hit points.</p>"
+        },
+        "isActive": {
+          "type": "Boolean",
+          "value": false
+        },
+        "tier": {
+          "type": "String",
+          "value": "epic"
+        },
+        "powerUsage": {
+          "type": "String",
+          "value": ""
+        },
+        "quantity": {
+          "type": "Number",
+          "value": null
+        },
+        "maxQuantity": {
+          "type": "Number",
+          "value": null
+        }
+      }
+    }
+  },
+  "ownership": {
+    "default": 0,
+    "UzA77dWItspmhNMp": 3
+  },
+  "effects": [],
+  "sort": 0,
+  "folder": null,
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "14",
+    "systemId": "archmage",
+    "systemVersion": "1.40.1",
+    "createdTime": null,
+    "modifiedTime": 1789220687009,
+    "lastModifiedBy": null,
+    "exportSource": null
+  },
+  "_key": "!items!YQbH6arEchPrbfcc"
+}

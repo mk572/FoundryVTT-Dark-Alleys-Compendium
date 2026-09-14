@@ -1,0 +1,297 @@
+{
+  "_id": "OFv9fQDQgMDq6ImM",
+  "name": "Domain: Liberation/Anarchy",
+  "type": "power",
+  "flags": {},
+  "img": "icons/svg/mystery-man.svg",
+  "effects": [],
+  "system": {
+    "name": {
+      "type": "String",
+      "label": "Name"
+    },
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p><strong>Domain</strong>: Once per incremental advance you attain, you can generate a one-point positive relationship with an icon you don&rsquo;t already have a relationship with. This relationship must be formed with an icon who is an enemy of another icon with whom you have a negative relationship. At your next incremental advance, you may choose a new one. At the GM&rsquo;s discretion, you can instead &ldquo;save&rdquo; this bonus relationship point and allocate it later to thwart your enemies as the story unfolds, rolling for its potential benefits immediately upon choosing the relationship.</p>\n<p>&nbsp;</p>\n<p><strong>For Gamemasters</strong>: Icon&nbsp;Relationships &amp; the&nbsp;Liberation Domain</p>\n<p>13th Age offers its own set of core assumptions about who the icons are, how they interact with one another, and how the expected moral compass of heroic player characters shapes their relationships with those icons. In your own campaign, of course, those assumptions may vary drastically. While each icon is loosely labeled as a Good Guy, a Bad Guy, or Something In Between in the rules, their social and ethical leanings are less overt. (Other games might denote these on the chaos/law axis of an alignment system.) Yet this distinction is an important one to heroic clerics who choose the Liberation Domain&mdash;they&rsquo;re often agents of rebellion whose religions eschew any societal conventions that would cause harm to their faithful. Their icon relationships should reflect this too, as they&rsquo;re key to making this Domain Talent function as intended. Equally important, though, is that you define the relationships between your game world&rsquo;s icons so that you and the players are crafting the story <em>together</em>.</p>"
+    },
+    "group": {
+      "type": "String",
+      "label": "Group",
+      "value": ""
+    },
+    "powerSource": {
+      "type": "String",
+      "label": "Power Source",
+      "value": "class"
+    },
+    "powerSourceName": {
+      "type": "String",
+      "label": "Power Source Name",
+      "value": "Cleric"
+    },
+    "powerType": {
+      "type": "String",
+      "label": "Power Type",
+      "value": "talent"
+    },
+    "powerUsage": {
+      "type": "String",
+      "label": "Power Usage",
+      "value": "daily"
+    },
+    "powerLevel": {
+      "type": "Number",
+      "label": "Level",
+      "value": null
+    },
+    "actionType": {
+      "type": "String",
+      "label": "Action",
+      "value": "quick"
+    },
+    "range": {
+      "type": "String",
+      "label": "Range",
+      "value": ""
+    },
+    "trigger": {
+      "type": "String",
+      "label": "Trigger",
+      "value": ""
+    },
+    "target": {
+      "type": "String",
+      "label": "Target",
+      "value": ""
+    },
+    "always": {
+      "type": "String",
+      "label": "Always",
+      "value": ""
+    },
+    "attack": {
+      "type": "String",
+      "label": "Attack",
+      "value": ""
+    },
+    "hit": {
+      "type": "String",
+      "label": "Hit",
+      "value": ""
+    },
+    "hitEven": {
+      "type": "String",
+      "label": "Natural Even Hit",
+      "value": ""
+    },
+    "hitOdd": {
+      "type": "String",
+      "label": "Natural Odd Hit",
+      "value": ""
+    },
+    "crit": {
+      "type": "String",
+      "label": "Crit",
+      "value": ""
+    },
+    "miss": {
+      "type": "String",
+      "label": "Miss",
+      "value": ""
+    },
+    "missEven": {
+      "type": "String",
+      "label": "Even Miss",
+      "value": ""
+    },
+    "missOdd": {
+      "type": "String",
+      "label": "Odd Miss",
+      "value": ""
+    },
+    "cost": {
+      "type": "String",
+      "label": "Cost",
+      "value": ""
+    },
+    "castBroadEffect": {
+      "type": "String",
+      "label": "Cast for Broad Effect",
+      "value": ""
+    },
+    "castPower": {
+      "type": "String",
+      "label": "Cast for Power",
+      "value": ""
+    },
+    "sustainedEffect": {
+      "type": "String",
+      "label": "Opening and Sustained Effect",
+      "value": ""
+    },
+    "finalVerse": {
+      "type": "String",
+      "label": "Final Verse",
+      "value": ""
+    },
+    "special": {
+      "type": "String",
+      "label": "Special",
+      "value": ""
+    },
+    "effect": {
+      "type": "String",
+      "label": "Effect",
+      "value": "<p>This battle, you can make a nearby ally pop free from an enemy that is engaged with them.</p>"
+    },
+    "spellLevel3": {
+      "type": "String",
+      "label": "3rd Level Spell",
+      "value": ""
+    },
+    "spellLevel5": {
+      "type": "String",
+      "label": "5th Level Spell",
+      "value": ""
+    },
+    "spellLevel7": {
+      "type": "String",
+      "label": "7th Level Spell",
+      "value": ""
+    },
+    "spellLevel9": {
+      "type": "String",
+      "label": "9th Level Spell",
+      "value": ""
+    },
+    "spellChain": {
+      "type": "String",
+      "label": "Chain Spell",
+      "value": ""
+    },
+    "breathWeapon": {
+      "type": "String",
+      "label": "Breath Weapon",
+      "value": ""
+    },
+    "recharge": {
+      "type": "Number",
+      "label": "Recharge",
+      "value": null
+    },
+    "rechargeAttempts": {
+      "type": "Number",
+      "label": "Number of Recharges Attempted",
+      "value": 0
+    },
+    "quantity": {
+      "type": "Number",
+      "label": "Uses",
+      "value": 1
+    },
+    "maxQuantity": {
+      "type": "Number",
+      "label": "Max Uses",
+      "value": 1
+    },
+    "feats": {
+      "0": {
+        "description": {
+          "type": "String",
+          "value": "<p>&nbsp;You may use this invocation as a free action at any time, even on someone else&rsquo;s turn.</p>"
+        },
+        "isActive": {
+          "type": "Boolean",
+          "value": false
+        },
+        "tier": {
+          "type": "String",
+          "value": "adventurer"
+        },
+        "powerUsage": {
+          "type": "String",
+          "value": ""
+        },
+        "quantity": {
+          "type": "Number",
+          "value": null
+        },
+        "maxQuantity": {
+          "type": "Number",
+          "value": null
+        }
+      },
+      "1": {
+        "description": {
+          "type": "String",
+          "value": "<p>When you use this ability on an ally that is grabbed or stuck, the effect or condition ends immediately.</p>"
+        },
+        "isActive": {
+          "type": "Boolean",
+          "value": false
+        },
+        "tier": {
+          "type": "String",
+          "value": "champion"
+        },
+        "powerUsage": {
+          "type": "String",
+          "value": ""
+        },
+        "quantity": {
+          "type": "Number",
+          "value": null
+        },
+        "maxQuantity": {
+          "type": "Number",
+          "value": null
+        }
+      },
+      "2": {
+        "description": {
+          "type": "String",
+          "value": "<p>Once per day, you can use this ability on all nearby allies. They become immune to being grabbed or stuck for the rest of the battle.</p>"
+        },
+        "isActive": {
+          "type": "Boolean",
+          "value": false
+        },
+        "tier": {
+          "type": "String",
+          "value": "epic"
+        },
+        "powerUsage": {
+          "type": "String",
+          "value": ""
+        },
+        "quantity": {
+          "type": "Number",
+          "value": null
+        },
+        "maxQuantity": {
+          "type": "Number",
+          "value": null
+        }
+      }
+    }
+  },
+  "ownership": {
+    "default": 0,
+    "A901bz1OKzb5sxyf": 3
+  },
+  "sort": 0,
+  "folder": null,
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "14",
+    "systemId": "archmage",
+    "systemVersion": "1.40.1",
+    "createdTime": null,
+    "modifiedTime": 1789220686938,
+    "lastModifiedBy": null,
+    "exportSource": null
+  },
+  "_key": "!items!OFv9fQDQgMDq6ImM"
+}

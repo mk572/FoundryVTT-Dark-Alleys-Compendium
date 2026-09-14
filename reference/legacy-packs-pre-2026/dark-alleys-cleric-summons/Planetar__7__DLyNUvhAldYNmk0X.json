@@ -1,0 +1,639 @@
+{
+  "_id": "DLyNUvhAldYNmk0X",
+  "name": "Planetar (7)",
+  "type": "npc",
+  "sort": 100001,
+  "flags": {},
+  "token": {
+    "flags": {},
+    "name": "Planetar",
+    "displayName": 0,
+    "img": "icons/svg/mystery-man.svg",
+    "tint": null,
+    "width": 1,
+    "height": 1,
+    "scale": 1,
+    "lockRotation": false,
+    "rotation": 0,
+    "vision": false,
+    "dimSight": 0,
+    "brightSight": 0,
+    "dimLight": 0,
+    "brightLight": 0,
+    "sightAngle": 360,
+    "lightAngle": 360,
+    "lightAlpha": 1,
+    "lightAnimation": {
+      "speed": 5,
+      "intensity": 5
+    },
+    "actorId": "DLyNUvhAldYNmk0X",
+    "actorLink": false,
+    "disposition": -1,
+    "displayBars": 0,
+    "bar1": {},
+    "bar2": {},
+    "randomImg": false
+  },
+  "items": [
+    {
+      "_id": "stssTVYroYxs1Tmj",
+      "name": "Blade of Elysium",
+      "type": "action",
+      "sort": 100000,
+      "flags": {},
+      "img": "icons/svg/target.svg",
+      "effects": [],
+      "system": {
+        "name": {
+          "type": "String",
+          "label": "Name"
+        },
+        "description": {
+          "type": "String",
+          "label": "Description"
+        },
+        "group": {
+          "type": "String",
+          "label": "Group",
+          "value": ""
+        },
+        "attack": {
+          "type": "String",
+          "label": "Attack Roll",
+          "value": "[[d20+12]] vs. PD"
+        },
+        "hit": {
+          "type": "String",
+          "label": "Hit",
+          "value": "[[25]] holy damage"
+        },
+        "hit1": {
+          "type": "String",
+          "label": "Hit",
+          "name": "",
+          "value": ""
+        },
+        "hit2": {
+          "type": "String",
+          "label": "Hit",
+          "name": "",
+          "value": ""
+        },
+        "hit3": {
+          "type": "String",
+          "label": "Hit",
+          "name": "",
+          "value": ""
+        },
+        "hit4": {
+          "type": "String",
+          "label": "Hit"
+        },
+        "hit5": {
+          "type": "String",
+          "label": "Hit"
+        },
+        "miss": {
+          "type": "String",
+          "label": "Miss",
+          "value": "Half damage"
+        }
+      },
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "coreVersion": "14",
+        "systemId": "archmage",
+        "systemVersion": "1.40.1",
+        "createdTime": null,
+        "modifiedTime": 1789220686971,
+        "lastModifiedBy": null,
+        "exportSource": null
+      },
+      "_key": "!actors.items!DLyNUvhAldYNmk0X.stssTVYroYxs1Tmj"
+    },
+    {
+      "_id": "NltOFh0WrPpB6ejl",
+      "name": "Winged Smite",
+      "type": "action",
+      "sort": 200000,
+      "flags": {},
+      "img": "icons/svg/target.svg",
+      "effects": [],
+      "system": {
+        "name": {
+          "type": "String",
+          "label": "Name"
+        },
+        "description": {
+          "type": "String",
+          "label": "Description",
+          "value": "<p><em>Limited use</em>: The planetar can use winged smite only when the escalation die is even.</p>"
+        },
+        "group": {
+          "type": "String",
+          "label": "Group",
+          "value": "Close-quarters"
+        },
+        "attack": {
+          "type": "String",
+          "label": "Attack Roll",
+          "value": "[[d20+12]] vs. PD"
+        },
+        "hit": {
+          "type": "String",
+          "label": "Hit",
+          "value": "[[25]] holy damage, and the planetar flies to engage the target"
+        },
+        "hit1": {
+          "type": "String",
+          "label": "Hit",
+          "name": "Natural 16+",
+          "value": "The target is also weakened until the end of its next turn."
+        },
+        "hit2": {
+          "type": "String",
+          "label": "Hit",
+          "name": "",
+          "value": ""
+        },
+        "hit3": {
+          "type": "String",
+          "label": "Hit",
+          "name": "",
+          "value": ""
+        },
+        "hit4": {
+          "type": "String",
+          "label": "Hit"
+        },
+        "hit5": {
+          "type": "String",
+          "label": "Hit"
+        },
+        "miss": {
+          "type": "String",
+          "label": "Miss",
+          "value": "—"
+        }
+      },
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "coreVersion": "14",
+        "systemId": "archmage",
+        "systemVersion": "1.40.1",
+        "createdTime": null,
+        "modifiedTime": 1789220686971,
+        "lastModifiedBy": null,
+        "exportSource": null
+      },
+      "_key": "!actors.items!DLyNUvhAldYNmk0X.NltOFh0WrPpB6ejl"
+    },
+    {
+      "_id": "lE7XvlrLWVWIbta7",
+      "name": "Flight",
+      "type": "trait",
+      "sort": 300000,
+      "flags": {},
+      "img": "icons/svg/regen.svg",
+      "effects": [],
+      "system": {
+        "name": {
+          "type": "String",
+          "label": "Name"
+        },
+        "description": {
+          "type": "String",
+          "label": "Description",
+          "value": "<p>The planetar flies with large feathered wings on its back.</p>"
+        },
+        "group": {
+          "type": "String",
+          "label": "Group",
+          "value": ""
+        }
+      },
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "coreVersion": "14",
+        "systemId": "archmage",
+        "systemVersion": "1.40.1",
+        "createdTime": null,
+        "modifiedTime": 1789220686971,
+        "lastModifiedBy": null,
+        "exportSource": null
+      },
+      "_key": "!actors.items!DLyNUvhAldYNmk0X.lE7XvlrLWVWIbta7"
+    }
+  ],
+  "effects": [],
+  "system": {
+    "abilities": {
+      "str": {
+        "type": "Number",
+        "label": "Strength",
+        "value": 10,
+        "min": 3,
+        "mod": 0
+      },
+      "dex": {
+        "type": "Number",
+        "label": "Dexterity",
+        "value": 10,
+        "min": 3,
+        "mod": 0
+      },
+      "con": {
+        "type": "Number",
+        "label": "Constitution",
+        "value": 10,
+        "min": 3,
+        "mod": 0
+      },
+      "int": {
+        "type": "Number",
+        "label": "Intelligence",
+        "value": 10,
+        "min": 3,
+        "mod": 0
+      },
+      "wis": {
+        "type": "Number",
+        "label": "Wisdom",
+        "value": 10,
+        "min": 3,
+        "mod": 0
+      },
+      "cha": {
+        "type": "Number",
+        "label": "Charisma",
+        "value": 10,
+        "min": 3,
+        "mod": 0
+      }
+    },
+    "attributes": {
+      "ac": {
+        "type": "Number",
+        "label": "Armor Class",
+        "value": 22,
+        "base": 10,
+        "min": 0
+      },
+      "pd": {
+        "type": "Number",
+        "label": "Physical Defense",
+        "value": 17,
+        "base": 10,
+        "min": 0
+      },
+      "md": {
+        "type": "Number",
+        "label": "Mental Defense",
+        "value": 20,
+        "base": 10,
+        "min": 0
+      },
+      "hp": {
+        "type": "Number",
+        "label": "Hit Points",
+        "value": 80,
+        "min": 0,
+        "max": 80,
+        "temp": 0,
+        "tempmax": 0,
+        "base": 7,
+        "automatic": true
+      },
+      "recoveries": {
+        "type": "Number",
+        "label": "Recoveries",
+        "value": 8,
+        "max": 8,
+        "dice": "d8",
+        "base": 8,
+        "automatic": true
+      },
+      "init": {
+        "type": "Number",
+        "label": "Initiative Modifier",
+        "value": 7
+      },
+      "level": {
+        "type": "Number",
+        "label": "Level",
+        "value": 7,
+        "min": 0,
+        "max": 10
+      },
+      "disengage": 11,
+      "disengageBonus": 0,
+      "saves": {
+        "easy": 6,
+        "normal": 11,
+        "hard": 16,
+        "death": 16,
+        "deathFails": {
+          "value": 0,
+          "max": 4,
+          "steps": [
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        "lastGasp": 16,
+        "lastGaspFails": {
+          "value": 0,
+          "max": 4,
+          "steps": [
+            false,
+            false,
+            false,
+            false
+          ]
+        }
+      }
+    },
+    "details": {
+      "alignment": {
+        "type": "String",
+        "label": "Alignment"
+      },
+      "biography": {
+        "type": "String",
+        "label": "Biography"
+      },
+      "class": {
+        "type": "String",
+        "label": "Class"
+      },
+      "race": {
+        "type": "String",
+        "label": "Race"
+      },
+      "out": {
+        "label": "One Unique Thing",
+        "type": "String",
+        "value": ""
+      },
+      "role": {
+        "value": "spoiler",
+        "type": "String",
+        "label": "Role"
+      },
+      "size": {
+        "value": "normal",
+        "type": "String",
+        "label": "Size"
+      },
+      "type": {
+        "value": "celestial",
+        "type": "String",
+        "label": "Type"
+      },
+      "resistance": {
+        "type": "String",
+        "label": "Resistance",
+        "value": ""
+      },
+      "vulnerability": {
+        "type": "String",
+        "label": "Vulnerability",
+        "value": ""
+      }
+    },
+    "backgrounds": {
+      "bg1": {
+        "name": {
+          "type": "String",
+          "value": ""
+        },
+        "bonus": {
+          "type": "Number",
+          "value": 0
+        },
+        "isActive": {
+          "type": "Boolean",
+          "value": 1
+        }
+      },
+      "bg2": {
+        "name": {
+          "type": "String",
+          "value": ""
+        },
+        "bonus": {
+          "type": "Number",
+          "value": 0
+        },
+        "isActive": {
+          "type": "Boolean",
+          "value": 1
+        }
+      },
+      "bg3": {
+        "name": {
+          "type": "String",
+          "value": ""
+        },
+        "bonus": {
+          "type": "Number",
+          "value": 0
+        },
+        "isActive": {
+          "type": "Boolean",
+          "value": 1
+        }
+      },
+      "bg4": {
+        "name": {
+          "type": "String",
+          "value": ""
+        },
+        "bonus": {
+          "type": "Number",
+          "value": 0
+        },
+        "isActive": {
+          "type": "Boolean",
+          "value": 0
+        }
+      },
+      "bg5": {
+        "name": {
+          "type": "String",
+          "value": ""
+        },
+        "bonus": {
+          "type": "Number",
+          "value": 0
+        },
+        "isActive": {
+          "type": "Boolean",
+          "value": 0
+        }
+      },
+      "bg6": {
+        "name": {
+          "type": "String",
+          "value": ""
+        },
+        "bonus": {
+          "type": "Number",
+          "value": 0
+        },
+        "isActive": {
+          "type": "Boolean",
+          "value": 0
+        }
+      },
+      "bg7": {
+        "name": {
+          "type": "String",
+          "value": ""
+        },
+        "bonus": {
+          "type": "Number",
+          "value": 0
+        },
+        "isActive": {
+          "type": "Boolean",
+          "value": 0
+        }
+      },
+      "bg8": {
+        "name": {
+          "type": "String",
+          "value": ""
+        },
+        "bonus": {
+          "type": "Number",
+          "value": 0
+        },
+        "isActive": {
+          "type": "Boolean",
+          "value": 0
+        }
+      }
+    },
+    "icons": {
+      "i1": {
+        "name": {
+          "type": "String",
+          "value": ""
+        },
+        "relationship": {
+          "type": "String",
+          "value": ""
+        },
+        "bonus": {
+          "type": "Number",
+          "value": 0
+        },
+        "isActive": {
+          "type": "Boolean",
+          "value": 1
+        },
+        "results": []
+      },
+      "i2": {
+        "name": {
+          "type": "String",
+          "value": ""
+        },
+        "relationship": {
+          "type": "String",
+          "value": ""
+        },
+        "bonus": {
+          "type": "Number",
+          "value": 0
+        },
+        "isActive": {
+          "type": "Boolean",
+          "value": 1
+        },
+        "results": []
+      },
+      "i3": {
+        "name": {
+          "type": "String",
+          "value": ""
+        },
+        "relationship": {
+          "type": "String",
+          "value": ""
+        },
+        "bonus": {
+          "type": "Number",
+          "value": 0
+        },
+        "isActive": {
+          "type": "Boolean",
+          "value": 1
+        },
+        "results": []
+      },
+      "i4": {
+        "name": {
+          "type": "String",
+          "value": ""
+        },
+        "relationship": {
+          "type": "String",
+          "value": ""
+        },
+        "bonus": {
+          "type": "Number",
+          "value": 0
+        },
+        "isActive": {
+          "type": "Boolean",
+          "value": 0
+        },
+        "results": []
+      },
+      "i5": {
+        "name": {
+          "type": "String",
+          "value": ""
+        },
+        "relationship": {
+          "type": "String",
+          "value": ""
+        },
+        "bonus": {
+          "type": "Number",
+          "value": 0
+        },
+        "isActive": {
+          "type": "Boolean",
+          "value": 0
+        },
+        "results": []
+      }
+    }
+  },
+  "ownership": {
+    "default": 0,
+    "A901bz1OKzb5sxyf": 3
+  },
+  "folder": null,
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "14",
+    "systemId": "archmage",
+    "systemVersion": "1.40.1",
+    "createdTime": null,
+    "modifiedTime": 1789220686971,
+    "lastModifiedBy": null,
+    "exportSource": null
+  },
+  "_key": "!actors!DLyNUvhAldYNmk0X"
+}
