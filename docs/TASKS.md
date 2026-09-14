@@ -5,6 +5,22 @@ background and technical detail live in the project's `../CLAUDE.md` — this
 file is just the to-do list. The user has more items in mind not yet
 written down here; treat this as a starting point, not the full scope.
 
+## Druid Problems 1 & 7 fixed — real power types, not all "talent" (2026-09-14)
+
+Refreshes `packs/dark-alleys-druid` from `13a-rules-db` (commit `911e2e4`,
+bump to 0.6.5). The scraper's assumption that spells/powers always sit at
+h4 (and that an entry's type comes purely from the nearest divider
+heading) was directly why almost every Druid circle entry exported as
+`talent` regardless of what it actually was. Fixed at the source; type
+distribution went from ~277 entries nearly all `talent` to a realistic
+190 spell / 46 feature / 27 power / 14 flexible / 5 talent split, matching
+the project owner's own predictions per circle exactly (War → flexible,
+Moon → power/Aspects, Life/Land → spell). Full mechanism writeup in
+`13a-rules-db/docs/TASKS.md`'s "Dark Alleys Druid clean-up" Problems 1
+and 7. Still outstanding on this class: Problems 3 and 4 (13TW content
+cloning, animal companion investigation) and the Import Powers dialog
+grouping limitation noted under Problem 2.
+
 ## Dark Alleys Druid clean-up in progress (2026-09-14) — full writeup in 13a-rules-db
 
 Project owner reported the Dark Alleys Druid as "a total mess" — 5
