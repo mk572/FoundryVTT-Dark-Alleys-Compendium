@@ -123,15 +123,14 @@ as plain JSON (not shipped, not loaded by Foundry):
 
 ## Next up
 
-1. **Cut a real GitHub Release for v0.6.0.** The manifest's `manifest`/
-   `download` URLs still point at the old `latest` release tag (from
-   v0.5.0) — nothing public has been updated yet. Needs: tag `0.6.0`,
-   rebuild the distributable zip (same recipe as
-   `dist/dark-alleys-compendium-test.zip` but as a real release asset),
-   write release notes (the migration summary in `CLAUDE.md` is a good
-   starting point), attach `module.json` + the zip to the release, matching
-   the existing `.github` release-asset naming convention already in the
-   repo.
+1. ~~Cut a real GitHub Release for v0.6.0~~ **Done long ago** — this note
+   was stale as of the 2026-09-14 wrap-up pass. The module has been on a
+   real, working CI-published release pipeline for a while now (currently
+   `0.6.5`; every version bump documented in the sections above and in
+   `13a-rules-db/docs/TASKS.md` auto-publishes via `.github/workflows/
+   main.yml` → `scripts/build-release-zip.sh`). Left struck through
+   rather than deleted so a future stale-doc sweep can see this was
+   checked, not just silently dropped.
 2. **Decide the fate of `_backup-nedb-packs/`.** Currently kept locally
    (gitignored) as a safety net per explicit request. Revisit once the
    v0.6.0 release has been out and unproblematic for a while.
