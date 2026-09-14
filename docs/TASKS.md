@@ -20,6 +20,17 @@ its whole kit) and smaller counts in Rogue/Savage/Monk/Paladin — not
 yet re-scraped/merged for any of them**, flagged there for a dedicated
 follow-up pass rather than done unprompted.
 
+**Shipped, final live-in-Forge check still pending.** Confirmed correct
+two ways already: the published manifest serves `0.6.7` directly
+(`curl`-verified), and Forge's own Setup → Add-on Modules list shows it
+installed at `0.6.7` after a full uninstall/reinstall. The very last
+step (launch "Dark Alleys Test", open a Ranger power live to eyeball
+it) got stuck on Forge's own Setup page being slow/erroring on an
+unrelated Bazaar lookup — paused per the project owner rather than
+fought further. Resume from a fresh page load next session; see
+`13a-rules-db/docs/TASKS.md`'s matching entry for the exact resume
+step.
+
 ## Druid Problems 1 & 7 fixed — real power types, not all "talent" (2026-09-14)
 
 Refreshes `packs/dark-alleys-druid` from `13a-rules-db` (commit `911e2e4`,
