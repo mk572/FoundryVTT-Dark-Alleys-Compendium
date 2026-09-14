@@ -259,10 +259,10 @@
       "type": "Item"
     },
     {
-      "name": "druid-dark-alleys",
-      "label": "Druid (Dark Alleys)",
+      "name": "dark-alleys-druid",
+      "label": "Dark Alleys Druid",
       "system": "archmage",
-      "path": "packs/druid-dark-alleys",
+      "path": "packs/dark-alleys-druid",
       "type": "Item"
     }
   ],
