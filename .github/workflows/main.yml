@@ -9,7 +9,7 @@ jobs:
     - uses: actions/checkout@v2
 
     # create a zip file with all files required by the module to add to the release
-    - run: zip -r ./dark-alleys-compendium.zip module.json packs/
+    - run: zip -r ./dark-alleys-compendium.zip module.json README.md INSTALL.md scripts/ packs/
 
     # Get the version from 'module.json'
     - name: Get Version
