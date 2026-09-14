@@ -18,6 +18,7 @@
       }
     ]
   },
+  "scripts": ["scripts/setup.js"],
   "packs": [
     {
       "name": "13-cld-cleric",
@@ -207,6 +208,55 @@
       "system": "archmage",
       "path": "packs/wizard-summons",
       "type": "Actor"
+    },
+    {
+      "name": "abomination",
+      "label": "Abomination",
+      "system": "archmage",
+      "path": "packs/abomination",
+      "type": "Item"
+    },
+    {
+      "name": "fateweaver",
+      "label": "Fateweaver",
+      "system": "archmage",
+      "path": "packs/fateweaver",
+      "type": "Item"
+    },
+    {
+      "name": "psion",
+      "label": "Psion",
+      "system": "archmage",
+      "path": "packs/psion",
+      "type": "Item"
+    },
+    {
+      "name": "psion-summons",
+      "label": "Psion (Summons)",
+      "system": "archmage",
+      "path": "packs/psion-summons",
+      "type": "Actor"
+    },
+    {
+      "name": "savage",
+      "label": "Savage",
+      "system": "archmage",
+      "path": "packs/savage",
+      "type": "Item"
+    },
+    {
+      "name": "swordmage",
+      "label": "Swordmage",
+      "system": "archmage",
+      "path": "packs/swordmage",
+      "type": "Item"
+    },
+    {
+      "name": "warlock",
+      "label": "Warlock",
+      "system": "archmage",
+      "path": "packs/warlock",
+      "type": "Item"
     }
   ],
   "manifest": "https://github.com/mk572/FoundryVTT-Dark-Alleys-Compendium/releases/download/latest/module.json",
