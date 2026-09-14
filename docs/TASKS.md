@@ -5,6 +5,34 @@ background and technical detail live in the project's `../CLAUDE.md` — this
 file is just the to-do list. The user has more items in mind not yet
 written down here; treat this as a starting point, not the full scope.
 
+## Dark Alleys Druid clean-up in progress (2026-09-14) — full writeup in 13a-rules-db
+
+Project owner reported the Dark Alleys Druid as "a total mess" — 5
+problems (full list + status in `13a-rules-db/docs/TASKS.md`'s "Dark
+Alleys Druid clean-up" entry). First fix landed here: refreshed
+`packs/dark-alleys-druid` and `packs/ranger`/`packs/paladin`/
+`packs/occultist`/`packs/fighter`/`packs/barbarian`-adjacent... wait, only
+`dark-alleys-druid` actually changed content this round (the tier-divider
+scraper fix touched ranger/paladin/occultist/fighter/barbarian too, but
+those packs weren't refreshed here yet — see next task). This refresh:
+every entry now has its `group` set to its own Circle's display name
+("Circle of the Fang", etc.) via a new `circle`-aware grouping rule in
+`export-to-foundry.mjs`, so Import Powers' "Group by: Custom Groups" view
+sorts the ~280 entries by circle instead of one flat list. Bumped to
+0.6.4. Still outstanding: entry types (everything currently exports as
+`talent` regardless of circle), 13TW base content cloning, and the
+animal companion investigation — see 13a-rules-db's TASKS.md.
+
+## Tier-divider scraper fix — packs not yet refreshed here (2026-09-14)
+
+`13a-rules-db` commit `2abd64b` fixed a scraper bug affecting Ranger,
+Barbarian, Paladin, Occultist and Fighter (Champion/Epic tier talents
+were either phantom-scraped as fake entries or silently stuck at level 1
+instead of their real 5/8 — see that repo's TASKS.md for full detail).
+**Not yet copied into this module's `packs/`** — do that refresh (and a
+version bump) in the same pass as whichever of these 5 classes gets
+tested next, rather than a blind refresh-everything pass.
+
 ## Cleric Invocations added, 35 new items (2026-09-14) — full writeup in 13a-rules-db
 
 Refreshed `packs/cleric` again from `13a-rules-db` commit `46ed1ee`
