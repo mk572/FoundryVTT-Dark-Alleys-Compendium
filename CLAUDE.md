@@ -98,27 +98,10 @@ compaction would do. The lower counts are the *correct* de-duplicated
 totals, not lost data. Verified line-by-line with a duplicate-`_id` count
 per file before concluding this.
 
-**Foundry/Forge operational gotchas hit during testing** (useful if you're
-setting up another test round):
-- After using Forge's Import Wizard, the imported module does **not**
-  appear in Module Management until you **Stop then Start the Forge
-  server** (Games Configuration page) — documented by Forge, easy to miss.
-- Installing a module on the server (Setup → Add-on Modules) and
-  **enabling it for a specific World** (in-world Settings → Module
-  Management) are two separate steps.
-- In this test, the in-world "Manage Modules" form's checkbox + Save
-  button did **not** actually persist the active-module change (confirmed
-  via `game.modules.get(id).active` staying `false` after save+reload).
-  Had to force it via the console: `game.settings.set('core',
-  'moduleConfiguration', {...current, '<module-id>': true})` then reload.
-  Unclear if this is a general Foundry v14/Forge bug or an artifact of the
-  session's reload cycle — worth retesting fresh before assuming it'll
-  recur.
-- Legacy Token schema fields on Actors (`dimSight`/`brightSight`/
-  `lightAngle`/etc., from pre-v10 Foundry) are **auto-migrated by Foundry
-  core** into the modern `sight`/`light`/`texture` structure at load time —
-  confirmed via `doc.prototypeToken.sight` etc. on a loaded document. No
-  manual conversion needed for old token data in general.
+**Foundry/Forge operational gotchas, live-testing via Safari MCP, and the
+update/install workflow**: all consolidated in
+`docs/FOUNDRY-VTT-AUTOMATION.md` (2026-09-17) — read that before setting
+up another test round instead of hunting through session history.
 
 ## SRD content comparison (started 2026-09-12)
 
