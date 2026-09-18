@@ -27,10 +27,21 @@ files.
 
 ## 1. Safari MCP quirks specific to this kind of session
 
-- **Always call `safari_new_tab` first** rather than driving the user's
-  already-open tab. Several tools (`safari_resize` at least) refuse to
-  act on a tab this MCP session doesn't own ("tab safety" error), and a
-  fresh tab is one less thing to accidentally disrupt for the user.
+- **Prefer working in the user's own already-open tab over spawning new
+  ones** — updated 2026-09-18, the user changed the Safari MCP settings
+  to opt the extension into driving their own tab. Use
+  `safari_switch_tab({index: 1})` (or whichever index/receipt is the
+  user's real tab, see `safari_list_tabs`) — the result's
+  `"note": "(user tab, opted-in)"` confirms it worked. Once switched,
+  `safari_evaluate`/`safari_navigate`/etc. all work directly on it, no
+  further `safari_new_tab` needed for the rest of the session. Before
+  this setting existed, the previous guidance here was "always call
+  `safari_new_tab` first" (several tools threw a "tab safety" error on a
+  tab the MCP session didn't own) — that's now unnecessary and should be
+  avoided: repeatedly opening fresh tabs clutters the user's browser and
+  was flagged directly as unwanted. Only fall back to `safari_new_tab`
+  if `safari_switch_tab` itself errors (the setting isn't enabled, or no
+  user tab exists yet).
 - **`safari_screenshot` reliably renders solid black** for MCP-owned tabs
   in this environment (confirmed 2026-09-17, both a fresh tab and the
   original session tab) — this looks like a window-focus/compositing
@@ -64,8 +75,11 @@ files.
 
 ## 2. Logging in and joining a world
 
-1. `safari_new_tab` → `https://mk333.as.forge-vtt.com`. Lands on Foundry's
-   Setup screen (`/setup`), already Forge-authenticated.
+1. `safari_switch_tab({index: 1})` to claim the user's own tab (see quirks
+   above), then `safari_navigate` to `https://mk333.as.forge-vtt.com`.
+   Lands on Foundry's Setup screen (`/setup`), already Forge-
+   authenticated — or, if a world is already running server-side from an
+   earlier session, redirects straight to `/join` for it.
 2. The world list (`safari_read_page`) shows the current worlds — see
    [[forge-test-worlds-by-edition]] for which one to use. As of
    2026-09-17: **"Dark Alleys Test"** (1e content) and **"13th Age 2E
@@ -90,8 +104,8 @@ files.
 
 ### Returning to Setup from inside a world
 
-Don't navigate the URL directly — use Foundry's own Main Menu, which is
-the officially supported "leave without disconnecting weirdly" path:
+Prefer Foundry's own Main Menu, the officially supported "leave without
+disconnecting weirdly" path:
 ```js
 document.querySelector('button[data-action="menu"]').click();
 // then, once the dialog is open:
@@ -99,6 +113,16 @@ document.querySelector('button[data-action="menu"]').click();
   .find(h => h.textContent.includes('Return to Setup'))
   .closest('li').click();
 ```
+**This click is unreliable in practice** (confirmed 2026-09-18, same
+"synthetic click had no effect" class of issue as elsewhere in this
+doc) — it sometimes just leaves the tab sitting on `/game` with no
+visible error. If `safari_wait_for` on Setup-screen text times out
+after trying it, the reliable fallback actually IS a direct URL
+navigate (`safari_navigate` to `.../join` or `.../setup`) despite the
+"don't" above — confirmed this doesn't break anything (the world stays
+running server-side either way, and logging back in via `/join` picks
+up cleanly). Treat the Main Menu path as the first attempt, not the
+only one.
 
 ## 3. Updating an already-installed module
 
