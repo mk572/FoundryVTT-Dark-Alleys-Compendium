@@ -5,6 +5,34 @@ background and technical detail live in the project's `../CLAUDE.md` — this
 file is just the to-do list. The user has more items in mind not yet
 written down here; treat this as a starting point, not the full scope.
 
+## Full 14-class rescrape+tag+export, bump to 0.6.21 (2026-09-19)
+
+Refreshes `packs/barbarian`, `bard`, `chaos-mage`, `cleric` (+
+`cleric-summons`), `commander`, `fighter`, `monk`, `necromancer` (+
+`necromancer-summons`), `occultist`, `paladin`, `ranger`, `rogue`,
+`sorcerer`, `wizard` (+ `wizard-summons`) — all 14 `kind: extension`
+classes, from `13a-rules-db` commit `5ff0eb8`. Fresh
+download → cleanse → scrape → build → tag → export cycle for each,
+project owner's own call to hold off on the 6 DPAS classes and Druid/
+Dark Alleys Druid until they have a working class compendium of their
+own. Bundles every scraper/tagger fix from this whole session into one
+pass: the "Rogue Powers" heading type fix, both "damage equal to X"
+tagger collapse generalizations, the Flexible-attack at-will default,
+the `SPELL_LEVEL_LABEL_RE` widening past "spell," and the new
+`needs_manual_check` field. Rogue specifically re-downloaded to pick up
+the project owner's own live-SRD fix for the duplicate "Skill Shot"
+listing — confirmed only one Skill Shot in the shipped pack now. Full
+detail in `13a-rules-db/docs/TASKS-DONE.md`.
+
+**Not yet verified live in Forge** — pushed and version-bumped only, no
+live-world check done for this specific release across the 14 classes.
+Do that before relying on it for real play/testing: update the module
+in the "Dark Alleys Test" world, spot-check the Import Powers dialog
+per class (grouping, level headers, real clickable rolls where the
+tagger converted something, `needs_manual_check` entries visible as a
+signal for what still needs a human look), and specifically confirm
+Rogue only shows one "Skill Shot."
+
 ## Bard/Fighter: Flexible attacks now default to at-will, bump to 0.6.20 (2026-09-19)
 
 Refreshes `packs/bard` and `packs/fighter` from `13a-rules-db` (commit
