@@ -5,6 +5,21 @@ background and technical detail live in the project's `../CLAUDE.md` — this
 file is just the to-do list. The user has more items in mind not yet
 written down here; treat this as a starting point, not the full scope.
 
+## Rogue power/talent type fix, bump to 0.6.17 (2026-09-19)
+
+Refreshes `packs/rogue` only from `13a-rules-db` (commit `e7a32a4`). That
+project's scraper never recognized a plain "X Powers" section heading
+(only "X Talents"/"X Spells"), so most of Rogue's own "Rogue Powers"
+section was falling through to the database-wide `talent` default —
+fixed there and re-scraped; 17 entries retyped `talent` → `power` in the
+data that actually ships (final: 18 talent / 42 power / 1 feature, up
+from 35/25/1). Full detail in `13a-rules-db/docs/TASKS-DONE.md`'s "Rogue:
+'X Powers' heading fallback" entry. Deliberately scoped to `packs/rogue`
+alone, not a full `dist/foundry/` refresh — every other class's LevelDB
+pack regenerates its internal log/manifest files on ANY export run even
+when the underlying content is unchanged, which would have produced a
+182-file noise diff across all 22 classes for a one-class fix.
+
 ## Full pack refresh from 13a-rules-db, bump to 0.6.8 (2026-09-15)
 
 Refreshed all 25 packs from `13a-rules-db`'s `dist/foundry/` (this
