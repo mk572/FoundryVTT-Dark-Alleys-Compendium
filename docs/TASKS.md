@@ -5,6 +5,26 @@ background and technical detail live in the project's `../CLAUDE.md` — this
 file is just the to-do list. The user has more items in mind not yet
 written down here; treat this as a starting point, not the full scope.
 
+## Rogue: two more roll-conversion fixes, bump to 0.6.19 (2026-09-19)
+
+Refreshes `packs/rogue` only from `13a-rules-db` (commit `8ff87d1`) —
+two more real bugs found live in Forge on this same module, same
+session as the 0.6.18 release below. (1) The SRD's default "Miss:
+Damage equal to your level" line was only ever getting a bare `@lvl`
+substitution, never wrapped in `[[...]]`, so archmage's damage-
+application button silently did nothing with it — now collapses to the
+real `[[@lvl]] damage` archmage uses natively. (2) Bullseye/Shadow
+Trap/Death Strike's "7th/9th level power: ..." scaling text was wrongly
+stuck inside the `Miss:` line instead of its own dedicated per-level
+field — `13a-rules-db`'s tier-scaling-divider detection only recognized
+the word "spell", never "power" (or 5 other class-specific nouns also
+in use database-wide). Both fixed at the source (`13a-rules-db`'s
+tagger and scraper respectively), Rogue rescraped/rebuilt/re-tagged.
+Full detail in `13a-rules-db/docs/TASKS-DONE.md`'s "Tagger and scraper:
+two more Rogue fixes found live in Forge" entry. **6 other classes
+(Bard/Fighter/Monk/Paladin/Psion/Ranger) are confirmed affected by the
+second bug but not yet rescraped** — see that project's T051.
+
 ## Rogue: real clickable rolls, bump to 0.6.18 (2026-09-19)
 
 Refreshes `packs/rogue` only from `13a-rules-db` (commit `d271c32`) —
