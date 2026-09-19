@@ -100,8 +100,10 @@ per file before concluding this.
 
 **Foundry/Forge operational gotchas, live-testing via Safari MCP, and the
 update/install workflow**: all consolidated in
-`docs/FOUNDRY-VTT-AUTOMATION.md` (2026-09-17) — read that before setting
-up another test round instead of hunting through session history.
+`docs/FOUNDRY-VTT-AUTOMATION.md` in the `13a-rules-db` dev project
+(moved there 2026-09-19 — this repo is production, dev docs live there) —
+read that before setting up another test round instead of hunting through
+session history.
 
 ## SRD content comparison (started 2026-09-12)
 
