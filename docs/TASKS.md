@@ -5,6 +5,23 @@ background and technical detail live in the project's `../CLAUDE.md` — this
 file is just the to-do list. The user has more items in mind not yet
 written down here; treat this as a starting point, not the full scope.
 
+## Bard/Fighter: Flexible attacks now default to at-will, bump to 0.6.20 (2026-09-19)
+
+Refreshes `packs/bard` and `packs/fighter` from `13a-rules-db` (commit
+`2135d4d`) — a Flexible attack with no stated frequency is at-will by
+the 13th Age rules themselves, but `13a-rules-db`'s scraper was leaving
+`powerUsage` unset in that case rather than defaulting it, so these
+powers shipped with no frequency badge at all. Fixed at the source and
+rescraped: 13 fixes in Bard, 30 in Fighter (which also picked up one
+more tier-scaling-text fix, Brutal Blows' "7th/9th level maneuver:", as
+a side effect of the same rebuild — same underlying bug as the Rogue
+0.6.19 release, just a different class-specific noun). Full detail in
+`13a-rules-db/docs/TASKS-DONE.md`'s "Flexible attacks default to
+at-will" entry. **Abomination confirmed affected by the same bug (39
+entries) but not yet rescraped**, and **Druid is affected too but
+deliberately on hold** — the project owner is editing some Druid SRD
+entries directly first.
+
 ## Rogue: two more roll-conversion fixes, bump to 0.6.19 (2026-09-19)
 
 Refreshes `packs/rogue` only from `13a-rules-db` (commit `8ff87d1`) —
