@@ -2,7 +2,7 @@
   "id": "13a-dark-alleys-compendium",
   "title": "13th Age Dark Alleys Compendium",
   "description": "Game rules & Compendiums for the 13th Age Compatible expansion book Dark Alleys & Twisted Path for Foundry Virtual Tabletop ",
-  "version": "0.6.21",
+  "version": "0.6.22",
   "compatibility": {
     "minimum": "13",
     "verified": "14"
@@ -196,6 +196,13 @@
       "system": "archmage",
       "path": "packs/dark-alleys-druid",
       "type": "Item"
+    },
+    {
+      "name": "classes",
+      "label": "Classes",
+      "system": "archmage",
+      "path": "packs/classes",
+      "type": "JournalEntry"
     }
   ],
   "manifest": "https://github.com/mk572/FoundryVTT-Dark-Alleys-Compendium/releases/download/latest/module.json",
