@@ -42,7 +42,7 @@ Hooks.on("ready", function () {
   CONFIG.ARCHMAGE.keyModifiers["darkalleysdruid"]["abomination"] = ["str","wis"];
   CONFIG.ARCHMAGE.keyModifiers["darkalleysdruid"]["barbarian"] = ["str","wis"];
   CONFIG.ARCHMAGE.keyModifiers["darkalleysdruid"]["bard"] = ["wis","cha"];
-  CONFIG.ARCHMAGE.keyModifiers["darkalleysdruid"]["chaos-mage"] = ["wis","cha"];
+  CONFIG.ARCHMAGE.keyModifiers["darkalleysdruid"]["chaosmage"] = ["wis","cha"];
   CONFIG.ARCHMAGE.keyModifiers["darkalleysdruid"]["cleric"] = ["str","wis"];
   CONFIG.ARCHMAGE.keyModifiers["darkalleysdruid"]["commander"] = ["wis","cha"];
   CONFIG.ARCHMAGE.keyModifiers["darkalleysdruid"]["fateweaver"] = ["str","wis"];
