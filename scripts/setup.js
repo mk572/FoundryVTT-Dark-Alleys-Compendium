@@ -95,6 +95,34 @@ Hooks.on("ready", function () {
   CONFIG.ARCHMAGE.keyModifiers["fateweaver"]["wizard"] = ["int","wis"];
   console.log("Fateweaver (13th Age) class loaded successfully.");
 
+  console.log("Gunslinger (13th Age) class injecting data into the system...");
+  CONFIG.ARCHMAGE.classList["gunslinger"] = "Gunslinger";
+  CONFIG.ARCHMAGE.classes["gunslinger"] = {"hp":7,"ac_lgt":13,"ac_hvy":14,"ac_hvy_pen":-2,"shld_pen":-2,"pd":11,"md":10,"rec_die":8,"wpn_1h":8,"wpn_2h":10,"wpn_2h_pen":-2,"wpn_rngd":8,"skilled_warrior":false};
+  CONFIG.ARCHMAGE.keyModifiers["gunslinger"] ??= {};
+  CONFIG.ARCHMAGE.keyModifiers["gunslinger"]["abomination"] = ["str","dex"];
+  CONFIG.ARCHMAGE.keyModifiers["gunslinger"]["barbarian"] = ["str","dex"];
+  CONFIG.ARCHMAGE.keyModifiers["gunslinger"]["bard"] = ["dex","cha"];
+  CONFIG.ARCHMAGE.keyModifiers["gunslinger"]["chaosmage"] = ["dex","cha"];
+  CONFIG.ARCHMAGE.keyModifiers["gunslinger"]["cleric"] = ["str","wis"];
+  CONFIG.ARCHMAGE.keyModifiers["gunslinger"]["commander"] = ["str","cha"];
+  CONFIG.ARCHMAGE.keyModifiers["gunslinger"]["druid"] = ["dex","wis"];
+  CONFIG.ARCHMAGE.keyModifiers["gunslinger"]["fateweaver"] = ["str","wis"];
+  CONFIG.ARCHMAGE.keyModifiers["gunslinger"]["fighter"] = ["str","dex"];
+  CONFIG.ARCHMAGE.keyModifiers["gunslinger"]["monk"] = ["str","dex"];
+  CONFIG.ARCHMAGE.keyModifiers["gunslinger"]["necromancer"] = ["dex","int"];
+  CONFIG.ARCHMAGE.keyModifiers["gunslinger"]["occultist"] = ["dex","int"];
+  CONFIG.ARCHMAGE.keyModifiers["gunslinger"]["paladin"] = ["str","dex"];
+  CONFIG.ARCHMAGE.keyModifiers["gunslinger"]["psion"] = ["dex","int"];
+  CONFIG.ARCHMAGE.keyModifiers["gunslinger"]["ranger"] = ["dex","wis"];
+  CONFIG.ARCHMAGE.keyModifiers["gunslinger"]["rogue"] = ["str","dex"];
+  CONFIG.ARCHMAGE.keyModifiers["gunslinger"]["savage"] = ["str","dex"];
+  CONFIG.ARCHMAGE.keyModifiers["gunslinger"]["sorcerer"] = ["dex","cha"];
+  CONFIG.ARCHMAGE.keyModifiers["gunslinger"]["swordmage"] = ["dex","int"];
+  CONFIG.ARCHMAGE.keyModifiers["gunslinger"]["warlock"] = ["dex","cha"];
+  CONFIG.ARCHMAGE.keyModifiers["gunslinger"]["wizard"] = ["dex","int"];
+  CONFIG.ARCHMAGE.classResources["gunslinger"] = [["Grit","quick"]];
+  console.log("Gunslinger (13th Age) class loaded successfully.");
+
   console.log("Psion (13th Age) class injecting data into the system...");
   CONFIG.ARCHMAGE.classList["psion"] = "Psion";
   CONFIG.ARCHMAGE.classes["psion"] = {"hp":6,"ac_lgt":10,"ac_hvy":11,"ac_hvy_pen":-2,"shld_pen":0,"pd":10,"md":12,"rec_die":6,"wpn_1h":6,"wpn_2h":10,"wpn_2h_pen":-3,"wpn_rngd":6,"skilled_warrior":false};
