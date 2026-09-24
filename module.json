@@ -224,6 +224,13 @@
       "system": "archmage",
       "path": "packs/classes",
       "type": "JournalEntry"
+    },
+    {
+      "name": "races",
+      "label": "Races (Dark Alleys)",
+      "system": "archmage",
+      "path": "packs/races",
+      "type": "Item"
     }
   ],
   "manifest": "https://github.com/mk572/FoundryVTT-Dark-Alleys-Compendium/releases/download/latest/module.json",
