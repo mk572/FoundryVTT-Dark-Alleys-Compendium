@@ -894,6 +894,31 @@ const DA_DATA = {
       "transfer enchantment": "Transmutation",
       "disintegrate": "Transmutation"
     }
+  },
+  "importExtras": {
+    "powers": {
+      "druid": [
+        {
+          "name": "animal-companion-dark-alleys"
+        }
+      ],
+      "darkalleysdruid": [
+        {
+          "name": "animal-companion-dark-alleys"
+        },
+        {
+          "id": "archmage.animal-companion"
+        }
+      ]
+    },
+    "companionTraits": [
+      {
+        "actorPack": "archmage.animal-companions",
+        "traitPack": {
+          "name": "animal-companion-dark-alleys"
+        }
+      }
+    ]
   }
 };
 
@@ -990,5 +1015,108 @@ Hooks.on("preCreateItem", function (item, data) {
   const fromSource = /^Compendium\.archmage\.[^.]+\.Item\.([^.]+)$/.exec(source)?.[1];
   const group = coreGroupById.get(fromSource ?? data?._id);
   if (group) item.updateSource({ "system.group.value": group });
+});
+
+// ---- vtt-scripts/import-extras.js ----
+// Wires extra compendium content into archmage's own flows, the way archmage
+// hardcodes it for its core classes (docs/ANIMAL-COMPANIONS.md):
+//
+// 1. Import Powers: archmage adds its "Animal Companion" pack to the power
+//    list of the core ranger and druid only. This adds configured packs'
+//    power Items to other classes too — e.g. core's companion talent and
+//    spells for the Dark Alleys Druid, and our companion spell expansion for
+//    the core Druid and the Dark Alleys Druid.
+// 2. Companion actors: when an actor from a configured Actor pack (core's
+//    "Animal Companion (N)" actors) is created in a world, our trait Items
+//    (e.g. new animal types) are added to it, next to core's own choices.
+//
+// Runs inside Foundry, as part of the module's scripts/setup.js (see
+// docs/VTT-SCRIPTS.md). Reads DA_DATA.importExtras, written by
+// scripts/generate-archmage-setup.mjs from the class files' `foundry_import`
+// blocks:
+//   powers: { <archmage-style class id, e.g. "darkalleysdruid">: [<pack ref>] }
+//   companionTraits: [{ actorPack: "<full Actor pack id>", traitPack: <pack ref> }]
+// A pack ref is { id: "archmage.animal-companion" } for another package's
+// pack, or { name: "animal-companion-dark-alleys" } for one of this module's
+// own (looked up by name, so setup.js doesn't depend on the module's id).
+
+const findPack = (ref) =>
+  ref.id
+    ? game.packs.get(ref.id)
+    : game.packs.find((p) => p.metadata.packageType === "module" && p.metadata.name === ref.name);
+
+// [{ actorPack, actorIds: Set of that pack's actor ids, traits: [trait Item data] }]
+const companionTraitSets = [];
+
+Hooks.once("ready", async function () {
+  const extras = DA_DATA.importExtras;
+  if (Object.keys(extras.powers).length) await wrapImportPowers(extras.powers);
+  for (const { actorPack, traitPack } of extras.companionTraits) {
+    const actors = game.packs.get(actorPack);
+    const traits = findPack(traitPack);
+    if (!actors || !traits) continue;
+    companionTraitSets.push({
+      actorPack,
+      actorIds: new Set((await actors.getIndex()).map((e) => e._id)),
+      traits: (await traits.getDocuments())
+        .filter((d) => d.type === "trait")
+        .map((d) => {
+          const data = d.toObject();
+          delete data._id;
+          return data;
+        }),
+    });
+  }
+});
+
+// archmage doesn't expose its Import Powers loader, but ships its code
+// unbundled, so importing archmage-prepopulate.js relative to the system's own
+// module script URL returns the very module instance archmage uses; wrapping
+// the prototype method changes what every Import Powers dialog shows.
+// Verified live 2026-09-25 (archmage 1.41 on Forge, script served from the
+// Forge CDN).
+async function wrapImportPowers(powers) {
+  const systemScript = [...document.querySelectorAll('script[type="module"][src]')]
+    .map((s) => s.src)
+    .find((src) => /\/systems\/archmage\/(.+\/)?module\/archmage\.js(\?|$)/.test(src));
+  if (!systemScript) {
+    console.warn("Dark Alleys: archmage's module script not found; Import Powers extras disabled.");
+    return;
+  }
+  const { ArchmagePrepopulate } = await import(new URL("setup/archmage-prepopulate.js", systemScript).href);
+  const proto = ArchmagePrepopulate?.prototype;
+  if (typeof proto?.getCompendiums !== "function") {
+    console.warn("Dark Alleys: archmage's getCompendiums not found; Import Powers extras disabled.");
+    return;
+  }
+  const original = proto.getCompendiums;
+  proto.getCompendiums = async function (classes = [], race = "") {
+    const content = await original.call(this, classes, race);
+    for (const [cls, refs] of Object.entries(powers)) {
+      if (!classes.includes(cls) || !content?.[cls]) continue;
+      for (const ref of refs) {
+        const pack = findPack(ref);
+        if (!pack) continue;
+        const docs = (await pack.getDocuments()).filter((d) => d.type === "power");
+        content[cls].content = docs.concat(content[cls].content);
+      }
+    }
+    return content;
+  };
+  console.log(`Dark Alleys: Import Powers extras for ${Object.keys(powers).join(", ")}.`);
+}
+
+// A dragged or imported compendium actor records `_stats.compendiumSource`
+// ("Compendium.<pack id>.Actor.<id>"); the pack's own `_id` in the creation
+// data is the fallback. Traits the actor already has (by name) are skipped,
+// so duplicating a companion doesn't add them twice.
+Hooks.on("preCreateActor", function (actor, data) {
+  const source = actor._stats?.compendiumSource ?? "";
+  for (const { actorPack, actorIds, traits } of companionTraitSets) {
+    if (!source.startsWith(`Compendium.${actorPack}.Actor.`) && !actorIds.has(data?._id)) continue;
+    const have = new Set(actor.items.map((i) => i.name));
+    const add = traits.filter((t) => !have.has(t.name));
+    if (add.length) actor.updateSource({ items: [...actor._source.items, ...add] });
+  }
 });
 })();
