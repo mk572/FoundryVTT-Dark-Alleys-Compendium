@@ -919,7 +919,65 @@ const DA_DATA = {
         }
       }
     ]
-  }
+  },
+  "races": [
+    {
+      "id": "firesoul",
+      "name": "Firesoul"
+    },
+    {
+      "id": "halfogre",
+      "name": "Half-Ogre"
+    },
+    {
+      "id": "leomar",
+      "name": "Leomar"
+    },
+    {
+      "id": "nyama",
+      "name": "Nyama"
+    },
+    {
+      "id": "orc",
+      "name": "Orc"
+    },
+    {
+      "id": "pixie",
+      "name": "Pixie"
+    },
+    {
+      "id": "ratkin",
+      "name": "Ratkin"
+    },
+    {
+      "id": "rocksoul",
+      "name": "Rocksoul"
+    },
+    {
+      "id": "shadowborn",
+      "name": "Shadowborn"
+    },
+    {
+      "id": "starchild",
+      "name": "Star Child"
+    },
+    {
+      "id": "stormsoul",
+      "name": "Stormsoul"
+    },
+    {
+      "id": "vorhai",
+      "name": "Vorhai"
+    },
+    {
+      "id": "greyskin",
+      "name": "Greyskin"
+    },
+    {
+      "id": "watersoul",
+      "name": "Watersoul"
+    }
+  ]
 };
 
 // ---- vtt-scripts/register-classes.js ----
@@ -967,6 +1025,31 @@ Hooks.on("ready", function () {
     }
     if (cls.baseStats) console.log(`${cls.name} (13th Age) class loaded successfully.`);
   }
+});
+
+// ---- vtt-scripts/register-races.js ----
+// Registers this module's races with the archmage system at `ready`, so
+// Import Powers offers their racial powers and feats. archmage already loads
+// every installed pack named "races" (or "kin-powers-2e" with its
+// secondEdition setting on) — scripts/export-races.mjs gives ours that name —
+// but it only matches a character's race text against the names in
+// CONFIG.ARCHMAGE.raceList (archmage-prepopulate.js getCompendiums), so a race
+// missing from that list never finds its powers, whatever pack they're in.
+//
+// Runs inside Foundry, as part of the module's scripts/setup.js (see
+// docs/VTT-SCRIPTS.md). Reads DA_DATA.races, written by
+// scripts/generate-archmage-setup.mjs from data/<edition>/races/*.yaml:
+//   [{ id (archmage-style, separators stripped), name (display name) }]
+// A race printed under two names ("Vorhai / Greyskin") has one record per
+// name. archmage localizes raceList's values at `init`, so plain display
+// names added at `ready` are already in the form it matches against.
+Hooks.on("ready", function () {
+  if (!DA_DATA.races?.length) return;
+  CONFIG.ARCHMAGE.raceList ??= {};
+  for (const race of DA_DATA.races) {
+    CONFIG.ARCHMAGE.raceList[race.id] ??= race.name;
+  }
+  console.log(`Dark Alleys: ${DA_DATA.races.length} race name(s) registered for Import Powers.`);
 });
 
 // ---- vtt-scripts/core-groups.js ----
