@@ -233,6 +233,44 @@
       "type": "Item"
     }
   ],
+  "packFolders": [
+    {
+      "name": "Dark Pacts / Dark Alleys",
+      "sorting": "a",
+      "packs": [
+        "barbarian",
+        "bard",
+        "chaos-mage",
+        "cleric",
+        "cleric-summons",
+        "commander",
+        "fighter",
+        "monk",
+        "necromancer",
+        "necromancer-summons",
+        "occultist",
+        "paladin",
+        "ranger",
+        "rogue",
+        "sorcerer",
+        "wizard",
+        "wizard-summons",
+        "abomination",
+        "fateweaver",
+        "gunslinger",
+        "psion",
+        "psion-summons",
+        "savage",
+        "swordmage",
+        "warlock",
+        "dark-alleys-druid",
+        "dark-alleys-druid-summons",
+        "animal-companion-dark-alleys",
+        "classes",
+        "races"
+      ]
+    }
+  ],
   "manifest": "https://github.com/mk572/FoundryVTT-Dark-Alleys-Compendium/releases/download/latest/module.json",
   "download": "https://github.com/mk572/FoundryVTT-Dark-Alleys-Compendium/releases/download/latest/dark-alleys-compendium.zip"
 }
