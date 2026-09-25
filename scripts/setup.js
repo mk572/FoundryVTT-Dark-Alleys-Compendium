@@ -1226,7 +1226,8 @@ Hooks.on("preCreateActor", function (actor, data) {
 // createItem/deleteItem. Import Powers hiding the children is import-extras.js.
 //
 // Reads DA_DATA.flagScope (the key under which the exporter writes Item flags):
-//   parent Item:  flags[scope].grants = [{ pack: "<this module's pack name>", id: "<Item _id in that pack>" }]
+//   parent Item:  flags[scope].grants = [{ pack: "<this module's pack name>", id: "<Item _id in that pack>" }
+//                                         | { packId: "<full pack id, any package>", name: "<Item name>" }]
 //   granted copy: flags[scope].grantedBy = the parent's Item id on the actor,
 //                 flags[scope].grantedByName = the parent's name at grant time
 // A copy is tied to the one parent that created it: two parents granting the
@@ -1234,10 +1235,15 @@ Hooks.on("preCreateActor", function (actor, data) {
 // as plain properties, not getFlag(), which rejects scopes that aren't packages.
 
 // The child's own text field that gets the "Created by <parent>" line.
-const CREATED_BY_FIELD = "effect";
+const CREATED_BY_FIELD = "special";
 
 const grantScope = DA_DATA.flagScope;
 
+// A granted child that itself lists grants (item 1 grants item 2, item 2 grants
+// item 3) is flattened: everything is created once and tied to the TOP parent
+// (item 1), so removing item 1 removes all of it. The data is meant to list every
+// child on the top parent; this is the fallback when it doesn't. Copies created
+// here don't run this hook again (daGranted), and a `seen` set stops loops.
 function grantChildData(child, parent) {
   const data = child.toObject();
   delete data._id;
@@ -1250,6 +1256,30 @@ function grantChildData(child, parent) {
   return data;
 }
 
+async function collectGrants(refs, seen, found, missing, viaName) {
+  for (const { pack: packName, id, packId, name } of refs) {
+    // Own child: this module's pack + Item id. External: any package's full pack id + Item name.
+    const pack = packId
+      ? game.packs.get(packId)
+      : game.packs.find((p) => p.metadata.packageType === "module" && p.metadata.name === packName);
+    const childId = id ?? (await pack?.getIndex())?.find((e) => e.name === name)?._id;
+    const child = childId ? await pack.getDocument(childId) : null;
+    if (!child) {
+      missing.push(packId ? `${packId}/${name}` : `${packName}/${id}`);
+      continue;
+    }
+    const key = child.uuid ?? child.id;
+    if (seen.has(key)) continue;
+    seen.add(key);
+    found.push(child);
+    const nested = child.flags?.[grantScope]?.grants;
+    if (nested?.length) {
+      console.info(`Dark Alleys: ${child.name} (granted via ${viaName}) grants more; those are tied to the top parent too.`);
+      await collectGrants(nested, seen, found, missing, viaName);
+    }
+  }
+}
+
 Hooks.on("createItem", async function (item, options, userId) {
   if (userId !== game.user.id || options?.daGranted) return;
   const actor = item.parent;
@@ -1257,14 +1287,10 @@ Hooks.on("createItem", async function (item, options, userId) {
   const grants = item.flags?.[grantScope]?.grants;
   if (!grants?.length) return;
 
-  const children = [];
+  const found = [];
   const missing = [];
-  for (const { pack: packName, id } of grants) {
-    const pack = game.packs.find((p) => p.metadata.packageType === "module" && p.metadata.name === packName);
-    const child = await pack?.getDocument(id);
-    if (child) children.push(grantChildData(child, item));
-    else missing.push(`${packName}/${id}`);
-  }
+  await collectGrants(grants, new Set(), found, missing, item.name);
+  const children = found.map((child) => grantChildData(child, item));
   if (missing.length) {
     console.warn(`Dark Alleys: ${item.name} could not add ${missing.length} granted item(s): ${missing.join(", ")}`);
     ui.notifications.warn(`${item.name}: ${missing.length} granted power(s) could not be added.`);
