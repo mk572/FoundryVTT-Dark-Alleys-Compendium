@@ -1305,4 +1305,28 @@ Hooks.on("deleteItem", async function (item, options, userId) {
   const ids = actor.items.filter((i) => i.flags?.[grantScope]?.grantedBy === item.id).map((i) => i.id);
   if (ids.length) await actor.deleteEmbeddedDocuments("Item", ids);
 });
+
+// ---- vtt-scripts/uses-init.js ----
+// Uses that scale with an ability modifier (docs/DATA-FORMAT.md "Ability-mod-scaled
+// use counts"): a power's max uses can be a formula ("[[@cha.mod]]"). archmage
+// resolves it when the actor rests, but a power just added to a character keeps the
+// placeholder count the export wrote (1), so it would start with the wrong number of
+// uses. On creation, set the current uses to the resolved maximum. Only for powers
+// that track that pool at all (uses not null), and only when the maximum is a
+// formula: fixed counts are already right. `resolveMaxQuantity` is archmage 1.41+.
+Hooks.on("createItem", async function (item, options, userId) {
+  if (userId !== game.user.id) return;
+  const actor = item.parent;
+  if (actor?.documentName !== "Actor" || actor.type !== "character") return;
+  if (typeof item.resolveMaxQuantity !== "function") return;
+  const update = {};
+  for (const [maxField, usesField] of [["maxQuantity", "quantity"], ["maxQuantitySecondary", "quantitySecondary"]]) {
+    const raw = item.system?.[maxField]?.value;
+    if (typeof raw !== "string" || !/\[\[|@/.test(raw)) continue;
+    if (item.system?.[usesField]?.value == null) continue;
+    const max = await item.resolveMaxQuantity(maxField);
+    if (max != null) update[`system.${usesField}.value`] = max;
+  }
+  if (Object.keys(update).length) await item.update(update);
+});
 })();
