@@ -919,7 +919,13 @@ const DA_DATA = {
           ]
         },
         {
-          "name": "druid"
+          "name": "druid",
+          "except": [
+            "Terrain Caster: Desert, Wasteland",
+            "Terrain Caster: Hellhole, Abyss",
+            "Terrain Caster: Ocean, Island",
+            "Terrain Caster: Volcano"
+          ]
         }
       ],
       "ranger": [
