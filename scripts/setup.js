@@ -910,6 +910,15 @@ const DA_DATA = {
           "id": "archmage.animal-companion"
         },
         {
+          "id": "archmage.druid",
+          "only": [
+            "Divine Implements",
+            "Druidic Summoning",
+            "Melee Attack: Strength or Speed",
+            "Wilderness Survival"
+          ]
+        },
+        {
           "name": "druid"
         }
       ],
@@ -1145,6 +1154,10 @@ Hooks.on("preCreateItem", function (item, data) {
 // A pack ref is { id: "archmage.animal-companion" } for another package's
 // pack, or { name: "animal-companion-dark-alleys" } for one of this module's
 // own (looked up by name, so setup.js doesn't depend on the module's id).
+// A ref may also carry `only: [Item names]` (just those Items) or `except:
+// [Item names]` (all but those), matched ignoring case; a name in `only` that
+// the pack doesn't have is reported in the console and to the GM, so a rename
+// in the source pack can't silently drop e.g. a class's basic attacks.
 
 const findPack = (ref) =>
   ref.id
@@ -1181,6 +1194,27 @@ Hooks.once("ready", async function () {
 // the prototype method changes what every Import Powers dialog shows.
 // Verified live 2026-09-25 (archmage 1.41 on Forge, script served from the
 // Forge CDN).
+const reported = new Set();
+
+// Applies a ref's `only` / `except` name filter to a pack's power Items.
+function selectItems(ref, pack, docs) {
+  const same = (a, b) => a.toLowerCase() === b.toLowerCase();
+  if (ref.only) {
+    const missing = ref.only.filter((n) => !docs.some((d) => same(d.name, n)));
+    for (const name of missing) {
+      const key = `${pack.collection}:${name}`;
+      if (reported.has(key)) continue;
+      reported.add(key);
+      const msg = `Dark Alleys: "${name}" is not in ${pack.collection}; Import Powers can't offer it.`;
+      console.warn(msg);
+      if (game.user.isGM) ui.notifications.warn(msg);
+    }
+    return docs.filter((d) => ref.only.some((n) => same(d.name, n)));
+  }
+  if (ref.except) return docs.filter((d) => !ref.except.some((n) => same(d.name, n)));
+  return docs;
+}
+
 async function wrapImportPowers(powers) {
   const systemScript = [...document.querySelectorAll('script[type="module"][src]')]
     .map((s) => s.src)
@@ -1203,7 +1237,7 @@ async function wrapImportPowers(powers) {
       for (const ref of refs) {
         const pack = findPack(ref);
         if (!pack) continue;
-        const docs = (await pack.getDocuments()).filter((d) => d.type === "power");
+        const docs = selectItems(ref, pack, (await pack.getDocuments()).filter((d) => d.type === "power"));
         content[cls].content = docs.concat(content[cls].content);
       }
     }
