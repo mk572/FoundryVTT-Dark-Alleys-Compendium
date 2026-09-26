@@ -928,6 +928,20 @@ const DA_DATA = {
       }
     ]
   },
+  "sceneTerrains": [
+    "Cave, Dungeon, Underworld",
+    "Desert, Wasteland",
+    "Forest, Woods",
+    "Hellhole, Abyss",
+    "Ice, Tundra, Deep Snow",
+    "Koru Behemoth",
+    "Mountains",
+    "Ocean, Island",
+    "Plains, Overworld",
+    "Ruins",
+    "Swamp, Lake, River",
+    "Volcano"
+  ],
   "races": [
     {
       "id": "firesoul",
@@ -1223,6 +1237,42 @@ Hooks.on("preCreateActor", function (actor, data) {
     const have = new Set(actor.items.map((i) => i.name));
     const add = traits.filter((t) => !have.has(t.name));
     if (add.length) actor.updateSource({ items: [...actor._source.items, ...add] });
+  }
+});
+
+// ---- vtt-scripts/scene-terrains.js ----
+// Adds the terrains this module's Druid content introduces (Desert/Wasteland,
+// Hellhole/Abyss, Ocean/Island, Volcano) to archmage's scene terrain selector, the
+// "Terrains Present" list in Scene Config. archmage keeps that list in
+// `game.archmage.terrains` and only uses it to show terrain badges on a scene: it
+// doesn't gate spells, so an extra entry is purely a display option
+// (docs/DRUID-SPLIT.md).
+//
+// Reads DA_DATA.sceneTerrains: the terrain names of every "Terrain Caster: <name>"
+// group in the class files, e.g. ["Cave, Dungeon, Underworld", "Desert, Wasteland"].
+// A name archmage already lists (compared with its localized label) is skipped.
+
+// Icons (Font Awesome) for the terrains we add; anything else gets the default.
+const TERRAIN_ICONS = {
+  "Desert, Wasteland": "fa-solid fa-sun",
+  "Hellhole, Abyss": "fa-solid fa-fire",
+  "Ocean, Island": "fa-solid fa-anchor",
+  "Volcano": "fa-solid fa-volcano",
+};
+
+Hooks.once("ready", function () {
+  const terrains = game.archmage?.terrains;
+  if (!Array.isArray(terrains)) return;
+  const existing = new Set(terrains.map((t) => game.i18n.localize(t.name).toLowerCase()));
+  for (const name of DA_DATA.sceneTerrains ?? []) {
+    if (existing.has(name.toLowerCase())) continue;
+    // A camelCase id like archmage's own ("desertWasteland"); a name that is no
+    // localization key is shown as it is.
+    const id = name
+      .toLowerCase()
+      .replace(/[^a-z\d]+(.)/g, (_m, c) => c.toUpperCase())
+      .replace(/[^a-z\d]/gi, "");
+    terrains.push({ id, name, icon: TERRAIN_ICONS[name] ?? "fa-solid fa-mountain-sun" });
   }
 });
 
