@@ -205,13 +205,6 @@
       "type": "Item"
     },
     {
-      "name": "dark-alleys-druid-summons",
-      "label": "Dark Alleys Druid (Summons)",
-      "system": "archmage",
-      "path": "packs/dark-alleys-druid-summons",
-      "type": "Actor"
-    },
-    {
       "name": "druid",
       "label": "Druid",
       "system": "archmage",
@@ -278,7 +271,8 @@
         "swordmage",
         "warlock",
         "dark-alleys-druid",
-        "dark-alleys-druid-summons",
+        "druid",
+        "druid-summons",
         "animal-companion-dark-alleys",
         "classes",
         "races"
