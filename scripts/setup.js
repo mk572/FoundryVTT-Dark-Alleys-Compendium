@@ -908,6 +908,14 @@ const DA_DATA = {
         },
         {
           "id": "archmage.animal-companion"
+        },
+        {
+          "name": "druid"
+        }
+      ],
+      "ranger": [
+        {
+          "name": "animal-companion-dark-alleys"
         }
       ]
     },
