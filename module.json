@@ -212,6 +212,20 @@
       "type": "Actor"
     },
     {
+      "name": "druid",
+      "label": "Druid",
+      "system": "archmage",
+      "path": "packs/druid",
+      "type": "Item"
+    },
+    {
+      "name": "druid-summons",
+      "label": "Druid (Summons)",
+      "system": "archmage",
+      "path": "packs/druid-summons",
+      "type": "Actor"
+    },
+    {
       "name": "animal-companion-dark-alleys",
       "label": "Animal Companion (Dark Alleys)",
       "system": "archmage",
