@@ -275,6 +275,16 @@ cover cleric content and they turned out to need very different treatment:
 
 ## Notes for Claude
 
+- **This repo is a sync target, not a place to hand-edit.** Packs, `scripts/setup.js` and
+  `assets/icons/` come from `~/projects/13a-rules-db`'s `sync-to-module.mjs` — never hand-edit those
+  here, and never hand-commit/hand-push a fix to anything that ships in the release zip (including
+  this repo's own `scripts/build-release-zip.sh` or `.github/workflows/`) without going through that
+  script's `--bump`. A 2026-09-27 hand-edit to `build-release-zip.sh`, committed directly here instead
+  of via `sync-to-module.mjs --bump`, shipped a real fix (assets/ wasn't in the zip, so custom
+  Swordmage icons 404'd) but skipped the version bump — Forge's update check saw no version change
+  and the live world stayed broken. CI now runs `scripts/check-version-bump.sh` first and fails the
+  build if that happens again, but treat it as a safety net, not a green light to hand-edit here. Full
+  rationale/rule: 13a-rules-db's `CLAUDE.md`, "Notes for Claude".
 - The GitHub repo's `manifest`/`download` URLs still point at a `latest`
   release tag from the old version — **no new GitHub Release has been cut
   yet** for this migration. See `docs/TASKS.md`.
