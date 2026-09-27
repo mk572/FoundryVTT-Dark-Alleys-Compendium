@@ -24,9 +24,14 @@ Follow `~/projects/CODING_GUIDELINES.md`. Project-specific overrides:
 ## Commands
 
 - **Build a test zip:** from the project root:
-  `zip -r dist/dark-alleys-compendium-test.zip module.json README.md packs`
+  `zip -r dist/dark-alleys-compendium-test.zip module.json README.md packs assets`
   (`dist/` is gitignored). This is what gets fed into Forge's Import Wizard
-  for testing — see below.
+  for testing — see below. Must include `assets/` (added 2026-09-27,
+  `scripts/build-release-zip.sh`'s own fix) — that's where a `custom/<file>`
+  `entry.img` (13a-rules-db's `docs/DATA-FORMAT.md`) resolves to; a zip
+  without it silently 404s only those icons, everything else (archmage
+  stock icons, Foundry-core icons) keeps working since they come from
+  elsewhere.
 - **Regenerate a pack after editing staged JSON:** use
   `@foundryvtt/foundryvtt-cli`'s `compilePack(srcDir, destDir)` — see
   "Migration tooling" below for the exact key-format gotchas.

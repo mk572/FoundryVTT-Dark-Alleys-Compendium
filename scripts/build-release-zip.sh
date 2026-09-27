@@ -5,4 +5,4 @@
 # edit, which needs the `workflow` OAuth scope to push.
 set -euo pipefail
 
-zip -r ./dark-alleys-compendium.zip module.json README.md INSTALL.md scripts/ packs/
+zip -r ./dark-alleys-compendium.zip module.json README.md INSTALL.md scripts/ packs/ assets/
