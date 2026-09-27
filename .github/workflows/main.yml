@@ -7,6 +7,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
+      with:
+        fetch-depth: 0 # full tag history -- check-version-bump.sh diffs against a past tag
+
+    # Fail fast if shipped content (module.json/README/INSTALL/scripts/packs/assets) changed
+    # since the commit tagged with the CURRENT module.json version, without a version bump.
+    # Kept in scripts/check-version-bump.sh, not inlined, for the same reason as the zip
+    # script below. See that script's --help for exact behavior.
+    - run: bash scripts/check-version-bump.sh
 
     # create a zip file with all files required by the module to add to the release.
     # Kept in scripts/build-release-zip.sh, not inlined here, so future changes to
