@@ -2,7 +2,7 @@
   "id": "13a-dark-alleys-compendium",
   "title": "13th Age Dark Alleys Compendium",
   "description": "Game rules & Compendiums for the 13th Age Compatible expansion book Dark Alleys & Twisted Path for Foundry Virtual Tabletop ",
-  "version": "0.6.88",
+  "version": "0.6.89",
   "compatibility": {
     "minimum": "13",
     "verified": "14"
@@ -112,6 +112,13 @@
       "system": "archmage",
       "path": "packs/ranger",
       "type": "Item"
+    },
+    {
+      "name": "ranger-rolltables",
+      "label": "Ranger (Roll Tables)",
+      "system": "archmage",
+      "path": "packs/ranger-rolltables",
+      "type": "RollTable"
     },
     {
       "name": "rogue",
@@ -258,6 +265,7 @@
         "occultist",
         "paladin",
         "ranger",
+        "ranger-rolltables",
         "rogue",
         "sorcerer",
         "wizard",

@@ -4,6 +4,9 @@
 // generator. See docs/VTT-SCRIPTS.md.
 (() => {
 const DA_DATA = {
+  "rollTablePacks": [
+    "13a-dark-alleys-compendium.ranger-rolltables"
+  ],
   "classPackName": "classes",
   "classes": [
     {
@@ -1488,5 +1491,30 @@ Hooks.on("createItem", async function (item, options, userId) {
     if (max != null) update[`system.${usesField}.value`] = max;
   }
   if (Object.keys(update).length) await item.update(update);
+});
+
+// ---- vtt-scripts/rolltables-to-world.js ----
+// Copies this module's roll tables into the world, so archmage can roll them by name.
+//
+// archmage's item roll resolves an item's `rollTable` name only against world tables and its own
+// system-rolltables pack, never against a module's pack (module/item/item.js, _rollHandleRollTable),
+// so a table that lives only in our pack never rolls (no popup, no error). The exporter writes the
+// table's plain name into the item; this puts a table of that name in the world.
+//
+// Runs inside Foundry, as part of the module's scripts/setup.js (see docs/VTT-SCRIPTS.md). Reads
+// DA_DATA.rollTablePacks, the pack ids (<module id>.<pack name>) written by
+// scripts/generate-archmage-setup.mjs. GM only; a table whose name already exists in the world is
+// left alone (a GM's own edits win).
+
+Hooks.once("ready", async function () {
+  if (!game.user.isGM) return;
+  for (const packId of DA_DATA.rollTablePacks ?? []) {
+    const pack = game.packs.get(packId);
+    if (!pack) continue;
+    const missing = (await pack.getDocuments()).filter((t) => !game.tables.some((w) => w.name === t.name));
+    if (!missing.length) continue;
+    await RollTable.create(missing.map((t) => t.toObject()), { keepId: false });
+    console.log(`Dark Alleys: copied ${missing.length} roll table(s) from ${packId} into the world: ${missing.map((t) => t.name).join(", ")}`);
+  }
 });
 })();
