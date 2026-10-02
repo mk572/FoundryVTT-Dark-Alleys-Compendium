@@ -2,7 +2,7 @@
   "id": "13a-dark-alleys-compendium",
   "title": "13th Age Dark Alleys Compendium",
   "description": "Game rules & Compendiums for the 13th Age Compatible expansion book Dark Alleys & Twisted Path for Foundry Virtual Tabletop ",
-  "version": "0.6.96",
+  "version": "0.6.97",
   "compatibility": {
     "minimum": "13",
     "verified": "14"
@@ -105,6 +105,13 @@
       "system": "archmage",
       "path": "packs/occultist",
       "type": "Item"
+    },
+    {
+      "name": "occultist-rolltables",
+      "label": "Occultist (Roll Tables)",
+      "system": "archmage",
+      "path": "packs/occultist-rolltables",
+      "type": "RollTable"
     },
     {
       "name": "paladin",
@@ -320,6 +327,7 @@
         "necromancer",
         "necromancer-summons",
         "occultist",
+        "occultist-rolltables",
         "paladin",
         "paladin-rolltables",
         "ranger",
