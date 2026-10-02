@@ -106,7 +106,8 @@ const DA_DATA = {
           "int"
         ]
       },
-      "customResources": null
+      "customResources": null,
+      "resourceMax": null
     },
     {
       "id": "darkalleysdruid",
@@ -208,7 +209,8 @@ const DA_DATA = {
           "wis"
         ]
       },
-      "customResources": null
+      "customResources": null,
+      "resourceMax": null
     },
     {
       "id": "fateweaver",
@@ -310,7 +312,8 @@ const DA_DATA = {
           "wis"
         ]
       },
-      "customResources": null
+      "customResources": null,
+      "resourceMax": null
     },
     {
       "id": "gunslinger",
@@ -421,7 +424,8 @@ const DA_DATA = {
           "Grit",
           "quick"
         ]
-      ]
+      ],
+      "resourceMax": null
     },
     {
       "id": "psion",
@@ -528,7 +532,8 @@ const DA_DATA = {
           "PP",
           "quick"
         ]
-      ]
+      ],
+      "resourceMax": null
     },
     {
       "id": "ranger",
@@ -540,7 +545,8 @@ const DA_DATA = {
           "Charges",
           "full"
         ]
-      ]
+      ],
+      "resourceMax": null
     },
     {
       "id": "savage",
@@ -651,7 +657,8 @@ const DA_DATA = {
           "Frenzydiesize",
           "none"
         ]
-      ]
+      ],
+      "resourceMax": null
     },
     {
       "id": "sorcerer",
@@ -663,7 +670,10 @@ const DA_DATA = {
           "Sorcery Points",
           "full"
         ]
-      ]
+      ],
+      "resourceMax": {
+        "Sorcery Points": "cha.mod"
+      }
     },
     {
       "id": "swordmage",
@@ -765,7 +775,8 @@ const DA_DATA = {
           "int"
         ]
       },
-      "customResources": null
+      "customResources": null,
+      "resourceMax": null
     },
     {
       "id": "warlock",
@@ -867,7 +878,8 @@ const DA_DATA = {
           "cha"
         ]
       },
-      "customResources": null
+      "customResources": null,
+      "resourceMax": null
     }
   ],
   "coreGroups": {
@@ -1488,5 +1500,55 @@ Hooks.on("createItem", async function (item, options, userId) {
     if (max != null) update[`system.${usesField}.value`] = max;
   }
   if (Object.keys(update).length) await item.update(update);
+});
+
+// ---- vtt-scripts/resource-max.js ----
+// Keeps a class's custom resource pool at a maximum that depends on the character, e.g. the Sorcerer's Sorcery
+// Points = their Charisma modifier. archmage's own class resource definitions ([label, rest, current, max], see
+// register-classes.js) only take fixed numbers, and archmage rebuilds `system.resources` whenever it re-detects a
+// character's classes, so the maximum is re-applied here after every actor update instead.
+//
+// Runs inside Foundry, as part of the module's scripts/setup.js (see docs/VTT-SCRIPTS.md). Reads
+// DA_DATA.classes[].resourceMax, written by scripts/generate-archmage-setup.mjs from a class file's
+// `archmage_class_config.custom_resource_max`: { "<resource label>": "<ability>.mod" }.
+//
+// Only the owner of an actor changes it (the GM owns every actor, so a player's sheet is fixed up by the GM's client
+// or their own). A full heal-up refills the pool to this maximum through archmage's own rest handling ("full").
+const RESOURCE_MAX_CLASSES = DA_DATA.classes.filter((cls) => cls.resourceMax);
+const RESOURCE_MAX_FORMULA = /^(str|dex|con|int|wis|cha)\.mod$/;
+
+function syncResourceMax(actor) {
+  if (!RESOURCE_MAX_CLASSES.length || actor.type !== "character" || !actor.isOwner) return;
+  const detected = actor.system.details?.detectedClasses ?? [];
+  const spendable = actor.system.resources?.spendable ?? {};
+  const updates = {};
+  for (const cls of RESOURCE_MAX_CLASSES) {
+    if (!detected.includes(cls.id)) continue;
+    for (const [label, formula] of Object.entries(cls.resourceMax)) {
+      const match = RESOURCE_MAX_FORMULA.exec(formula);
+      if (!match) {
+        console.warn(`Dark Alleys: unsupported resource maximum "${formula}" for ${label} (use <ability>.mod)`);
+        continue;
+      }
+      const found = Object.entries(spendable).find(([key, res]) => key !== "ki" && res?.enabled && res.label === label);
+      const mod = actor.system.abilities?.[match[1]]?.mod;
+      if (!found || typeof mod !== "number") continue;
+      const [key, res] = found;
+      const max = Math.max(0, mod);
+      if (res.max !== max) updates[`system.resources.spendable.${key}.max`] = max;
+      // A pool that was never filled (new character, or just re-detected) starts full; a lowered maximum caps it.
+      if ((res.max === 0 && res.current === 0 && max > 0) || res.current > max) {
+        updates[`system.resources.spendable.${key}.current`] = max;
+      }
+    }
+  }
+  if (Object.keys(updates).length) actor.update(updates);
+}
+
+// An update that changes nothing further ends the loop: the next call finds the maximum already right.
+Hooks.on("updateActor", (actor) => syncResourceMax(actor));
+Hooks.on("createActor", (actor) => syncResourceMax(actor));
+Hooks.once("ready", () => {
+  for (const actor of game.actors) syncResourceMax(actor);
 });
 })();
