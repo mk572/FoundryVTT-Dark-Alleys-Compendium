@@ -10,9 +10,8 @@ single source of truth for 13th Age rules content generally — the SRD
 comparison work happening in this project (see "SRD content comparison"
 below) is what feeds it. Once an entry here is verified against the SRD/PDF,
 it belongs in `13a-rules-db` too (as a `status: verified` entry), not just
-in this module's Foundry packs. `reference/srd-cache/` in *this* project is
-raw parsed-SRD material; `13a-rules-db`'s `data/1e/classes/*.yaml` is the
-actual curated, schema-validated source of truth built from it.
+in this module's Foundry packs. `13a-rules-db`'s `data/1e/classes/*.yaml` is the
+actual curated, schema-validated source of truth.
 
 ## Conventions
 
@@ -52,10 +51,6 @@ Follow `~/projects/CODING_GUIDELINES.md`. Project-specific overrides:
   help judge whether its classes are 1e- or 2e-flavored. Not part of Dark
   Alleys; parked pending a reply from the DPAS author.
 - `dist/` (gitignored) — build output (test zips). Not committed.
-- `reference/srd-cache/` — **tracked, not gitignored** (unlike the above —
-  this is real reference work product, not scratch). One JSON file per
-  13th Age SRD class page already parsed for the SRD content comparison
-  task (see below). Read before re-fetching a page you've already done.
 
 ## 2026-09-12 migration (Foundry v14 / archmage 1.40.1)
 
@@ -118,20 +113,9 @@ rules errata, or transcription drift from the original PDF-era digitization.
 Progress and per-pack findings live in `~/projects/13a-rules-db/docs/TASKS.md`; this section is the
 reusable *method*.
 
-**Local SRD cache (started 2026-09-13):** `reference/srd-cache/<class>.json`
-holds the parsed-and-structured result for each class page already checked
-— not raw HTML, not markdown, but the same structured facts (entry name,
-tier, source tag, full text, plus whatever page-specific structure that
-class needed — see each file's own `page_structure` note, since pages are
-**not** structurally uniform, see point 10 below) already extracted via the
-method below. Read an existing cache file before re-fetching a page you've
-already done. Write a new one any time you finish parsing a class page,
-even if the comparison itself gets paused/deferred — the parsing work is
-the expensive part, not the comparison. A full site-wide scrape-everything-
-upfront approach was considered and rejected 2026-09-13: each class page
-needs its own parsing logic anyway (confirmed by how differently Cleric's
-page is structured from Barbarian/Bard's), so there's no shortcut around
-doing this page-by-page as we get to each class.
+**Local SRD cache (removed 2026-10-02):** the per-class `reference/srd-cache/*.json`
+files were deleted from this repo; the parsed SRD material now lives in
+`13a-rules-db`. Recoverable from git history if ever needed.
 
 **The reliable method — read the raw HTML yourself, don't trust one
 summarized `WebFetch` pass for an inventory.** A single `WebFetch` call
@@ -270,7 +254,7 @@ cover cleric content and they turned out to need very different treatment:
   method point 11) is accounted for. **Not yet done:** the deeper
   mechanical (dice/numbers/feat-tier) comparison for those ~100 domain
   spells, the way Barbarian/Bard got checked line-by-line — the user
-  paused before that pass. Pick up from `reference/srd-cache/cleric.json`
+  paused before that pass. Pick up from `13a-rules-db`'s Cleric data
   rather than re-parsing the page.
 
 ## Notes for Claude
