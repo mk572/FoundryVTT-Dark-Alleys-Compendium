@@ -2,7 +2,7 @@
   "id": "13a-dark-alleys-compendium",
   "title": "13th Age Dark Alleys Compendium",
   "description": "Game rules & Compendiums for the 13th Age Compatible expansion book Dark Alleys & Twisted Path for Foundry Virtual Tabletop ",
-  "version": "0.6.89",
+  "version": "0.6.90",
   "compatibility": {
     "minimum": "13",
     "verified": "14"
@@ -42,6 +42,13 @@
       "system": "archmage",
       "path": "packs/chaos-mage",
       "type": "Item"
+    },
+    {
+      "name": "chaos-mage-rolltables",
+      "label": "Chaos Mage (Roll Tables)",
+      "system": "archmage",
+      "path": "packs/chaos-mage-rolltables",
+      "type": "RollTable"
     },
     {
       "name": "cleric",
@@ -107,6 +114,13 @@
       "type": "Item"
     },
     {
+      "name": "paladin-rolltables",
+      "label": "Paladin (Roll Tables)",
+      "system": "archmage",
+      "path": "packs/paladin-rolltables",
+      "type": "RollTable"
+    },
+    {
       "name": "ranger",
       "label": "Ranger",
       "system": "archmage",
@@ -135,11 +149,25 @@
       "type": "Item"
     },
     {
+      "name": "sorcerer-rolltables",
+      "label": "Sorcerer (Roll Tables)",
+      "system": "archmage",
+      "path": "packs/sorcerer-rolltables",
+      "type": "RollTable"
+    },
+    {
       "name": "wizard",
       "label": "Wizard",
       "system": "archmage",
       "path": "packs/wizard",
       "type": "Item"
+    },
+    {
+      "name": "wizard-rolltables",
+      "label": "Wizard (Roll Tables)",
+      "system": "archmage",
+      "path": "packs/wizard-rolltables",
+      "type": "RollTable"
     },
     {
       "name": "wizard-summons",
@@ -198,6 +226,13 @@
       "type": "Item"
     },
     {
+      "name": "swordmage-rolltables",
+      "label": "Swordmage (Roll Tables)",
+      "system": "archmage",
+      "path": "packs/swordmage-rolltables",
+      "type": "RollTable"
+    },
+    {
       "name": "warlock",
       "label": "Warlock",
       "system": "archmage",
@@ -210,6 +245,13 @@
       "system": "archmage",
       "path": "packs/dark-alleys-druid",
       "type": "Item"
+    },
+    {
+      "name": "dark-alleys-druid-rolltables",
+      "label": "Dark Alleys Druid (Roll Tables)",
+      "system": "archmage",
+      "path": "packs/dark-alleys-druid-rolltables",
+      "type": "RollTable"
     },
     {
       "name": "druid",
@@ -255,6 +297,7 @@
         "barbarian",
         "bard",
         "chaos-mage",
+        "chaos-mage-rolltables",
         "cleric",
         "cleric-summons",
         "commander",
@@ -264,11 +307,14 @@
         "necromancer-summons",
         "occultist",
         "paladin",
+        "paladin-rolltables",
         "ranger",
         "ranger-rolltables",
         "rogue",
         "sorcerer",
+        "sorcerer-rolltables",
         "wizard",
+        "wizard-rolltables",
         "wizard-summons",
         "abomination",
         "fateweaver",
@@ -277,8 +323,10 @@
         "psion-summons",
         "savage",
         "swordmage",
+        "swordmage-rolltables",
         "warlock",
         "dark-alleys-druid",
+        "dark-alleys-druid-rolltables",
         "druid",
         "druid-summons",
         "animal-companion-dark-alleys",

@@ -1,0 +1,5 @@
+2026/10/02-22:36:12.385963 172507000 Delete type=3 #1
+2026/10/02-22:36:12.386455 172593000 Level-0 table #5: started
+2026/10/02-22:36:12.386582 172593000 Level-0 table #5: 693 bytes OK
+2026/10/02-22:36:12.386646 172593000 Delete type=0 #3
+2026/10/02-22:36:12.386683 172593000 Manual compaction at level-0 from '!tables!6bbff1ecfbfdaf14' @ 72057594037927935 : 1 .. '!tables.results!6bbff1ecfbfdaf14.bad041c13c32a482' @ 0 : 0; will stop at (end)
