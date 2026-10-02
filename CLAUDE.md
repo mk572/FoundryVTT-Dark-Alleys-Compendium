@@ -115,7 +115,7 @@ session history.
 Separate from the technical migration: comparing each pack's rules text
 against the public 13th Age SRD (13thagesrd.com) to catch missing talents,
 rules errata, or transcription drift from the original PDF-era digitization.
-Progress and per-pack findings live in `docs/TASKS.md`; this section is the
+Progress and per-pack findings live in `~/projects/13a-rules-db/docs/TASKS.md`; this section is the
 reusable *method*.
 
 **Local SRD cache (started 2026-09-13):** `reference/srd-cache/<class>.json`
@@ -287,7 +287,7 @@ cover cleric content and they turned out to need very different treatment:
   rationale/rule: 13a-rules-db's `CLAUDE.md`, "Notes for Claude".
 - The GitHub repo's `manifest`/`download` URLs still point at a `latest`
   release tag from the old version — **no new GitHub Release has been cut
-  yet** for this migration. See `docs/TASKS.md`.
+  yet** for this migration. See `~/projects/13a-rules-db/docs/TASKS.md`.
 - Don't delete `_backup-nedb-packs/` without asking — that's the rollback
   path if something surfaces later that this session's testing didn't
   catch.

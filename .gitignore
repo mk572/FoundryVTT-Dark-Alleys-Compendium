@@ -1,3 +1,6 @@
 /notes/
 /_backup-nedb-packs/
 /dist/
+
+# Dev docs/task lists live in ~/projects/13a-rules-db, never in this repo
+/docs/
