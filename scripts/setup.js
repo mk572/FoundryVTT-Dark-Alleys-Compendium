@@ -654,6 +654,18 @@ const DA_DATA = {
       ]
     },
     {
+      "id": "sorcerer",
+      "name": "Sorcerer",
+      "baseStats": null,
+      "keyModifiers": null,
+      "customResources": [
+        [
+          "Sorcery Points",
+          "full"
+        ]
+      ]
+    },
+    {
       "id": "swordmage",
       "name": "Swordmage",
       "baseStats": {
