@@ -21,7 +21,7 @@ Don't document dev work here.
 - `.github/workflows/main.yml` — on push: version check, zip, GitHub Releases
   for `<version>` and `latest`.
 - `README.md`, `INSTALL.md` — user-facing, shipped in the zip.
-- `reference/` — tracked archive folders (`legacy-packs-pre-2026/`,
+- `backup/` — tracked archive of material that predates the rework (`legacy-packs-pre-2026/`,
   `13-cld-cleric-needs-owner/`); not shipped.
 - Gitignored local-only: `notes/`, `dist/` (test zips), `_backup-nedb-packs/`
   (original NeDB packs, rollback path; don't delete without asking), `docs/`.
