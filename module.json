@@ -2,7 +2,7 @@
   "id": "13a-dark-alleys-compendium",
   "title": "13th Age Dark Alleys Compendium",
   "description": "Game rules & Compendiums for the 13th Age Compatible expansion book Dark Alleys & Twisted Path for Foundry Virtual Tabletop ",
-  "version": "0.6.95",
+  "version": "0.6.96",
   "compatibility": {
     "minimum": "13",
     "verified": "14"
@@ -268,6 +268,13 @@
       "type": "Item"
     },
     {
+      "name": "druid-rolltables",
+      "label": "Druid (Roll Tables)",
+      "system": "archmage",
+      "path": "packs/druid-rolltables",
+      "type": "RollTable"
+    },
+    {
       "name": "druid-summons",
       "label": "Druid (Summons)",
       "system": "archmage",
@@ -336,6 +343,7 @@
         "dark-alleys-druid",
         "dark-alleys-druid-rolltables",
         "druid",
+        "druid-rolltables",
         "druid-summons",
         "animal-companion-dark-alleys",
         "classes",
