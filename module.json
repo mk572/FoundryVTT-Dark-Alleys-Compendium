@@ -2,7 +2,7 @@
   "id": "13a-dark-alleys-compendium",
   "title": "13th Age Dark Alleys Compendium",
   "description": "Game rules & Compendiums for the 13th Age Compatible expansion book Dark Alleys & Twisted Path for Foundry Virtual Tabletop ",
-  "version": "0.6.92",
+  "version": "0.6.93",
   "compatibility": {
     "minimum": "13",
     "verified": "14"
@@ -205,6 +205,13 @@
       "type": "Item"
     },
     {
+      "name": "psion-rolltables",
+      "label": "Psion (Roll Tables)",
+      "system": "archmage",
+      "path": "packs/psion-rolltables",
+      "type": "RollTable"
+    },
+    {
       "name": "psion-summons",
       "label": "Psion (Summons)",
       "system": "archmage",
@@ -320,6 +327,7 @@
         "fateweaver",
         "gunslinger",
         "psion",
+        "psion-rolltables",
         "psion-summons",
         "savage",
         "swordmage",
