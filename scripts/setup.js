@@ -1719,10 +1719,11 @@ Hooks.on("renderChatMessageHTML", function (message, html) {
     const disabled = done || !usable || !actor?.isOwner;
     const note = !usable ? " (no uses left)" : c.verdict === "unknown" ? " (depends on the hit/miss or other condition)" : "";
     const chosen = data.chosen === c.id ? " da-flex-chosen" : "";
+    // archmage's chat CSS makes images display:block, so the icon and text sit in a flex row.
     return `<button type="button" class="da-flex-pick${chosen}" data-item-id="${esc(c.id)}"${disabled ? " disabled" : ""}`
-      + ` style="display:block;width:100%;margin:2px 0;text-align:left">`
-      + `<img src="${esc(c.img)}" width="20" height="20" style="vertical-align:middle;border:0"> `
-      + `<strong>${esc(c.name)}</strong> <em>${esc(c.trigger)}${esc(note)}</em></button>`;
+      + ` style="display:flex;align-items:center;gap:6px;width:100%;height:auto;min-height:28px;margin:2px 0;padding:3px 6px;text-align:left;white-space:normal;line-height:1.2">`
+      + `<img src="${esc(c.img)}" width="22" height="22" style="flex:none;border:0">`
+      + `<span style="flex:1;min-width:0"><strong>${esc(c.name)}</strong> <em>${esc(c.trigger)}${esc(note)}</em></span></button>`;
   });
   slot.innerHTML = `<div style="margin-top:6px"><strong>${heading}</strong>${rows.join("")}</div>`;
   slot.querySelectorAll("button.da-flex-pick").forEach((button) => {
