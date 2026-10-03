@@ -2,7 +2,7 @@
   "id": "13a-dark-alleys-compendium",
   "title": "13th Age Dark Alleys Compendium",
   "description": "Game rules & Compendiums for the 13th Age Compatible expansion book Dark Alleys & Twisted Path for Foundry Virtual Tabletop ",
-  "version": "0.6.100",
+  "version": "0.6.101",
   "compatibility": {
     "minimum": "13",
     "verified": "14"
@@ -161,6 +161,13 @@
       "system": "archmage",
       "path": "packs/sorcerer-rolltables",
       "type": "RollTable"
+    },
+    {
+      "name": "sorcerer-summons",
+      "label": "Sorcerer (Summons)",
+      "system": "archmage",
+      "path": "packs/sorcerer-summons",
+      "type": "Actor"
     },
     {
       "name": "wizard",
@@ -335,6 +342,7 @@
         "rogue",
         "sorcerer",
         "sorcerer-rolltables",
+        "sorcerer-summons",
         "wizard",
         "wizard-rolltables",
         "wizard-summons",
