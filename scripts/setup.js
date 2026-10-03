@@ -1556,4 +1556,29 @@ Hooks.on("createActor", (actor) => syncResourceMax(actor));
 Hooks.once("ready", () => {
   for (const actor of game.actors) syncResourceMax(actor);
 });
+
+// ---- vtt-scripts/register-conditions.js ----
+// Makes "cursed" in a chat card a draggable condition link (the warlock's marker, both
+// editions), with the duration read from the text ("cursed until the end of your next turn").
+// Cursed itself is core's: archmage lists it in ARCHMAGE.extendedStatusEffects, so it is
+// already in the token HUD and the drop handler (_applyAE) finds it in CONFIG.statusEffects.
+// What core's entry lacks is a `journal`, and archmage only compiles text patterns for
+// ARCHMAGE.statusEffects entries that have one (at `ready`). So at `setup`, after archmage's
+// init, we add a copy of core's own entry with a journal to that list. The HUD list is not
+// touched, so there is no second Cursed in it. The journal id is made up: archmage only uses
+// it to open a rules page from the conditions pack, and an id it cannot find opens nothing.
+// Cursed has no mechanical effect of its own: warlock features key on it (docs/TASKS-DONE.md T117).
+
+const DA_LINKED_CONDITIONS = { cursed: "daCursedCondition" };
+
+Hooks.once("setup", function () {
+  const list = CONFIG.ARCHMAGE?.statusEffects;
+  const core = CONFIG.ARCHMAGE?.extendedStatusEffects;
+  if (!Array.isArray(list) || !Array.isArray(core)) return;
+  for (const [id, journal] of Object.entries(DA_LINKED_CONDITIONS)) {
+    const entry = core.find((c) => c.id === id);
+    if (!entry || list.some((c) => c.id === id)) continue;
+    list.push({ ...foundry.utils.deepClone(entry), journal });
+  }
+});
 })();
