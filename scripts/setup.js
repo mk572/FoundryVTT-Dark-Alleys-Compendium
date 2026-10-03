@@ -1004,7 +1004,8 @@ const DA_DATA = {
       ],
       "ranger": [
         {
-          "name": "animal-companion-dark-alleys"
+          "name": "animal-companion-dark-alleys",
+          "edition": "1e"
         }
       ]
     },
@@ -1234,6 +1235,9 @@ Hooks.on("preCreateItem", function (item, data) {
 // A pack ref is { id: "archmage.animal-companion" } for another package's
 // pack, or { name: "animal-companion-dark-alleys" } for one of this module's
 // own (looked up by name, so setup.js doesn't depend on the module's id).
+// A ref may also carry `edition: "1e" | "2e"`: it is offered only while the
+// world's rules set is that edition (archmage's `secondEdition` setting, read
+// each time Import Powers opens, so switching the rules set switches the list).
 // A ref may also carry `only: [Item names]` (just those Items) or `except:
 // [Item names]` (all but those), matched ignoring case; a name in `only` that
 // the pack doesn't have is reported in the console and to the GM, so a rename
@@ -1315,6 +1319,7 @@ async function wrapImportPowers(powers) {
     for (const [cls, refs] of Object.entries(powers)) {
       if (!classes.includes(cls) || !content?.[cls]) continue;
       for (const ref of refs) {
+        if (ref.edition && ref.edition !== (game.settings.get("archmage", "secondEdition") ? "2e" : "1e")) continue;
         const pack = findPack(ref);
         if (!pack) continue;
         const docs = selectItems(ref, pack, (await pack.getDocuments()).filter((d) => d.type === "power"));
