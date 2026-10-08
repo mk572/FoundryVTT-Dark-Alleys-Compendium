@@ -931,9 +931,6 @@ const DA_DATA = {
           "name": "animal-companion-dark-alleys"
         },
         {
-          "id": "archmage.animal-companion"
-        },
-        {
           "id": "archmage.druid",
           "only": [
             "Divine Implements",
@@ -1009,6 +1006,9 @@ const DA_DATA = {
         }
       ]
     },
+    "companionClasses": [
+      "darkalleysdruid"
+    ],
     "companionTraits": [
       {
         "actorPack": "archmage.animal-companions",
@@ -1217,11 +1217,12 @@ Hooks.on("preCreateItem", function (item, data) {
 // Wires extra compendium content into archmage's own flows, the way archmage
 // hardcodes it for its core classes (docs/ANIMAL-COMPANIONS.md):
 //
-// 1. Import Powers: archmage adds its "Animal Companion" pack to the power
-//    list of the core ranger and druid only. This adds configured packs'
-//    power Items to other classes too — e.g. core's companion talent and
-//    spells for the Dark Alleys Druid, and our companion spell expansion for
-//    the core Druid and the Dark Alleys Druid.
+// 1. Import Powers (archmage 1.42's importer, ArchmagePrepopulate): the tabs are made of "default"
+//    compendiums, each power routed to a class tab by its compendium (`getDefaultPacks`, `routePower`).
+//    archmage gives its "Animal Companion" compendium to the classes in `animalCompanionClasses()` (Ranger
+//    and Druid); this adds the Dark Alleys Druid to that list, so it gets core's companion talent and
+//    spells the same way. Other configured packs (our companion spells, the base Druid powers the Dark
+//    Alleys Druid keeps) are added to a class's tab by the same two methods, optionally limited by name.
 // 2. Companion actors: when an actor from a configured Actor pack (core's
 //    "Animal Companion (N)" actors) is created in a world, our trait Items
 //    (e.g. new animal types) are added to it, next to core's own choices.
@@ -1230,6 +1231,7 @@ Hooks.on("preCreateItem", function (item, data) {
 // docs/VTT-SCRIPTS.md). Reads DA_DATA.importExtras, written by
 // scripts/generate-archmage-setup.mjs from the class files' `foundry_import`
 // blocks:
+//   companionClasses: [<archmage-style class id>]  (take core's Animal Companion compendium)
 //   powers: { <archmage-style class id, e.g. "darkalleysdruid">: [<pack ref>] }
 //   companionTraits: [{ actorPack: "<full Actor pack id>", traitPack: <pack ref> }]
 // A pack ref is { id: "archmage.animal-companion" } for another package's
@@ -1253,7 +1255,7 @@ const companionTraitSets = [];
 
 Hooks.once("ready", async function () {
   const extras = DA_DATA.importExtras;
-  await wrapImportPowers(extras.powers);
+  await wrapImportPowers(extras);
   for (const { actorPack, traitPack } of extras.companionTraits) {
     const actors = game.packs.get(actorPack);
     const traits = findPack(traitPack);
@@ -1280,26 +1282,34 @@ Hooks.once("ready", async function () {
 // Forge CDN).
 const reported = new Set();
 
-// Applies a ref's `only` / `except` name filter to a pack's power Items.
-function selectItems(ref, pack, docs) {
-  const same = (a, b) => a.toLowerCase() === b.toLowerCase();
-  if (ref.only) {
-    const missing = ref.only.filter((n) => !docs.some((d) => same(d.name, n)));
-    for (const name of missing) {
-      const key = `${pack.collection}:${name}`;
-      if (reported.has(key)) continue;
-      reported.add(key);
-      const msg = `Dark Alleys: "${name}" is not in ${pack.collection}; Import Powers can't offer it.`;
-      console.warn(msg);
-      if (game.user.isGM) ui.notifications.warn(msg);
-    }
-    return docs.filter((d) => ref.only.some((n) => same(d.name, n)));
-  }
-  if (ref.except) return docs.filter((d) => !ref.except.some((n) => same(d.name, n)));
-  return docs;
+const same = (a, b) => a.toLowerCase() === b.toLowerCase();
+
+// Is this ref offered in the current rules set (archmage's `secondEdition` setting, read each time)?
+const inEdition = (ref) => !ref.edition || ref.edition === (game.settings.get("archmage", "secondEdition") ? "2e" : "1e");
+
+// Does a ref's `only` / `except` name filter let this power through?
+function allows(ref, doc) {
+  if (ref.only) return ref.only.some((n) => same(n, doc.name));
+  if (ref.except) return !ref.except.some((n) => same(n, doc.name));
+  return true;
 }
 
-async function wrapImportPowers(powers) {
+// A name in `only` that its pack doesn't have is reported, so a rename in the source pack can't
+// silently drop e.g. a class's basic attacks.
+async function reportMissingNames(ref, pack) {
+  if (!ref.only) return;
+  const names = (await pack.getIndex()).map((e) => e.name);
+  for (const name of ref.only.filter((n) => !names.some((have) => same(have, n)))) {
+    const key = `${pack.collection}:${name}`;
+    if (reported.has(key)) continue;
+    reported.add(key);
+    const msg = `Dark Alleys: "${name}" is not in ${pack.collection}; Import Powers can't offer it.`;
+    console.warn(msg);
+    if (game.user.isGM) ui.notifications.warn(msg);
+  }
+}
+
+async function wrapImportPowers({ powers, companionClasses = [] }) {
   const systemScript = [...document.querySelectorAll('script[type="module"][src]')]
     .map((s) => s.src)
     .find((src) => /\/systems\/archmage\/(.+\/)?module\/archmage\.js(\?|$)/.test(src));
@@ -1307,42 +1317,45 @@ async function wrapImportPowers(powers) {
     console.warn("Dark Alleys: archmage's module script not found; Import Powers extras disabled.");
     return;
   }
+  // archmage ships its code unbundled: importing its file relative to its own module script URL returns
+  // the very module instance it uses, so wrapping the prototype changes every Import Powers dialog.
   const { ArchmagePrepopulate } = await import(new URL("setup/archmage-prepopulate.js", systemScript).href);
   const proto = ArchmagePrepopulate?.prototype;
-  if (typeof proto?.getCompendiums !== "function") {
-    console.warn("Dark Alleys: archmage's getCompendiums not found; Import Powers extras disabled.");
+  if (!["animalCompanionClasses", "getDefaultPacks", "routePower"].every((m) => typeof proto?.[m] === "function")) {
+    console.warn("Dark Alleys: archmage's Import Powers has changed (animalCompanionClasses/getDefaultPacks/routePower not found); extras disabled.");
     return;
   }
-  const original = proto.getCompendiums;
-  proto.getCompendiums = async function (classes = [], race = "") {
-    const content = await original.call(this, classes, race);
-    for (const [cls, refs] of Object.entries(powers)) {
-      if (!classes.includes(cls) || !content?.[cls]) continue;
-      for (const ref of refs) {
-        if (ref.edition && ref.edition !== (game.settings.get("archmage", "secondEdition") ? "2e" : "1e")) continue;
-        const pack = findPack(ref);
-        if (!pack) continue;
-        const docs = selectItems(ref, pack, (await pack.getDocuments()).filter((d) => d.type === "power"));
-        content[cls].content = docs.concat(content[cls].content);
-      }
-    }
-    hideGrantedChildren(content);
-    return content;
-  };
-  if (Object.keys(powers).length) console.log(`Dark Alleys: Import Powers extras for ${Object.keys(powers).join(", ")}.`);
-}
 
-// Child entries (docs/DATA-FORMAT.md "granted"): a child the parent adds by
-// itself is hidden from the dialog, but only while its parent is listed in
-// the same class group, so a broken link can never make a power unreachable.
-function hideGrantedChildren(content) {
-  const scope = DA_DATA.flagScope;
-  for (const group of Object.values(content ?? {})) {
-    if (!Array.isArray(group?.content)) continue;
-    const docId = (d) => d.id ?? d._id;
-    const listedGrants = new Set(group.content.flatMap((d) => (d.flags?.[scope]?.grants ?? []).map((g) => g.id)));
-    group.content = group.content.filter((d) => !(d.flags?.[scope]?.autoGranted && listedGrants.has(docId(d))));
-  }
+  // Same way archmage lists its companion compendium for the Ranger and Druid.
+  const animalCompanionClasses = proto.animalCompanionClasses;
+  proto.animalCompanionClasses = function () {
+    return [...new Set([...animalCompanionClasses.call(this), ...companionClasses])];
+  };
+
+  // The configured packs, with the classes that take them.
+  const refs = Object.entries(powers).flatMap(([cls, list]) => list.map((ref) => ({ cls, ref, pack: findPack(ref) })));
+  for (const { ref, pack } of refs) if (pack) reportMissingNames(ref, pack);
+
+  const getDefaultPacks = proto.getDefaultPacks;
+  proto.getDefaultPacks = function (classes = [], race = "") {
+    const ids = getDefaultPacks.call(this, classes, race);
+    for (const { cls, ref, pack } of refs) {
+      if (pack && classes.includes(cls) && inEdition(ref)) ids.add(pack.collection);
+    }
+    return ids;
+  };
+
+  const routePower = proto.routePower;
+  proto.routePower = function (pack, doc, source) {
+    const tabs = [...routePower.call(this, pack, doc, source)];
+    for (const { cls, ref, pack: extra } of refs) {
+      if (extra?.collection !== pack.collection || !source.classes.includes(cls) || tabs.includes(cls)) continue;
+      if (inEdition(ref) && allows(ref, doc)) tabs.push(cls);
+    }
+    return tabs;
+  };
+  const names = Object.keys(powers);
+  console.log(`Dark Alleys: Import Powers extras for ${[...new Set([...names, ...companionClasses])].join(", ")}.`);
 }
 
 // A dragged or imported compendium actor records `_stats.compendiumSource`
@@ -1393,94 +1406,6 @@ Hooks.once("ready", function () {
       .replace(/[^a-z\d]/gi, "");
     terrains.push({ id, name, icon: TERRAIN_ICONS[name] ?? "fa-solid fa-mountain-sun" });
   }
-});
-
-// ---- vtt-scripts/granted-items.js ----
-// Child entries (docs/DATA-FORMAT.md "granted"): adding a parent Item to a
-// character also adds the children it lists, and removing the parent removes
-// the children it created. Runs on every way an Item reaches an actor (Import
-// Powers, drag from a compendium, "add item"), since it listens to
-// createItem/deleteItem. Import Powers hiding the children is import-extras.js.
-//
-// Reads DA_DATA.flagScope (the key under which the exporter writes Item flags):
-//   parent Item:  flags[scope].grants = [{ pack: "<this module's pack name>", id: "<Item _id in that pack>" }
-//                                         | { packId: "<full pack id, any package>", name: "<Item name>" }]
-//   granted copy: flags[scope].grantedBy = the parent's Item id on the actor,
-//                 flags[scope].grantedByName = the parent's name at grant time
-// A copy is tied to the one parent that created it: two parents granting the
-// same power give two copies, and each goes with its own parent. Flags are read
-// as plain properties, not getFlag(), which rejects scopes that aren't packages.
-
-// The child's own text field that gets the "Created by <parent>" line.
-const CREATED_BY_FIELD = "special";
-
-const grantScope = DA_DATA.flagScope;
-
-// A granted child that itself lists grants (item 1 grants item 2, item 2 grants
-// item 3) is flattened: everything is created once and tied to the TOP parent
-// (item 1), so removing item 1 removes all of it. The data is meant to list every
-// child on the top parent; this is the fallback when it doesn't. Copies created
-// here don't run this hook again (daGranted), and a `seen` set stops loops.
-function grantChildData(child, parent) {
-  const data = child.toObject();
-  delete data._id;
-  data.flags = foundry.utils.mergeObject(data.flags ?? {}, {
-    [grantScope]: { grantedBy: parent.id, grantedByName: parent.name },
-  });
-  const field = (data.system[CREATED_BY_FIELD] ??= { value: "" });
-  const line = `<p><em>Created by ${foundry.utils.escapeHTML(parent.name)}</em></p>`;
-  field.value = field.value ? `${line}${field.value}` : line;
-  return data;
-}
-
-async function collectGrants(refs, seen, found, missing, viaName) {
-  for (const { pack: packName, id, packId, name } of refs) {
-    // Own child: this module's pack + Item id. External: any package's full pack id + Item name.
-    const pack = packId
-      ? game.packs.get(packId)
-      : game.packs.find((p) => p.metadata.packageType === "module" && p.metadata.name === packName);
-    const childId = id ?? (await pack?.getIndex())?.find((e) => e.name === name)?._id;
-    const child = childId ? await pack.getDocument(childId) : null;
-    if (!child) {
-      missing.push(packId ? `${packId}/${name}` : `${packName}/${id}`);
-      continue;
-    }
-    const key = child.uuid ?? child.id;
-    if (seen.has(key)) continue;
-    seen.add(key);
-    found.push(child);
-    const nested = child.flags?.[grantScope]?.grants;
-    if (nested?.length) {
-      console.info(`Dark Alleys: ${child.name} (granted via ${viaName}) grants more; those are tied to the top parent too.`);
-      await collectGrants(nested, seen, found, missing, viaName);
-    }
-  }
-}
-
-Hooks.on("createItem", async function (item, options, userId) {
-  if (userId !== game.user.id || options?.daGranted) return;
-  const actor = item.parent;
-  if (actor?.documentName !== "Actor" || actor.type !== "character") return;
-  const grants = item.flags?.[grantScope]?.grants;
-  if (!grants?.length) return;
-
-  const found = [];
-  const missing = [];
-  await collectGrants(grants, new Set(), found, missing, item.name);
-  const children = found.map((child) => grantChildData(child, item));
-  if (missing.length) {
-    console.warn(`Dark Alleys: ${item.name} could not add ${missing.length} granted item(s): ${missing.join(", ")}`);
-    ui.notifications.warn(`${item.name}: ${missing.length} granted power(s) could not be added.`);
-  }
-  if (children.length) await actor.createEmbeddedDocuments("Item", children, { daGranted: true });
-});
-
-Hooks.on("deleteItem", async function (item, options, userId) {
-  if (userId !== game.user.id) return;
-  const actor = item.parent;
-  if (actor?.documentName !== "Actor" || !item.flags?.[grantScope]?.grants?.length) return;
-  const ids = actor.items.filter((i) => i.flags?.[grantScope]?.grantedBy === item.id).map((i) => i.id);
-  if (ids.length) await actor.deleteEmbeddedDocuments("Item", ids);
 });
 
 // ---- vtt-scripts/uses-init.js ----
